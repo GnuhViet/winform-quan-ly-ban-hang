@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BTLCSDL.Model {
+	internal class HoaDonBan {
+		public int MaHDB { get; set; }
+		public DateTime NgayBan { get; set; }
+		public double TongTien { get; set; }
+		public int MaKH { get; set; }
+		public int MaNV { get; set; }
+	}
+}
