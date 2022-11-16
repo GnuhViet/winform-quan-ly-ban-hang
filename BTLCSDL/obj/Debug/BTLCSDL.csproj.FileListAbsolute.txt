@@ -45,4 +45,4 @@ E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.csproj.CopyComplete
 E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.exe.licenses
 E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.MainForm.resources
 E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.CommonForm.resources
-E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.FormSanPham.resources
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.txtSanPhamHienTai.resources

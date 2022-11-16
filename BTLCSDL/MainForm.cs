@@ -107,7 +107,7 @@ namespace BTLCSDL {
 
 		private void dsSanPham_Click(object sender, EventArgs e) {
 			formName.Text = "Sản Phẩm";
-			OpenChildForm(new FormSanPham(SanPhamDAO, ChatLieuDAO, TheLoaiDAO, QuocGiaDAO, SizeDAO, MauSacDAO, ChiTietSPDAO), sender);
+			OpenChildForm(new txtSanPhamHienTai(SanPhamDAO, ChatLieuDAO, TheLoaiDAO, QuocGiaDAO, SizeDAO, MauSacDAO, ChiTietSPDAO), sender);
 			setOffAll();
 			setOn(btnSanPham);
 		}
