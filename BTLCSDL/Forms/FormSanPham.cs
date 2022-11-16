@@ -2,6 +2,7 @@
 using BTLCSDL.DAO.impl;
 using BTLCSDL.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,11 +24,11 @@ namespace BTLCSDL.Forms {
 		ReflectionDAO MauSacDAO;
 		ReflectionDAO ChiTietSPDAO;
 
-		List<Object> chatLieu;
-		List<Object> theLoai;
-		List<Object> quocGia;
-		List<Object> size;
-		List<Object> mau;
+		Hashtable HTChatLieu;
+		Hashtable HTTheLoai;
+		Hashtable HTQuocGia;
+		Hashtable HTSize;
+		Hashtable HTMau;
 
 		private bool isThem;
 
@@ -50,34 +51,47 @@ namespace BTLCSDL.Forms {
 			ControlExtension.Draggable(formInputCTSP, true);
 
 			// load list
-			chatLieu = ChatLieuDAO.getListAll();
-			theLoai  = TheLoaiDAO.getListAll();
-			quocGia  = QuocGiaDAO.getListAll();
-			size = SizeDAO.getListAll();
-			mau = MauSacDAO.getListAll();
+			HTChatLieu = ChatLieuDAO.getHashtableAll();
+			HTTheLoai  = TheLoaiDAO.getHashtableAll();
+			HTQuocGia  = QuocGiaDAO.getHashtableAll();
+			HTSize = SizeDAO.getHashtableAll();
+			HTMau = MauSacDAO.getHashtableAll();
 
+			// add gia tri empty
+			cbbLocChatLieu.Items.Add("");
+			cbbLocTheLoai.Items.Add("");
+			cbbLocQuocGia.Items.Add("");
 			// add vao cbb
-			foreach(ChatLieu model in chatLieu) {
+			foreach (int i in HTChatLieu.Keys) {
+				ChatLieu model = (ChatLieu)HTChatLieu[i];
 				cbbLocChatLieu.Items.Add(model.MaCL + " - " + model.TenCL);
 				cbbChatLieu.Items.Add(model.MaCL + " - " + model.TenCL);
 			}
-			foreach (TheLoai model in theLoai) {
+			foreach (int i in HTTheLoai.Keys) {
+				TheLoai model = (TheLoai)HTTheLoai[i];
 				cbbLocTheLoai.Items.Add(model.MaTL + " - " + model.TenTL);
 				cbbTheLoai.Items.Add(model.MaTL + " - " + model.TenTL);
 			}
-			foreach (QuocGia model in quocGia) {
+			foreach (int i in HTQuocGia.Keys) {
+				QuocGia model = (QuocGia)HTQuocGia[i];
 				cbbLocQuocGia.Items.Add(model.MaQG + " - " + model.TenQG);
 				cbbQuocGia.Items.Add(model.MaQG + " - " + model.TenQG);
 			}
-			foreach (Model.Size model in size) {
+			foreach (int i in HTSize.Keys) {
+				Model.Size model = (Model.Size)HTSize[i];
 				cbbSize.Items.Add(model.MaS + " - " + model.TenS);
 			}
-			foreach (MauSac model in mau) {
+			foreach (int i in HTMau.Keys) {
+				MauSac model = (MauSac)HTMau[i];
 				cbbMauSac.Items.Add(model.MaMS + " - " + model.TenMS);
 			}
-
+			// add vao table
 			tableSize.DataSource = SizeDAO.getAll();
 			tableMauSac.DataSource = MauSacDAO.getAll();
+			tableSize.Columns[1].ReadOnly = true;
+			tableSize.Columns[2].ReadOnly = true;
+			tableMauSac.Columns[1].ReadOnly = true;
+			tableMauSac.Columns[2].ReadOnly = true;
 		}
 
 		////////
@@ -86,7 +100,47 @@ namespace BTLCSDL.Forms {
 
 		#region main-form
 		private void FormSanPham_Load(object sender, EventArgs e) {
-			table.DataSource = dao.getAll();
+			// doc fillter
+			bool needFillter = false;
+
+			Dictionary<Type, List<String>> test = new Dictionary<Type, List<string>>();
+			if (cbbLocTheLoai.Text != null && cbbLocTheLoai.Text != "" ) {
+				test.Add(typeof(TheLoai),
+					new List<String>() {cbbLocTheLoai.Text.Split('-')[0]});
+				needFillter = true;
+			}
+			if (cbbLocChatLieu.Text != null && cbbLocChatLieu.Text != "") {
+				test.Add(typeof(ChatLieu),
+					new List<String>() {cbbLocChatLieu.Text.Split('-')[0]});
+				needFillter = true;
+			}
+			if (cbbLocQuocGia.Text != null && cbbLocQuocGia.Text != "") {
+				test.Add(typeof(QuocGia),
+					new List<String>() {cbbLocQuocGia.Text.Split('-')[0]});
+				needFillter = true;
+			}
+			List<String> listSize = new List<string>();
+			foreach(DataGridViewRow r in tableSize.Rows) {
+				DataGridViewCheckBoxCell chk = ((DataGridViewCheckBoxCell)r.Cells[0]);
+				if (chk.Value != null && (bool)chk.Value) {
+					listSize.Add(r.Cells[1].Value.ToString());
+					needFillter = true;
+				}
+			}; test.Add(typeof(Model.Size), listSize);
+			List<String> listMauSac = new List<string>();
+			foreach (DataGridViewRow r in tableMauSac.Rows) {
+				DataGridViewCheckBoxCell chk = ((DataGridViewCheckBoxCell)r.Cells[0]);
+				if (chk.Value != null && (bool)chk.Value) {
+					listMauSac.Add(r.Cells[1].Value.ToString());
+					needFillter = true;
+				}
+			}; test.Add(typeof(MauSac), listMauSac);
+
+			if (needFillter) {
+				table.DataSource = ((SanPhamDAO)dao).getWithFillter(test);
+			} else {
+				table.DataSource = dao.getAll();
+			}
 		}
 
 		private void table_CellContentClick(object sender, DataGridViewCellEventArgs e) {
@@ -108,7 +162,7 @@ namespace BTLCSDL.Forms {
 				// luu lai san pham hien tai
 				MaSanPhamHienTai = Convert.ToInt32(table.CurrentRow.Cells[3].Value);
 				tenSanPhamHienTai = table.CurrentRow.Cells[4].Value.ToString();
-				tableDSCTSP.DataSource = ChiTietSPDAO.GetDataTableByField("MaSP", table.CurrentRow.Cells[3].Value.ToString());
+				ReLoadCHTSP();
 				formDanhSachCTSP.Visible = true;
 
 				// set gia tri hien thi
@@ -127,8 +181,34 @@ namespace BTLCSDL.Forms {
 		private void txtTim_TextChanged(object sender, EventArgs e) {
 			table.DataSource = dao.search("TenSP", txtTim.Text);
 		}
+
+		private void cbbLocTheLoai_SelectedIndexChanged(object sender, EventArgs e) {
+			FormSanPham_Load(sender, e);
+		}
+
+		private void cbbLocChatLieu_SelectedIndexChanged(object sender, EventArgs e) {
+			FormSanPham_Load(sender, e);
+		}
+
+		private void cbbLocQuocGia_SelectedIndexChanged(object sender, EventArgs e) {
+			FormSanPham_Load(sender, e);
+		}
+
+
+		private void tableSize_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+			tableSize.CommitEdit(DataGridViewDataErrorContexts.Commit);
+		}
+
+		private void tableMauSac_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+			tableMauSac.CommitEdit(DataGridViewDataErrorContexts.Commit);
+		}
+
+		private void tableSize_MauSac_CellValueChanged(object sender, DataGridViewCellEventArgs e) {
+			FormSanPham_Load(sender, e);
+		}
+
 		#endregion
-		
+
 		#region form-input-SanPham
 
 		private void btnDongFrom_Click(object sender, EventArgs e) {
@@ -270,7 +350,9 @@ namespace BTLCSDL.Forms {
 		private void tableDSCTSP_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 			if (e.ColumnIndex == 0) { //delete
 				isThem = true;
-				ChiTietSPDAO.delelte(Convert.ToInt32(tableDSCTSP.CurrentRow.Cells[2].Value));
+				ChiTietSP model = new ChiTietSP();
+				model.MaCTSP = Convert.ToInt32(tableDSCTSP.CurrentRow.Cells[2].Value);
+				ChiTietSPDAO.delelte(model);
 				ReLoadCHTSP();
 				return;
 			}
@@ -287,8 +369,14 @@ namespace BTLCSDL.Forms {
 
 		#region form-chi-tiet-san-pham
 		private void ReLoadCHTSP() {
-			MessageBox.Show(MaSanPhamHienTai.ToString());
-			tableDSCTSP.DataSource = ChiTietSPDAO.GetDataTableByField("MaSP", MaSanPhamHienTai.ToString());
+			DataTable dt = ChiTietSPDAO.GetDataTableByField("MaSP", MaSanPhamHienTai.ToString());
+			dt.Columns.Add("Tên Size", typeof(String));
+			dt.Columns.Add("Tên Màu Sắc", typeof(String));
+			foreach (DataRow row in dt.Rows) {
+				row["Tên Size"] = ((Model.Size)HTSize[Convert.ToInt32(row["MaS"])]).TenS;
+				row["Tên Màu Sắc"] = ((MauSac)HTMau[Convert.ToInt32(row["MaMS"])]).TenMS; 
+			}
+			tableDSCTSP.DataSource = dt;
 		}
 
 		private void btnDongFormCTSP_Click(object sender, EventArgs e) {
@@ -362,8 +450,13 @@ namespace BTLCSDL.Forms {
 			txtMaS.Text = MaS.ToString();
 			txtMaMS.Text = MaMS.ToString();
 		}
-		#endregion
 
+
+		private void txtTimChiTietSP_TextChanged(object sender, EventArgs e) {
+			tableDSCTSP.DataSource = ChiTietSPDAO.search("MaCTSP", txtTimChiTietSP.Text);
+		}
+
+		#endregion
 
 	}
 }

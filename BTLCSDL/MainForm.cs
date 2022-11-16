@@ -59,7 +59,7 @@ namespace BTLCSDL {
 			ChucVuType = typeof(ChucVu);
 			ChucVuDAO = new ReflectionDAO(ChucVuType);
 
-			SanPhamDAO = new ReflectionDAO(typeof(SanPham));
+			SanPhamDAO = new SanPhamDAO(typeof(SanPham));
 			ChiTietSPDAO = new ReflectionDAO(typeof(ChiTietSP));
 			#endregion
 

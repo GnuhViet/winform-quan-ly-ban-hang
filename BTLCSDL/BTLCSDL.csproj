@@ -246,6 +246,7 @@
     </Compile>
     <Compile Include="DAO\CommonDAO.cs" />
     <Compile Include="DAO\impl\ReflectionDAO.cs" />
+    <Compile Include="DAO\impl\SanPhamDAO.cs" />
     <Compile Include="DAO\SQLServerConnection.cs" />
     <Compile Include="Forms\CommonForm.cs">
       <SubType>Form</SubType>

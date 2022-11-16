@@ -1,5 +1,6 @@
 ﻿using BTLCSDL.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,11 +13,11 @@ using System.Windows.Forms;
 
 namespace BTLCSDL.DAO.impl {
 	public class ReflectionDAO : CommonDAO {
-		private Type type;
-		private String className;
-		private String modelID;
+		protected Type type;
+		protected String className;
+		protected String modelID;
 
-		private PropertyInfo[] properties;
+		protected PropertyInfo[] properties;
 
 		private String insertQuery;
 		private String selectQuery;
@@ -67,7 +68,7 @@ namespace BTLCSDL.DAO.impl {
 			selectQuery = "select * from " + className + " where " + modelID + " = #";
 		}
 
-		public String mapping(PropertyInfo prop, Object model) {
+		protected String mapping(PropertyInfo prop, Object model) {
 			if (prop.GetValue(model) == null) {
 				return "NULL";
 			}
@@ -145,13 +146,7 @@ namespace BTLCSDL.DAO.impl {
 
 		public void delelte(Object model) {
 			String id = "-1";
-			foreach (var prop in properties) {
-				if (prop.Name.Equals(modelID)) {
-					id = prop.GetValue(model).ToString(); // luu lai id
-					break;
-				}
-			}
-
+			id = type.GetProperty(modelID).GetValue(model, null).ToString();
 			// common
 			String query = deleteQuery.Replace("#", id);
 			try {
@@ -163,7 +158,7 @@ namespace BTLCSDL.DAO.impl {
 
 		// get data func
 
-		public Object setMapping(DataRow row) {
+		protected Object setMapping(DataRow row) {
 			Object model = Activator.CreateInstance(type);
 			foreach (var prop in properties) {
 				if (prop.PropertyType == typeof(string) || prop.PropertyType == typeof(String)) {
@@ -193,6 +188,16 @@ namespace BTLCSDL.DAO.impl {
 				list.Add(setMapping(dt.Rows[i]));
 			}
 			return list;
+		}
+
+		public Hashtable getHashtableAll() {
+			Hashtable hs = new Hashtable();
+			DataTable dt = getAll();
+			for (int i = 0; i < dt.Rows.Count; i++) {
+				Object obj = setMapping(dt.Rows[i]);
+				hs.Add(Convert.ToInt32(type.GetProperty(modelID).GetValue(obj)),obj);
+			}
+			return hs;
 		}
 
 		public List<Object> getListByField(String fieldName, String value) {

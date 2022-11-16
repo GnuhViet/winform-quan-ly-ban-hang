@@ -35,15 +35,15 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
 			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
 			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
 			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
 			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
 			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
 			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
 			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
 			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
 			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -89,12 +89,16 @@
 			this.tableBtnSua = new System.Windows.Forms.DataGridViewImageColumn();
 			this.tableBtnDsHienCo = new System.Windows.Forms.DataGridViewImageColumn();
 			this.label13 = new System.Windows.Forms.Label();
-			this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-			this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-			this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-			this.btnThemSanPham = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-			this.txtTim = new Bunifu.UI.WinForms.BunifuTextBox();
 			this.formDanhSachCTSP = new System.Windows.Forms.Panel();
+			this.label19 = new System.Windows.Forms.Label();
+			this.labelTenSanPhamHienTai = new System.Windows.Forms.Label();
+			this.btnDongDSCTSP = new System.Windows.Forms.Button();
+			this.btnThemMoiCTSP = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+			this.tableDSCTSP = new Bunifu.UI.WinForms.BunifuDataGridView();
+			this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
+			this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
+			this.label14 = new System.Windows.Forms.Label();
+			this.txtTimChiTietSP = new Bunifu.UI.WinForms.BunifuTextBox();
 			this.formInputCTSP = new System.Windows.Forms.Panel();
 			this.txtSanPhamHienTaiID = new System.Windows.Forms.TextBox();
 			this.txtCTSPID = new System.Windows.Forms.TextBox();
@@ -110,15 +114,11 @@
 			this.label17 = new System.Windows.Forms.Label();
 			this.cbbSize = new System.Windows.Forms.ComboBox();
 			this.btnDongFormCTSP = new System.Windows.Forms.Button();
-			this.label19 = new System.Windows.Forms.Label();
-			this.labelTenSanPhamHienTai = new System.Windows.Forms.Label();
-			this.btnDongDSCTSP = new System.Windows.Forms.Button();
-			this.btnThemMoiCTSP = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-			this.tableDSCTSP = new Bunifu.UI.WinForms.BunifuDataGridView();
-			this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-			this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
-			this.label14 = new System.Windows.Forms.Label();
-			this.txtTimChiTietSP = new Bunifu.UI.WinForms.BunifuTextBox();
+			this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+			this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+			this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+			this.btnThemSanPham = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+			this.txtTim = new Bunifu.UI.WinForms.BunifuTextBox();
 			this.formInputSanPham.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureAnh)).BeginInit();
 			this.panelGioiTinh.SuspendLayout();
@@ -128,9 +128,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.tableSize)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
 			this.formDanhSachCTSP.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.tableDSCTSP)).BeginInit();
 			this.formInputCTSP.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.tableDSCTSP)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// formInputSanPham
@@ -212,6 +212,7 @@
 			this.cbbQuocGia.Location = new System.Drawing.Point(352, 302);
 			this.cbbQuocGia.Name = "cbbQuocGia";
 			this.cbbQuocGia.Size = new System.Drawing.Size(305, 32);
+			this.cbbQuocGia.Sorted = true;
 			this.cbbQuocGia.TabIndex = 38;
 			this.cbbQuocGia.SelectedIndexChanged += new System.EventHandler(this.cbbQuocGia_SelectedIndexChanged);
 			// 
@@ -233,6 +234,7 @@
 			this.cbbChatLieu.Location = new System.Drawing.Point(352, 264);
 			this.cbbChatLieu.Name = "cbbChatLieu";
 			this.cbbChatLieu.Size = new System.Drawing.Size(305, 32);
+			this.cbbChatLieu.Sorted = true;
 			this.cbbChatLieu.TabIndex = 36;
 			this.cbbChatLieu.SelectedIndexChanged += new System.EventHandler(this.cbbChatLieu_SelectedIndexChanged);
 			// 
@@ -254,6 +256,7 @@
 			this.cbbTheLoai.Location = new System.Drawing.Point(352, 226);
 			this.cbbTheLoai.Name = "cbbTheLoai";
 			this.cbbTheLoai.Size = new System.Drawing.Size(305, 32);
+			this.cbbTheLoai.Sorted = true;
 			this.cbbTheLoai.TabIndex = 34;
 			this.cbbTheLoai.SelectedIndexChanged += new System.EventHandler(this.cbbTheLoai_SelectedIndexChanged);
 			// 
@@ -432,7 +435,7 @@
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.label7.Location = new System.Drawing.Point(272, 4);
+			this.label7.Location = new System.Drawing.Point(266, 4);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(90, 24);
 			this.label7.TabIndex = 14;
@@ -462,7 +465,7 @@
 			// 
 			this.label10.AutoSize = true;
 			this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.label10.Location = new System.Drawing.Point(149, 4);
+			this.label10.Location = new System.Drawing.Point(139, 4);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(89, 24);
 			this.label10.TabIndex = 17;
@@ -524,20 +527,20 @@
 			this.tableMauSac.HeaderForeColor = System.Drawing.Color.White;
 			this.tableMauSac.Location = new System.Drawing.Point(18, 443);
 			this.tableMauSac.Name = "tableMauSac";
-			this.tableMauSac.ReadOnly = true;
 			this.tableMauSac.RowHeadersVisible = false;
 			this.tableMauSac.RowTemplate.Height = 40;
 			this.tableMauSac.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.tableMauSac.Size = new System.Drawing.Size(220, 310);
 			this.tableMauSac.TabIndex = 18;
 			this.tableMauSac.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+			this.tableMauSac.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableMauSac_CellContentClick);
+			this.tableMauSac.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableSize_MauSac_CellValueChanged);
 			// 
 			// cbChonMau
 			// 
 			this.cbChonMau.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
 			this.cbChonMau.HeaderText = "Chọn";
 			this.cbChonMau.Name = "cbChonMau";
-			this.cbChonMau.ReadOnly = true;
 			this.cbChonMau.Width = 50;
 			// 
 			// tableSize
@@ -596,20 +599,20 @@
 			this.tableSize.HeaderForeColor = System.Drawing.Color.White;
 			this.tableSize.Location = new System.Drawing.Point(18, 93);
 			this.tableSize.Name = "tableSize";
-			this.tableSize.ReadOnly = true;
 			this.tableSize.RowHeadersVisible = false;
 			this.tableSize.RowTemplate.Height = 40;
 			this.tableSize.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.tableSize.Size = new System.Drawing.Size(220, 320);
 			this.tableSize.TabIndex = 20;
 			this.tableSize.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+			this.tableSize.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableSize_CellContentClick);
+			this.tableSize.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableSize_MauSac_CellValueChanged);
 			// 
 			// cbChonSize
 			// 
 			this.cbChonSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
 			this.cbChonSize.HeaderText = "Chọn";
 			this.cbChonSize.Name = "cbChonSize";
-			this.cbChonSize.ReadOnly = true;
 			this.cbChonSize.Width = 50;
 			// 
 			// cbbLocQuocGia
@@ -646,13 +649,15 @@
 			this.cbbLocQuocGia.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
 			this.cbbLocQuocGia.ItemHighLightForeColor = System.Drawing.Color.White;
 			this.cbbLocQuocGia.ItemTopMargin = 3;
-			this.cbbLocQuocGia.Location = new System.Drawing.Point(265, 31);
+			this.cbbLocQuocGia.Location = new System.Drawing.Point(261, 31);
 			this.cbbLocQuocGia.Name = "cbbLocQuocGia";
 			this.cbbLocQuocGia.Size = new System.Drawing.Size(106, 32);
+			this.cbbLocQuocGia.Sorted = true;
 			this.cbbLocQuocGia.TabIndex = 21;
 			this.cbbLocQuocGia.Text = null;
 			this.cbbLocQuocGia.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
 			this.cbbLocQuocGia.TextLeftMargin = 5;
+			this.cbbLocQuocGia.SelectedIndexChanged += new System.EventHandler(this.cbbLocQuocGia_SelectedIndexChanged);
 			// 
 			// cbbLocChatLieu
 			// 
@@ -688,13 +693,15 @@
 			this.cbbLocChatLieu.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
 			this.cbbLocChatLieu.ItemHighLightForeColor = System.Drawing.Color.White;
 			this.cbbLocChatLieu.ItemTopMargin = 3;
-			this.cbbLocChatLieu.Location = new System.Drawing.Point(144, 31);
+			this.cbbLocChatLieu.Location = new System.Drawing.Point(129, 31);
 			this.cbbLocChatLieu.Name = "cbbLocChatLieu";
-			this.cbbLocChatLieu.Size = new System.Drawing.Size(105, 32);
+			this.cbbLocChatLieu.Size = new System.Drawing.Size(126, 32);
+			this.cbbLocChatLieu.Sorted = true;
 			this.cbbLocChatLieu.TabIndex = 22;
 			this.cbbLocChatLieu.Text = null;
 			this.cbbLocChatLieu.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
 			this.cbbLocChatLieu.TextLeftMargin = 5;
+			this.cbbLocChatLieu.SelectedIndexChanged += new System.EventHandler(this.cbbLocChatLieu_SelectedIndexChanged);
 			// 
 			// cbbLocTheLoai
 			// 
@@ -733,10 +740,12 @@
 			this.cbbLocTheLoai.Location = new System.Drawing.Point(17, 31);
 			this.cbbLocTheLoai.Name = "cbbLocTheLoai";
 			this.cbbLocTheLoai.Size = new System.Drawing.Size(106, 32);
+			this.cbbLocTheLoai.Sorted = true;
 			this.cbbLocTheLoai.TabIndex = 23;
 			this.cbbLocTheLoai.Text = null;
 			this.cbbLocTheLoai.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
 			this.cbbLocTheLoai.TextLeftMargin = 5;
+			this.cbbLocTheLoai.SelectedIndexChanged += new System.EventHandler(this.cbbLocTheLoai_SelectedIndexChanged);
 			// 
 			// table
 			// 
@@ -851,205 +860,9 @@
 			this.label13.TabIndex = 26;
 			this.label13.Text = "Tìm Kiếm : ";
 			// 
-			// dataGridViewImageColumn1
-			// 
-			this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.dataGridViewImageColumn1.FillWeight = 159.3909F;
-			this.dataGridViewImageColumn1.HeaderText = "Xoa";
-			this.dataGridViewImageColumn1.Image = global::BTLCSDL.Properties.Resources.icons8_close_30;
-			this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-			this.dataGridViewImageColumn1.ReadOnly = true;
-			this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridViewImageColumn1.Width = 40;
-			// 
-			// dataGridViewImageColumn2
-			// 
-			this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.dataGridViewImageColumn2.FillWeight = 40.60914F;
-			this.dataGridViewImageColumn2.HeaderText = "Sua";
-			this.dataGridViewImageColumn2.Image = global::BTLCSDL.Properties.Resources.icons8_option_20;
-			this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-			this.dataGridViewImageColumn2.ReadOnly = true;
-			this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridViewImageColumn2.Width = 40;
-			// 
-			// dataGridViewImageColumn3
-			// 
-			this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.dataGridViewImageColumn3.FillWeight = 35F;
-			this.dataGridViewImageColumn3.HeaderText = "Danh Sách";
-			this.dataGridViewImageColumn3.Image = global::BTLCSDL.Properties.Resources.icons8_numbered_list_24;
-			this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
-			// 
-			// btnThemSanPham
-			// 
-			this.btnThemSanPham.AllowAnimations = true;
-			this.btnThemSanPham.AllowMouseEffects = true;
-			this.btnThemSanPham.AllowToggling = false;
-			this.btnThemSanPham.AnimationSpeed = 200;
-			this.btnThemSanPham.AutoGenerateColors = false;
-			this.btnThemSanPham.AutoRoundBorders = false;
-			this.btnThemSanPham.AutoSizeLeftIcon = true;
-			this.btnThemSanPham.AutoSizeRightIcon = true;
-			this.btnThemSanPham.BackColor = System.Drawing.Color.Transparent;
-			this.btnThemSanPham.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
-			this.btnThemSanPham.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemSanPham.BackgroundImage")));
-			this.btnThemSanPham.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-			this.btnThemSanPham.ButtonText = "Thêm Mới";
-			this.btnThemSanPham.ButtonTextMarginLeft = 0;
-			this.btnThemSanPham.ColorContrastOnClick = 45;
-			this.btnThemSanPham.ColorContrastOnHover = 45;
-			this.btnThemSanPham.Cursor = System.Windows.Forms.Cursors.Default;
-			borderEdges1.BottomLeft = true;
-			borderEdges1.BottomRight = true;
-			borderEdges1.TopLeft = true;
-			borderEdges1.TopRight = true;
-			this.btnThemSanPham.CustomizableEdges = borderEdges1;
-			this.btnThemSanPham.DialogResult = System.Windows.Forms.DialogResult.None;
-			this.btnThemSanPham.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-			this.btnThemSanPham.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-			this.btnThemSanPham.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-			this.btnThemSanPham.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-			this.btnThemSanPham.Font = new System.Drawing.Font("Segoe UI", 14F);
-			this.btnThemSanPham.ForeColor = System.Drawing.Color.White;
-			this.btnThemSanPham.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnThemSanPham.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-			this.btnThemSanPham.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-			this.btnThemSanPham.IconMarginLeft = 11;
-			this.btnThemSanPham.IconPadding = 10;
-			this.btnThemSanPham.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnThemSanPham.IconRightCursor = System.Windows.Forms.Cursors.Default;
-			this.btnThemSanPham.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-			this.btnThemSanPham.IconSize = 25;
-			this.btnThemSanPham.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
-			this.btnThemSanPham.IdleBorderRadius = 25;
-			this.btnThemSanPham.IdleBorderThickness = 1;
-			this.btnThemSanPham.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
-			this.btnThemSanPham.IdleIconLeftImage = null;
-			this.btnThemSanPham.IdleIconRightImage = null;
-			this.btnThemSanPham.IndicateFocus = false;
-			this.btnThemSanPham.Location = new System.Drawing.Point(1222, 26);
-			this.btnThemSanPham.Name = "btnThemSanPham";
-			this.btnThemSanPham.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-			this.btnThemSanPham.OnDisabledState.BorderRadius = 25;
-			this.btnThemSanPham.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-			this.btnThemSanPham.OnDisabledState.BorderThickness = 1;
-			this.btnThemSanPham.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-			this.btnThemSanPham.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-			this.btnThemSanPham.OnDisabledState.IconLeftImage = null;
-			this.btnThemSanPham.OnDisabledState.IconRightImage = null;
-			this.btnThemSanPham.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-			this.btnThemSanPham.onHoverState.BorderRadius = 25;
-			this.btnThemSanPham.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-			this.btnThemSanPham.onHoverState.BorderThickness = 1;
-			this.btnThemSanPham.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-			this.btnThemSanPham.onHoverState.ForeColor = System.Drawing.Color.White;
-			this.btnThemSanPham.onHoverState.IconLeftImage = null;
-			this.btnThemSanPham.onHoverState.IconRightImage = null;
-			this.btnThemSanPham.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
-			this.btnThemSanPham.OnIdleState.BorderRadius = 25;
-			this.btnThemSanPham.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-			this.btnThemSanPham.OnIdleState.BorderThickness = 1;
-			this.btnThemSanPham.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
-			this.btnThemSanPham.OnIdleState.ForeColor = System.Drawing.Color.White;
-			this.btnThemSanPham.OnIdleState.IconLeftImage = null;
-			this.btnThemSanPham.OnIdleState.IconRightImage = null;
-			this.btnThemSanPham.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-			this.btnThemSanPham.OnPressedState.BorderRadius = 25;
-			this.btnThemSanPham.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-			this.btnThemSanPham.OnPressedState.BorderThickness = 1;
-			this.btnThemSanPham.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-			this.btnThemSanPham.OnPressedState.ForeColor = System.Drawing.Color.White;
-			this.btnThemSanPham.OnPressedState.IconLeftImage = null;
-			this.btnThemSanPham.OnPressedState.IconRightImage = null;
-			this.btnThemSanPham.Size = new System.Drawing.Size(116, 37);
-			this.btnThemSanPham.TabIndex = 24;
-			this.btnThemSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			this.btnThemSanPham.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-			this.btnThemSanPham.TextMarginLeft = 0;
-			this.btnThemSanPham.TextPadding = new System.Windows.Forms.Padding(0);
-			this.btnThemSanPham.UseDefaultRadiusAndThickness = true;
-			this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
-			// 
-			// txtTim
-			// 
-			this.txtTim.AcceptsReturn = false;
-			this.txtTim.AcceptsTab = false;
-			this.txtTim.AnimationSpeed = 200;
-			this.txtTim.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.txtTim.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.txtTim.BackColor = System.Drawing.Color.Transparent;
-			this.txtTim.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtTim.BackgroundImage")));
-			this.txtTim.BorderColorActive = System.Drawing.Color.DodgerBlue;
-			this.txtTim.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-			this.txtTim.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-			this.txtTim.BorderColorIdle = System.Drawing.Color.Silver;
-			this.txtTim.BorderRadius = 25;
-			this.txtTim.BorderThickness = 2;
-			this.txtTim.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-			this.txtTim.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtTim.DefaultFont = new System.Drawing.Font("Segoe UI", 14F);
-			this.txtTim.DefaultText = "";
-			this.txtTim.FillColor = System.Drawing.Color.White;
-			this.txtTim.HideSelection = true;
-			this.txtTim.IconLeft = null;
-			this.txtTim.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtTim.IconPadding = 10;
-			this.txtTim.IconRight = null;
-			this.txtTim.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtTim.Lines = new string[0];
-			this.txtTim.Location = new System.Drawing.Point(527, 26);
-			this.txtTim.MaxLength = 32767;
-			this.txtTim.MinimumSize = new System.Drawing.Size(1, 1);
-			this.txtTim.Modified = false;
-			this.txtTim.Multiline = false;
-			this.txtTim.Name = "txtTim";
-			stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-			stateProperties1.FillColor = System.Drawing.Color.Empty;
-			stateProperties1.ForeColor = System.Drawing.Color.Empty;
-			stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtTim.OnActiveState = stateProperties1;
-			stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-			stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-			stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-			stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-			this.txtTim.OnDisabledState = stateProperties2;
-			stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-			stateProperties3.FillColor = System.Drawing.Color.Empty;
-			stateProperties3.ForeColor = System.Drawing.Color.Empty;
-			stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtTim.OnHoverState = stateProperties3;
-			stateProperties4.BorderColor = System.Drawing.Color.Silver;
-			stateProperties4.FillColor = System.Drawing.Color.White;
-			stateProperties4.ForeColor = System.Drawing.Color.Empty;
-			stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtTim.OnIdleState = stateProperties4;
-			this.txtTim.Padding = new System.Windows.Forms.Padding(3);
-			this.txtTim.PasswordChar = '\0';
-			this.txtTim.PlaceholderForeColor = System.Drawing.Color.Silver;
-			this.txtTim.PlaceholderText = "Nhập Tên Sản Phẩm";
-			this.txtTim.ReadOnly = false;
-			this.txtTim.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.txtTim.SelectedText = "";
-			this.txtTim.SelectionLength = 0;
-			this.txtTim.SelectionStart = 0;
-			this.txtTim.ShortcutsEnabled = true;
-			this.txtTim.Size = new System.Drawing.Size(629, 37);
-			this.txtTim.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-			this.txtTim.TabIndex = 12;
-			this.txtTim.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.txtTim.TextMarginBottom = 0;
-			this.txtTim.TextMarginLeft = 3;
-			this.txtTim.TextMarginTop = 0;
-			this.txtTim.TextPlaceholder = "Nhập Tên Sản Phẩm";
-			this.txtTim.UseSystemPasswordChar = false;
-			this.txtTim.WordWrap = true;
-			this.txtTim.TextChange += new System.EventHandler(this.txtTim_TextChanged);
-			// 
 			// formDanhSachCTSP
 			// 
 			this.formDanhSachCTSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.formDanhSachCTSP.Controls.Add(this.formInputCTSP);
 			this.formDanhSachCTSP.Controls.Add(this.label19);
 			this.formDanhSachCTSP.Controls.Add(this.labelTenSanPhamHienTai);
 			this.formDanhSachCTSP.Controls.Add(this.btnDongDSCTSP);
@@ -1058,186 +871,11 @@
 			this.formDanhSachCTSP.Controls.Add(this.label14);
 			this.formDanhSachCTSP.Controls.Add(this.txtTimChiTietSP);
 			this.formDanhSachCTSP.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.formDanhSachCTSP.Location = new System.Drawing.Point(340, 145);
+			this.formDanhSachCTSP.Location = new System.Drawing.Point(256, 134);
 			this.formDanhSachCTSP.Name = "formDanhSachCTSP";
 			this.formDanhSachCTSP.Size = new System.Drawing.Size(781, 521);
 			this.formDanhSachCTSP.TabIndex = 43;
 			this.formDanhSachCTSP.Visible = false;
-			// 
-			// formInputCTSP
-			// 
-			this.formInputCTSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.formInputCTSP.Controls.Add(this.txtSanPhamHienTaiID);
-			this.formInputCTSP.Controls.Add(this.txtCTSPID);
-			this.formInputCTSP.Controls.Add(this.label18);
-			this.formInputCTSP.Controls.Add(this.txtSoLuong);
-			this.formInputCTSP.Controls.Add(this.btnThemCTSP);
-			this.formInputCTSP.Controls.Add(this.txtTenSanPhamHienTai);
-			this.formInputCTSP.Controls.Add(this.txtMaMS);
-			this.formInputCTSP.Controls.Add(this.txtMaS);
-			this.formInputCTSP.Controls.Add(this.label15);
-			this.formInputCTSP.Controls.Add(this.label16);
-			this.formInputCTSP.Controls.Add(this.cbbMauSac);
-			this.formInputCTSP.Controls.Add(this.label17);
-			this.formInputCTSP.Controls.Add(this.cbbSize);
-			this.formInputCTSP.Controls.Add(this.btnDongFormCTSP);
-			this.formInputCTSP.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.formInputCTSP.Location = new System.Drawing.Point(147, 129);
-			this.formInputCTSP.Name = "formInputCTSP";
-			this.formInputCTSP.Size = new System.Drawing.Size(485, 287);
-			this.formInputCTSP.TabIndex = 43;
-			this.formInputCTSP.Visible = false;
-			// 
-			// txtSanPhamHienTaiID
-			// 
-			this.txtSanPhamHienTaiID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.txtSanPhamHienTaiID.Location = new System.Drawing.Point(385, 79);
-			this.txtSanPhamHienTaiID.Name = "txtSanPhamHienTaiID";
-			this.txtSanPhamHienTaiID.ReadOnly = true;
-			this.txtSanPhamHienTaiID.Size = new System.Drawing.Size(81, 29);
-			this.txtSanPhamHienTaiID.TabIndex = 12;
-			this.txtSanPhamHienTaiID.Visible = false;
-			// 
-			// txtCTSPID
-			// 
-			this.txtCTSPID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.txtCTSPID.Location = new System.Drawing.Point(116, 34);
-			this.txtCTSPID.Name = "txtCTSPID";
-			this.txtCTSPID.ReadOnly = true;
-			this.txtCTSPID.Size = new System.Drawing.Size(81, 29);
-			this.txtCTSPID.TabIndex = 46;
-			this.txtCTSPID.Visible = false;
-			// 
-			// label18
-			// 
-			this.label18.AutoSize = true;
-			this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.label18.Location = new System.Drawing.Point(13, 191);
-			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(97, 24);
-			this.label18.TabIndex = 45;
-			this.label18.Text = "Số Lượng:";
-			// 
-			// txtSoLuong
-			// 
-			this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.txtSoLuong.Location = new System.Drawing.Point(116, 189);
-			this.txtSoLuong.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-			this.txtSoLuong.Name = "txtSoLuong";
-			this.txtSoLuong.Size = new System.Drawing.Size(305, 29);
-			this.txtSoLuong.TabIndex = 44;
-			// 
-			// btnThemCTSP
-			// 
-			this.btnThemCTSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.btnThemCTSP.Image = global::BTLCSDL.Properties.Resources.icons8_macos_close_321;
-			this.btnThemCTSP.Location = new System.Drawing.Point(186, 234);
-			this.btnThemCTSP.Name = "btnThemCTSP";
-			this.btnThemCTSP.Size = new System.Drawing.Size(99, 37);
-			this.btnThemCTSP.TabIndex = 43;
-			this.btnThemCTSP.Text = " thêm";
-			this.btnThemCTSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnThemCTSP.UseVisualStyleBackColor = true;
-			this.btnThemCTSP.Click += new System.EventHandler(this.btnThemCTSP_Click);
-			// 
-			// txtTenSanPhamHienTai
-			// 
-			this.txtTenSanPhamHienTai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.txtTenSanPhamHienTai.Location = new System.Drawing.Point(116, 69);
-			this.txtTenSanPhamHienTai.Name = "txtTenSanPhamHienTai";
-			this.txtTenSanPhamHienTai.ReadOnly = true;
-			this.txtTenSanPhamHienTai.Size = new System.Drawing.Size(305, 29);
-			this.txtTenSanPhamHienTai.TabIndex = 42;
-			// 
-			// txtMaMS
-			// 
-			this.txtMaMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.txtMaMS.Location = new System.Drawing.Point(385, 149);
-			this.txtMaMS.Name = "txtMaMS";
-			this.txtMaMS.ReadOnly = true;
-			this.txtMaMS.Size = new System.Drawing.Size(81, 29);
-			this.txtMaMS.TabIndex = 41;
-			this.txtMaMS.Visible = false;
-			// 
-			// txtMaS
-			// 
-			this.txtMaS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.txtMaS.Location = new System.Drawing.Point(385, 114);
-			this.txtMaS.Name = "txtMaS";
-			this.txtMaS.ReadOnly = true;
-			this.txtMaS.Size = new System.Drawing.Size(81, 29);
-			this.txtMaS.TabIndex = 40;
-			this.txtMaS.Visible = false;
-			// 
-			// label15
-			// 
-			this.label15.AutoSize = true;
-			this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.label15.Location = new System.Drawing.Point(8, 71);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(102, 24);
-			this.label15.TabIndex = 39;
-			this.label15.Text = "Sản Phẩm:";
-			// 
-			// label16
-			// 
-			this.label16.AutoSize = true;
-			this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.label16.Location = new System.Drawing.Point(21, 146);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(89, 24);
-			this.label16.TabIndex = 37;
-			this.label16.Text = "Màu Sắc:";
-			// 
-			// cbbMauSac
-			// 
-			this.cbbMauSac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.cbbMauSac.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.cbbMauSac.FormattingEnabled = true;
-			this.cbbMauSac.Location = new System.Drawing.Point(116, 143);
-			this.cbbMauSac.Name = "cbbMauSac";
-			this.cbbMauSac.Size = new System.Drawing.Size(305, 32);
-			this.cbbMauSac.TabIndex = 36;
-			this.cbbMauSac.SelectedIndexChanged += new System.EventHandler(this.cbbMau_SelectedIndexChanged);
-			// 
-			// label17
-			// 
-			this.label17.AutoSize = true;
-			this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.label17.Location = new System.Drawing.Point(59, 108);
-			this.label17.Name = "label17";
-			this.label17.Size = new System.Drawing.Size(51, 24);
-			this.label17.TabIndex = 35;
-			this.label17.Text = "Size:";
-			// 
-			// cbbSize
-			// 
-			this.cbbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.cbbSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.cbbSize.FormattingEnabled = true;
-			this.cbbSize.Location = new System.Drawing.Point(116, 105);
-			this.cbbSize.Name = "cbbSize";
-			this.cbbSize.Size = new System.Drawing.Size(305, 32);
-			this.cbbSize.TabIndex = 34;
-			this.cbbSize.SelectedIndexChanged += new System.EventHandler(this.cbbSize_SelectedIndexChanged);
-			// 
-			// btnDongFormCTSP
-			// 
-			this.btnDongFormCTSP.FlatAppearance.BorderSize = 0;
-			this.btnDongFormCTSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnDongFormCTSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.btnDongFormCTSP.Image = global::BTLCSDL.Properties.Resources.icons8_macos_close_32__1_;
-			this.btnDongFormCTSP.Location = new System.Drawing.Point(431, 7);
-			this.btnDongFormCTSP.Name = "btnDongFormCTSP";
-			this.btnDongFormCTSP.Size = new System.Drawing.Size(37, 37);
-			this.btnDongFormCTSP.TabIndex = 11;
-			this.btnDongFormCTSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnDongFormCTSP.UseVisualStyleBackColor = true;
-			this.btnDongFormCTSP.Click += new System.EventHandler(this.btnDongFormCTSP_Click);
 			// 
 			// label19
 			// 
@@ -1292,11 +930,11 @@
 			this.btnThemMoiCTSP.ColorContrastOnClick = 45;
 			this.btnThemMoiCTSP.ColorContrastOnHover = 45;
 			this.btnThemMoiCTSP.Cursor = System.Windows.Forms.Cursors.Default;
-			borderEdges2.BottomLeft = true;
-			borderEdges2.BottomRight = true;
-			borderEdges2.TopLeft = true;
-			borderEdges2.TopRight = true;
-			this.btnThemMoiCTSP.CustomizableEdges = borderEdges2;
+			borderEdges1.BottomLeft = true;
+			borderEdges1.BottomRight = true;
+			borderEdges1.TopLeft = true;
+			borderEdges1.TopRight = true;
+			this.btnThemMoiCTSP.CustomizableEdges = borderEdges1;
 			this.btnThemMoiCTSP.DialogResult = System.Windows.Forms.DialogResult.None;
 			this.btnThemMoiCTSP.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
 			this.btnThemMoiCTSP.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1498,26 +1136,26 @@
 			this.txtTimChiTietSP.Modified = false;
 			this.txtTimChiTietSP.Multiline = false;
 			this.txtTimChiTietSP.Name = "txtTimChiTietSP";
-			stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-			stateProperties5.FillColor = System.Drawing.Color.Empty;
-			stateProperties5.ForeColor = System.Drawing.Color.Empty;
-			stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtTimChiTietSP.OnActiveState = stateProperties5;
-			stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-			stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-			stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-			stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-			this.txtTimChiTietSP.OnDisabledState = stateProperties6;
-			stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-			stateProperties7.FillColor = System.Drawing.Color.Empty;
-			stateProperties7.ForeColor = System.Drawing.Color.Empty;
-			stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtTimChiTietSP.OnHoverState = stateProperties7;
-			stateProperties8.BorderColor = System.Drawing.Color.Silver;
-			stateProperties8.FillColor = System.Drawing.Color.White;
-			stateProperties8.ForeColor = System.Drawing.Color.Empty;
-			stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtTimChiTietSP.OnIdleState = stateProperties8;
+			stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+			stateProperties1.FillColor = System.Drawing.Color.Empty;
+			stateProperties1.ForeColor = System.Drawing.Color.Empty;
+			stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtTimChiTietSP.OnActiveState = stateProperties1;
+			stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+			this.txtTimChiTietSP.OnDisabledState = stateProperties2;
+			stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			stateProperties3.FillColor = System.Drawing.Color.Empty;
+			stateProperties3.ForeColor = System.Drawing.Color.Empty;
+			stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtTimChiTietSP.OnHoverState = stateProperties3;
+			stateProperties4.BorderColor = System.Drawing.Color.Silver;
+			stateProperties4.FillColor = System.Drawing.Color.White;
+			stateProperties4.ForeColor = System.Drawing.Color.Empty;
+			stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtTimChiTietSP.OnIdleState = stateProperties4;
 			this.txtTimChiTietSP.Padding = new System.Windows.Forms.Padding(3);
 			this.txtTimChiTietSP.PasswordChar = '\0';
 			this.txtTimChiTietSP.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -1538,6 +1176,381 @@
 			this.txtTimChiTietSP.TextPlaceholder = "Nhập Mã CTSP";
 			this.txtTimChiTietSP.UseSystemPasswordChar = false;
 			this.txtTimChiTietSP.WordWrap = true;
+			this.txtTimChiTietSP.TextChange += new System.EventHandler(this.txtTimChiTietSP_TextChanged);
+			this.txtTimChiTietSP.TextChanged += new System.EventHandler(this.txtTimChiTietSP_TextChanged);
+			// 
+			// formInputCTSP
+			// 
+			this.formInputCTSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.formInputCTSP.Controls.Add(this.txtSanPhamHienTaiID);
+			this.formInputCTSP.Controls.Add(this.txtCTSPID);
+			this.formInputCTSP.Controls.Add(this.label18);
+			this.formInputCTSP.Controls.Add(this.txtSoLuong);
+			this.formInputCTSP.Controls.Add(this.btnThemCTSP);
+			this.formInputCTSP.Controls.Add(this.txtTenSanPhamHienTai);
+			this.formInputCTSP.Controls.Add(this.txtMaMS);
+			this.formInputCTSP.Controls.Add(this.txtMaS);
+			this.formInputCTSP.Controls.Add(this.label15);
+			this.formInputCTSP.Controls.Add(this.label16);
+			this.formInputCTSP.Controls.Add(this.cbbMauSac);
+			this.formInputCTSP.Controls.Add(this.label17);
+			this.formInputCTSP.Controls.Add(this.cbbSize);
+			this.formInputCTSP.Controls.Add(this.btnDongFormCTSP);
+			this.formInputCTSP.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.formInputCTSP.Location = new System.Drawing.Point(348, 223);
+			this.formInputCTSP.Name = "formInputCTSP";
+			this.formInputCTSP.Size = new System.Drawing.Size(485, 287);
+			this.formInputCTSP.TabIndex = 43;
+			this.formInputCTSP.Visible = false;
+			// 
+			// txtSanPhamHienTaiID
+			// 
+			this.txtSanPhamHienTaiID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.txtSanPhamHienTaiID.Location = new System.Drawing.Point(385, 79);
+			this.txtSanPhamHienTaiID.Name = "txtSanPhamHienTaiID";
+			this.txtSanPhamHienTaiID.ReadOnly = true;
+			this.txtSanPhamHienTaiID.Size = new System.Drawing.Size(81, 29);
+			this.txtSanPhamHienTaiID.TabIndex = 12;
+			this.txtSanPhamHienTaiID.Visible = false;
+			// 
+			// txtCTSPID
+			// 
+			this.txtCTSPID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.txtCTSPID.Location = new System.Drawing.Point(116, 34);
+			this.txtCTSPID.Name = "txtCTSPID";
+			this.txtCTSPID.ReadOnly = true;
+			this.txtCTSPID.Size = new System.Drawing.Size(81, 29);
+			this.txtCTSPID.TabIndex = 46;
+			this.txtCTSPID.Visible = false;
+			// 
+			// label18
+			// 
+			this.label18.AutoSize = true;
+			this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.label18.Location = new System.Drawing.Point(13, 191);
+			this.label18.Name = "label18";
+			this.label18.Size = new System.Drawing.Size(97, 24);
+			this.label18.TabIndex = 45;
+			this.label18.Text = "Số Lượng:";
+			// 
+			// txtSoLuong
+			// 
+			this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.txtSoLuong.Location = new System.Drawing.Point(116, 189);
+			this.txtSoLuong.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+			this.txtSoLuong.Name = "txtSoLuong";
+			this.txtSoLuong.Size = new System.Drawing.Size(305, 29);
+			this.txtSoLuong.TabIndex = 44;
+			// 
+			// btnThemCTSP
+			// 
+			this.btnThemCTSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.btnThemCTSP.Image = global::BTLCSDL.Properties.Resources.icons8_macos_close_321;
+			this.btnThemCTSP.Location = new System.Drawing.Point(186, 234);
+			this.btnThemCTSP.Name = "btnThemCTSP";
+			this.btnThemCTSP.Size = new System.Drawing.Size(99, 37);
+			this.btnThemCTSP.TabIndex = 43;
+			this.btnThemCTSP.Text = " thêm";
+			this.btnThemCTSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnThemCTSP.UseVisualStyleBackColor = true;
+			this.btnThemCTSP.Click += new System.EventHandler(this.btnThemCTSP_Click);
+			// 
+			// txtTenSanPhamHienTai
+			// 
+			this.txtTenSanPhamHienTai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.txtTenSanPhamHienTai.Location = new System.Drawing.Point(116, 69);
+			this.txtTenSanPhamHienTai.Name = "txtTenSanPhamHienTai";
+			this.txtTenSanPhamHienTai.ReadOnly = true;
+			this.txtTenSanPhamHienTai.Size = new System.Drawing.Size(305, 29);
+			this.txtTenSanPhamHienTai.TabIndex = 42;
+			// 
+			// txtMaMS
+			// 
+			this.txtMaMS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.txtMaMS.Location = new System.Drawing.Point(385, 149);
+			this.txtMaMS.Name = "txtMaMS";
+			this.txtMaMS.ReadOnly = true;
+			this.txtMaMS.Size = new System.Drawing.Size(81, 29);
+			this.txtMaMS.TabIndex = 41;
+			this.txtMaMS.Visible = false;
+			// 
+			// txtMaS
+			// 
+			this.txtMaS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.txtMaS.Location = new System.Drawing.Point(385, 114);
+			this.txtMaS.Name = "txtMaS";
+			this.txtMaS.ReadOnly = true;
+			this.txtMaS.Size = new System.Drawing.Size(81, 29);
+			this.txtMaS.TabIndex = 40;
+			this.txtMaS.Visible = false;
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.label15.Location = new System.Drawing.Point(8, 71);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(102, 24);
+			this.label15.TabIndex = 39;
+			this.label15.Text = "Sản Phẩm:";
+			// 
+			// label16
+			// 
+			this.label16.AutoSize = true;
+			this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.label16.Location = new System.Drawing.Point(21, 146);
+			this.label16.Name = "label16";
+			this.label16.Size = new System.Drawing.Size(89, 24);
+			this.label16.TabIndex = 37;
+			this.label16.Text = "Màu Sắc:";
+			// 
+			// cbbMauSac
+			// 
+			this.cbbMauSac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbbMauSac.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.cbbMauSac.FormattingEnabled = true;
+			this.cbbMauSac.Location = new System.Drawing.Point(116, 143);
+			this.cbbMauSac.Name = "cbbMauSac";
+			this.cbbMauSac.Size = new System.Drawing.Size(305, 32);
+			this.cbbMauSac.Sorted = true;
+			this.cbbMauSac.TabIndex = 36;
+			this.cbbMauSac.SelectedIndexChanged += new System.EventHandler(this.cbbMau_SelectedIndexChanged);
+			// 
+			// label17
+			// 
+			this.label17.AutoSize = true;
+			this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.label17.Location = new System.Drawing.Point(59, 108);
+			this.label17.Name = "label17";
+			this.label17.Size = new System.Drawing.Size(51, 24);
+			this.label17.TabIndex = 35;
+			this.label17.Text = "Size:";
+			// 
+			// cbbSize
+			// 
+			this.cbbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbbSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.cbbSize.FormattingEnabled = true;
+			this.cbbSize.Location = new System.Drawing.Point(116, 105);
+			this.cbbSize.Name = "cbbSize";
+			this.cbbSize.Size = new System.Drawing.Size(305, 32);
+			this.cbbSize.Sorted = true;
+			this.cbbSize.TabIndex = 34;
+			this.cbbSize.SelectedIndexChanged += new System.EventHandler(this.cbbSize_SelectedIndexChanged);
+			// 
+			// btnDongFormCTSP
+			// 
+			this.btnDongFormCTSP.FlatAppearance.BorderSize = 0;
+			this.btnDongFormCTSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnDongFormCTSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.btnDongFormCTSP.Image = global::BTLCSDL.Properties.Resources.icons8_macos_close_32__1_;
+			this.btnDongFormCTSP.Location = new System.Drawing.Point(431, 7);
+			this.btnDongFormCTSP.Name = "btnDongFormCTSP";
+			this.btnDongFormCTSP.Size = new System.Drawing.Size(37, 37);
+			this.btnDongFormCTSP.TabIndex = 11;
+			this.btnDongFormCTSP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnDongFormCTSP.UseVisualStyleBackColor = true;
+			this.btnDongFormCTSP.Click += new System.EventHandler(this.btnDongFormCTSP_Click);
+			// 
+			// dataGridViewImageColumn1
+			// 
+			this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.dataGridViewImageColumn1.FillWeight = 159.3909F;
+			this.dataGridViewImageColumn1.HeaderText = "Xoa";
+			this.dataGridViewImageColumn1.Image = global::BTLCSDL.Properties.Resources.icons8_close_30;
+			this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+			this.dataGridViewImageColumn1.ReadOnly = true;
+			this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridViewImageColumn1.Width = 40;
+			// 
+			// dataGridViewImageColumn2
+			// 
+			this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.dataGridViewImageColumn2.FillWeight = 40.60914F;
+			this.dataGridViewImageColumn2.HeaderText = "Sua";
+			this.dataGridViewImageColumn2.Image = global::BTLCSDL.Properties.Resources.icons8_option_20;
+			this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+			this.dataGridViewImageColumn2.ReadOnly = true;
+			this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridViewImageColumn2.Width = 40;
+			// 
+			// dataGridViewImageColumn3
+			// 
+			this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.dataGridViewImageColumn3.FillWeight = 35F;
+			this.dataGridViewImageColumn3.HeaderText = "Danh Sách";
+			this.dataGridViewImageColumn3.Image = global::BTLCSDL.Properties.Resources.icons8_numbered_list_24;
+			this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
+			this.dataGridViewImageColumn3.Width = 90;
+			// 
+			// btnThemSanPham
+			// 
+			this.btnThemSanPham.AllowAnimations = true;
+			this.btnThemSanPham.AllowMouseEffects = true;
+			this.btnThemSanPham.AllowToggling = false;
+			this.btnThemSanPham.AnimationSpeed = 200;
+			this.btnThemSanPham.AutoGenerateColors = false;
+			this.btnThemSanPham.AutoRoundBorders = false;
+			this.btnThemSanPham.AutoSizeLeftIcon = true;
+			this.btnThemSanPham.AutoSizeRightIcon = true;
+			this.btnThemSanPham.BackColor = System.Drawing.Color.Transparent;
+			this.btnThemSanPham.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnThemSanPham.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemSanPham.BackgroundImage")));
+			this.btnThemSanPham.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnThemSanPham.ButtonText = "Thêm Mới";
+			this.btnThemSanPham.ButtonTextMarginLeft = 0;
+			this.btnThemSanPham.ColorContrastOnClick = 45;
+			this.btnThemSanPham.ColorContrastOnHover = 45;
+			this.btnThemSanPham.Cursor = System.Windows.Forms.Cursors.Default;
+			borderEdges2.BottomLeft = true;
+			borderEdges2.BottomRight = true;
+			borderEdges2.TopLeft = true;
+			borderEdges2.TopRight = true;
+			this.btnThemSanPham.CustomizableEdges = borderEdges2;
+			this.btnThemSanPham.DialogResult = System.Windows.Forms.DialogResult.None;
+			this.btnThemSanPham.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+			this.btnThemSanPham.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.btnThemSanPham.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnThemSanPham.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+			this.btnThemSanPham.Font = new System.Drawing.Font("Segoe UI", 14F);
+			this.btnThemSanPham.ForeColor = System.Drawing.Color.White;
+			this.btnThemSanPham.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnThemSanPham.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+			this.btnThemSanPham.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+			this.btnThemSanPham.IconMarginLeft = 11;
+			this.btnThemSanPham.IconPadding = 10;
+			this.btnThemSanPham.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnThemSanPham.IconRightCursor = System.Windows.Forms.Cursors.Default;
+			this.btnThemSanPham.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+			this.btnThemSanPham.IconSize = 25;
+			this.btnThemSanPham.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnThemSanPham.IdleBorderRadius = 25;
+			this.btnThemSanPham.IdleBorderThickness = 1;
+			this.btnThemSanPham.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnThemSanPham.IdleIconLeftImage = null;
+			this.btnThemSanPham.IdleIconRightImage = null;
+			this.btnThemSanPham.IndicateFocus = false;
+			this.btnThemSanPham.Location = new System.Drawing.Point(1222, 26);
+			this.btnThemSanPham.Name = "btnThemSanPham";
+			this.btnThemSanPham.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+			this.btnThemSanPham.OnDisabledState.BorderRadius = 25;
+			this.btnThemSanPham.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnThemSanPham.OnDisabledState.BorderThickness = 1;
+			this.btnThemSanPham.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.btnThemSanPham.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnThemSanPham.OnDisabledState.IconLeftImage = null;
+			this.btnThemSanPham.OnDisabledState.IconRightImage = null;
+			this.btnThemSanPham.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.btnThemSanPham.onHoverState.BorderRadius = 25;
+			this.btnThemSanPham.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnThemSanPham.onHoverState.BorderThickness = 1;
+			this.btnThemSanPham.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.btnThemSanPham.onHoverState.ForeColor = System.Drawing.Color.White;
+			this.btnThemSanPham.onHoverState.IconLeftImage = null;
+			this.btnThemSanPham.onHoverState.IconRightImage = null;
+			this.btnThemSanPham.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnThemSanPham.OnIdleState.BorderRadius = 25;
+			this.btnThemSanPham.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnThemSanPham.OnIdleState.BorderThickness = 1;
+			this.btnThemSanPham.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnThemSanPham.OnIdleState.ForeColor = System.Drawing.Color.White;
+			this.btnThemSanPham.OnIdleState.IconLeftImage = null;
+			this.btnThemSanPham.OnIdleState.IconRightImage = null;
+			this.btnThemSanPham.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+			this.btnThemSanPham.OnPressedState.BorderRadius = 25;
+			this.btnThemSanPham.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnThemSanPham.OnPressedState.BorderThickness = 1;
+			this.btnThemSanPham.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+			this.btnThemSanPham.OnPressedState.ForeColor = System.Drawing.Color.White;
+			this.btnThemSanPham.OnPressedState.IconLeftImage = null;
+			this.btnThemSanPham.OnPressedState.IconRightImage = null;
+			this.btnThemSanPham.Size = new System.Drawing.Size(116, 37);
+			this.btnThemSanPham.TabIndex = 24;
+			this.btnThemSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.btnThemSanPham.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+			this.btnThemSanPham.TextMarginLeft = 0;
+			this.btnThemSanPham.TextPadding = new System.Windows.Forms.Padding(0);
+			this.btnThemSanPham.UseDefaultRadiusAndThickness = true;
+			this.btnThemSanPham.Click += new System.EventHandler(this.btnThemSanPham_Click);
+			// 
+			// txtTim
+			// 
+			this.txtTim.AcceptsReturn = false;
+			this.txtTim.AcceptsTab = false;
+			this.txtTim.AnimationSpeed = 200;
+			this.txtTim.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.txtTim.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.txtTim.BackColor = System.Drawing.Color.Transparent;
+			this.txtTim.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtTim.BackgroundImage")));
+			this.txtTim.BorderColorActive = System.Drawing.Color.DodgerBlue;
+			this.txtTim.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.txtTim.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.txtTim.BorderColorIdle = System.Drawing.Color.Silver;
+			this.txtTim.BorderRadius = 25;
+			this.txtTim.BorderThickness = 2;
+			this.txtTim.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+			this.txtTim.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTim.DefaultFont = new System.Drawing.Font("Segoe UI", 14F);
+			this.txtTim.DefaultText = "";
+			this.txtTim.FillColor = System.Drawing.Color.White;
+			this.txtTim.HideSelection = true;
+			this.txtTim.IconLeft = null;
+			this.txtTim.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTim.IconPadding = 10;
+			this.txtTim.IconRight = null;
+			this.txtTim.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTim.Lines = new string[0];
+			this.txtTim.Location = new System.Drawing.Point(527, 26);
+			this.txtTim.MaxLength = 32767;
+			this.txtTim.MinimumSize = new System.Drawing.Size(1, 1);
+			this.txtTim.Modified = false;
+			this.txtTim.Multiline = false;
+			this.txtTim.Name = "txtTim";
+			stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+			stateProperties5.FillColor = System.Drawing.Color.Empty;
+			stateProperties5.ForeColor = System.Drawing.Color.Empty;
+			stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtTim.OnActiveState = stateProperties5;
+			stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+			this.txtTim.OnDisabledState = stateProperties6;
+			stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			stateProperties7.FillColor = System.Drawing.Color.Empty;
+			stateProperties7.ForeColor = System.Drawing.Color.Empty;
+			stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtTim.OnHoverState = stateProperties7;
+			stateProperties8.BorderColor = System.Drawing.Color.Silver;
+			stateProperties8.FillColor = System.Drawing.Color.White;
+			stateProperties8.ForeColor = System.Drawing.Color.Empty;
+			stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtTim.OnIdleState = stateProperties8;
+			this.txtTim.Padding = new System.Windows.Forms.Padding(3);
+			this.txtTim.PasswordChar = '\0';
+			this.txtTim.PlaceholderForeColor = System.Drawing.Color.Silver;
+			this.txtTim.PlaceholderText = "Nhập Tên Sản Phẩm";
+			this.txtTim.ReadOnly = false;
+			this.txtTim.ScrollBars = System.Windows.Forms.ScrollBars.None;
+			this.txtTim.SelectedText = "";
+			this.txtTim.SelectionLength = 0;
+			this.txtTim.SelectionStart = 0;
+			this.txtTim.ShortcutsEnabled = true;
+			this.txtTim.Size = new System.Drawing.Size(629, 37);
+			this.txtTim.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+			this.txtTim.TabIndex = 12;
+			this.txtTim.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.txtTim.TextMarginBottom = 0;
+			this.txtTim.TextMarginLeft = 3;
+			this.txtTim.TextMarginTop = 0;
+			this.txtTim.TextPlaceholder = "Nhập Tên Sản Phẩm";
+			this.txtTim.UseSystemPasswordChar = false;
+			this.txtTim.WordWrap = true;
+			this.txtTim.TextChange += new System.EventHandler(this.txtTim_TextChanged);
 			// 
 			// txtSanPhamHienTai
 			// 
@@ -1545,8 +1558,9 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
 			this.ClientSize = new System.Drawing.Size(1350, 765);
-			this.Controls.Add(this.formDanhSachCTSP);
+			this.Controls.Add(this.formInputCTSP);
 			this.Controls.Add(this.label13);
+			this.Controls.Add(this.formDanhSachCTSP);
 			this.Controls.Add(this.formInputSanPham);
 			this.Controls.Add(this.btnThemSanPham);
 			this.Controls.Add(this.cbbLocTheLoai);
@@ -1576,10 +1590,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
 			this.formDanhSachCTSP.ResumeLayout(false);
 			this.formDanhSachCTSP.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.tableDSCTSP)).EndInit();
 			this.formInputCTSP.ResumeLayout(false);
 			this.formInputCTSP.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.tableDSCTSP)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
