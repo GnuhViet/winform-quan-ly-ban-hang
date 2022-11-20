@@ -10,6 +10,6 @@ namespace BTLCSDL.Model {
 		public String TenNCC { get; set; }
 		public String DiaChi { get; set; }
 		public String SoDT { get; set; }
-		public String email { get; set; }
+		public String Email { get; set; }
 	}
 }

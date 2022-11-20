@@ -73,6 +73,16 @@ namespace BTLCSDL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_32_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-32-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-32", resourceCulture);
@@ -163,9 +173,39 @@ namespace BTLCSDL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_color_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-color-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_country_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-country-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_home_page_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-home-page-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_leather_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-leather-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +253,26 @@ namespace BTLCSDL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_manager_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-manager-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_name_tag_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-name-tag-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_numbered_list_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-numbered-list-24", resourceCulture);
@@ -243,6 +303,16 @@ namespace BTLCSDL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_package_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-package-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_search_14 {
             get {
                 object obj = ResourceManager.GetObject("icons8-search-14", resourceCulture);
@@ -263,9 +333,29 @@ namespace BTLCSDL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_sell_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sell-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_shopping_cart_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-shopping-cart-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sneaker_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sneaker-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,6 +386,16 @@ namespace BTLCSDL.Properties {
         internal static System.Drawing.Bitmap icons8_truck_weight_max_loading_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-truck-weight-max-loading-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_warehouse_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-warehouse-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

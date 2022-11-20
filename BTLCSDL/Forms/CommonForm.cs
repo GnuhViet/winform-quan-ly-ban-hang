@@ -41,7 +41,6 @@ namespace BTLCSDL.Forms {
 			InitializeComponent();
 			// keo tha panel
 			ControlExtension.Draggable(formInput, true);
-			labelTimKiem.Text += formName + ": ";
 			txtTim.PlaceholderText += formName;
 		}
 
@@ -111,17 +110,30 @@ namespace BTLCSDL.Forms {
 			txtTen.Text = "";
 		}
 
-		private void btnTim_Click(object sender, EventArgs e) {
-			table.DataSource = dao.search(Ten.Name,txtTim.Text);
-		}
-
 		private void btnReset_Click(object sender, EventArgs e) {
 			txtTim.Text = "";
 			Form_Load(sender, e);
 		}
 
         private void txtTim_TextChanged(object sender, EventArgs e) {
-			table.DataSource = dao.search(Ten.Name, txtTim.Text);
+			if(cbbLoaiTimKiem.Text == "Tên") {
+				table.DataSource = dao.search(Ten.Name, txtTim.Text);
+			} else {
+				if (cbbLoaiTimKiem.Text == "Mã") {
+					if (!Regex.IsMatch(txtTim.Text.Trim(), @"^\d+$")) {
+						txtTim.Text = "";
+					}
+				}
+				table.DataSource = dao.search(Ma.Name, txtTim.Text);
+			}
+		}
+
+		private void txtTim_KeyPress(object sender, KeyPressEventArgs e) {
+			if (cbbLoaiTimKiem.Text == "Mã") {
+				if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.')) {
+					e.Handled = true;
+				}
+			}
 		}
 
 		private void btnThem_Click(object sender, EventArgs e) {
@@ -129,5 +141,9 @@ namespace BTLCSDL.Forms {
 			btnThemSubmit.Text = " thêm";
 			isThem = true;
 		}
-    }
+
+        private void cbbLoaiTimKiem_SelectedIndexChanged(object sender, EventArgs e) {
+			txtTim.PlaceholderText = "Nhập " + cbbLoaiTimKiem.Text + " " + formName;
+        }
+	}
 }

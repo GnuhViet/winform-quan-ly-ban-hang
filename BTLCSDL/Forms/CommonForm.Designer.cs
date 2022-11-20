@@ -41,10 +41,11 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtTen = new System.Windows.Forms.TextBox();
 			this.table = new Bunifu.UI.WinForms.BunifuDataGridView();
-			this.txtTim = new Bunifu.UI.WinForms.BunifuTextBox();
-			this.btnThem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
 			this.tabeBtnXoa = new System.Windows.Forms.DataGridViewImageColumn();
 			this.tableBtnSua = new System.Windows.Forms.DataGridViewImageColumn();
+			this.txtTim = new Bunifu.UI.WinForms.BunifuTextBox();
+			this.btnThem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+			this.cbbLoaiTimKiem = new Bunifu.UI.WinForms.BunifuDropdown();
 			this.formInput.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
 			this.SuspendLayout();
@@ -53,11 +54,11 @@
 			// 
 			this.labelTimKiem.AutoSize = true;
 			this.labelTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.labelTimKiem.Location = new System.Drawing.Point(12, 9);
+			this.labelTimKiem.Location = new System.Drawing.Point(12, 16);
 			this.labelTimKiem.Name = "labelTimKiem";
-			this.labelTimKiem.Size = new System.Drawing.Size(95, 24);
+			this.labelTimKiem.Size = new System.Drawing.Size(145, 24);
 			this.labelTimKiem.TabIndex = 2;
-			this.labelTimKiem.Text = "Tìm Kiếm ";
+			this.labelTimKiem.Text = "Tìm Kiếm Theo:";
 			// 
 			// formInput
 			// 
@@ -200,6 +201,28 @@
 			this.table.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
 			this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
 			// 
+			// tabeBtnXoa
+			// 
+			this.tabeBtnXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.tabeBtnXoa.FillWeight = 159.3909F;
+			this.tabeBtnXoa.HeaderText = "Xoá";
+			this.tabeBtnXoa.Image = global::BTLCSDL.Properties.Resources.icons8_close_20;
+			this.tabeBtnXoa.Name = "tabeBtnXoa";
+			this.tabeBtnXoa.ReadOnly = true;
+			this.tabeBtnXoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.tabeBtnXoa.Width = 40;
+			// 
+			// tableBtnSua
+			// 
+			this.tableBtnSua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.tableBtnSua.FillWeight = 40.60914F;
+			this.tableBtnSua.HeaderText = "Sửa";
+			this.tableBtnSua.Image = global::BTLCSDL.Properties.Resources.icons8_option_20;
+			this.tableBtnSua.Name = "tableBtnSua";
+			this.tableBtnSua.ReadOnly = true;
+			this.tableBtnSua.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.tableBtnSua.Width = 40;
+			// 
 			// txtTim
 			// 
 			this.txtTim.AcceptsReturn = false;
@@ -227,7 +250,7 @@
 			this.txtTim.IconRight = null;
 			this.txtTim.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
 			this.txtTim.Lines = new string[0];
-			this.txtTim.Location = new System.Drawing.Point(213, 3);
+			this.txtTim.Location = new System.Drawing.Point(295, 3);
 			this.txtTim.MaxLength = 32767;
 			this.txtTim.MinimumSize = new System.Drawing.Size(1, 1);
 			this.txtTim.Modified = false;
@@ -263,7 +286,7 @@
 			this.txtTim.SelectionLength = 0;
 			this.txtTim.SelectionStart = 0;
 			this.txtTim.ShortcutsEnabled = true;
-			this.txtTim.Size = new System.Drawing.Size(1019, 37);
+			this.txtTim.Size = new System.Drawing.Size(900, 37);
 			this.txtTim.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
 			this.txtTim.TabIndex = 27;
 			this.txtTim.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -274,6 +297,7 @@
 			this.txtTim.UseSystemPasswordChar = false;
 			this.txtTim.WordWrap = true;
 			this.txtTim.TextChange += new System.EventHandler(this.txtTim_TextChanged);
+			this.txtTim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTim_KeyPress);
 			// 
 			// btnThem
 			// 
@@ -365,27 +389,51 @@
 			this.btnThem.UseDefaultRadiusAndThickness = true;
 			this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
 			// 
-			// tabeBtnXoa
+			// cbbLoaiTimKiem
 			// 
-			this.tabeBtnXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.tabeBtnXoa.FillWeight = 159.3909F;
-			this.tabeBtnXoa.HeaderText = "Xoá";
-			this.tabeBtnXoa.Image = global::BTLCSDL.Properties.Resources.icons8_close_20;
-			this.tabeBtnXoa.Name = "tabeBtnXoa";
-			this.tabeBtnXoa.ReadOnly = true;
-			this.tabeBtnXoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-			this.tabeBtnXoa.Width = 40;
-			// 
-			// tableBtnSua
-			// 
-			this.tableBtnSua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.tableBtnSua.FillWeight = 40.60914F;
-			this.tableBtnSua.HeaderText = "Sửa";
-			this.tableBtnSua.Image = global::BTLCSDL.Properties.Resources.icons8_option_20;
-			this.tableBtnSua.Name = "tableBtnSua";
-			this.tableBtnSua.ReadOnly = true;
-			this.tableBtnSua.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-			this.tableBtnSua.Width = 40;
+			this.cbbLoaiTimKiem.BackColor = System.Drawing.Color.Transparent;
+			this.cbbLoaiTimKiem.BackgroundColor = System.Drawing.Color.White;
+			this.cbbLoaiTimKiem.BorderColor = System.Drawing.Color.Silver;
+			this.cbbLoaiTimKiem.BorderRadius = 13;
+			this.cbbLoaiTimKiem.Color = System.Drawing.Color.Silver;
+			this.cbbLoaiTimKiem.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+			this.cbbLoaiTimKiem.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			this.cbbLoaiTimKiem.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.cbbLoaiTimKiem.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			this.cbbLoaiTimKiem.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			this.cbbLoaiTimKiem.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+			this.cbbLoaiTimKiem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.cbbLoaiTimKiem.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+			this.cbbLoaiTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbbLoaiTimKiem.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+			this.cbbLoaiTimKiem.FillDropDown = true;
+			this.cbbLoaiTimKiem.FillIndicator = false;
+			this.cbbLoaiTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.cbbLoaiTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.cbbLoaiTimKiem.ForeColor = System.Drawing.Color.Black;
+			this.cbbLoaiTimKiem.FormattingEnabled = true;
+			this.cbbLoaiTimKiem.Icon = null;
+			this.cbbLoaiTimKiem.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+			this.cbbLoaiTimKiem.IndicatorColor = System.Drawing.Color.Gray;
+			this.cbbLoaiTimKiem.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+			this.cbbLoaiTimKiem.ItemBackColor = System.Drawing.Color.White;
+			this.cbbLoaiTimKiem.ItemBorderColor = System.Drawing.Color.White;
+			this.cbbLoaiTimKiem.ItemForeColor = System.Drawing.Color.Black;
+			this.cbbLoaiTimKiem.ItemHeight = 26;
+			this.cbbLoaiTimKiem.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+			this.cbbLoaiTimKiem.ItemHighLightForeColor = System.Drawing.Color.White;
+			this.cbbLoaiTimKiem.Items.AddRange(new object[] {
+            "Tên",
+            "Mã"});
+			this.cbbLoaiTimKiem.ItemTopMargin = 3;
+			this.cbbLoaiTimKiem.Location = new System.Drawing.Point(163, 8);
+			this.cbbLoaiTimKiem.Name = "cbbLoaiTimKiem";
+			this.cbbLoaiTimKiem.Size = new System.Drawing.Size(112, 32);
+			this.cbbLoaiTimKiem.TabIndex = 30;
+			this.cbbLoaiTimKiem.Text = "Tên";
+			this.cbbLoaiTimKiem.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+			this.cbbLoaiTimKiem.TextLeftMargin = 5;
+			this.cbbLoaiTimKiem.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiTimKiem_SelectedIndexChanged);
 			// 
 			// CommonForm
 			// 
@@ -393,6 +441,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
 			this.ClientSize = new System.Drawing.Size(1350, 765);
+			this.Controls.Add(this.cbbLoaiTimKiem);
 			this.Controls.Add(this.btnThem);
 			this.Controls.Add(this.txtTim);
 			this.Controls.Add(this.formInput);
@@ -422,5 +471,6 @@
 		private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.DataGridViewImageColumn tabeBtnXoa;
         private System.Windows.Forms.DataGridViewImageColumn tableBtnSua;
+        private Bunifu.UI.WinForms.BunifuDropdown cbbLoaiTimKiem;
     }
 }

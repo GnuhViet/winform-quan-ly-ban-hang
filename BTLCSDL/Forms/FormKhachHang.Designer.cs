@@ -498,7 +498,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.table);
 			this.Name = "FormKhachHang";
-			this.Text = "FormNhanVien";
+			this.Text = "FormKhachHang";
 			this.Load += new System.EventHandler(this.FormKhachHang_Load);
 			this.formInput.ResumeLayout(false);
 			this.formInput.PerformLayout();

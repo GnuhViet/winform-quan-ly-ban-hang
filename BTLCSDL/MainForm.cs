@@ -38,6 +38,7 @@ namespace BTLCSDL {
 		private ReflectionDAO nhanVienDAO;
 		private ReflectionDAO hoaDonBanDAO;
 		private ReflectionDAO khachHangDAO;
+		private ReflectionDAO nhaCungCapDAO;
 		private ReflectionDAO chiTietHoaDonBanDAO;
 		#endregion
 
@@ -69,11 +70,15 @@ namespace BTLCSDL {
 			hoaDonBanDAO = new ReflectionDAO(typeof(HoaDonBan));
 			khachHangDAO = new ReflectionDAO(typeof(KhachHang));
 			chiTietHoaDonBanDAO = new ReflectionDAO(typeof(ChiTietHDB));
+			nhaCungCapDAO = new ReflectionDAO(typeof(NhaCungCap));
 			#endregion
 
 			SanPhamDropDownMenu.IsMainMenu = true;
 			NhanVienDropDownMenu.IsMainMenu = true;
 			HoaDonDropDownMenu.IsMainMenu = true;
+			SanPhamDropDownMenu.PrimaryColor = Color.FromArgb(13, 72, 111);
+			NhanVienDropDownMenu.PrimaryColor = Color.FromArgb(13, 72, 111);
+			HoaDonDropDownMenu.PrimaryColor = Color.FromArgb(13, 72, 111);
 		}
 
 
@@ -221,6 +226,13 @@ namespace BTLCSDL {
 			OpenChildForm(new FormKhachHang(khachHangDAO), sender);
 			setOffAll();
 			setOn(btnKhachHang);
+		}
+
+        private void btnNhaCungCap_Click(object sender, EventArgs e) {
+			formName.Text = "Nhà Cung Cấp";
+			OpenChildForm(new FormNhaCungCap(nhaCungCapDAO), sender);
+			setOffAll();
+			setOn(btnNhaCungCap);
 		}
     }
 }
