@@ -38,5 +38,9 @@ namespace BTLCSDL.DAO.impl {
 							"where " + whereClause.ToString();
 			return table(query);
 		}
+
+		public DataTable getAllWithChiTiet() {
+			return table("select SanPham.*, MaMS, MaS, SoLuong");
+		}
 	}
 }

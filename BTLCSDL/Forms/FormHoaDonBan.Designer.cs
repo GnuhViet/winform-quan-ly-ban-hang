@@ -1,5 +1,5 @@
 ﻿namespace BTLCSDL.Forms {
-	partial class FormHoaDon {
+	partial class FormHoaDonBan {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
@@ -26,7 +26,7 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHoaDon));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHoaDonBan));
 			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
 			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
 			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -762,7 +762,7 @@
 			// 
 			this.tabeBtnXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
 			this.tabeBtnXoa.FillWeight = 159.3909F;
-			this.tabeBtnXoa.HeaderText = "Xoa";
+			this.tabeBtnXoa.HeaderText = "Xoá";
 			this.tabeBtnXoa.Image = global::BTLCSDL.Properties.Resources.icons8_close_20;
 			this.tabeBtnXoa.Name = "tabeBtnXoa";
 			this.tabeBtnXoa.ReadOnly = true;
@@ -773,14 +773,14 @@
 			// 
 			this.tableBtnSua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
 			this.tableBtnSua.FillWeight = 40.60914F;
-			this.tableBtnSua.HeaderText = "Sua";
+			this.tableBtnSua.HeaderText = "Sửa";
 			this.tableBtnSua.Image = global::BTLCSDL.Properties.Resources.icons8_option_20;
 			this.tableBtnSua.Name = "tableBtnSua";
 			this.tableBtnSua.ReadOnly = true;
 			this.tableBtnSua.Resizable = System.Windows.Forms.DataGridViewTriState.True;
 			this.tableBtnSua.Width = 40;
 			// 
-			// FormHoaDon
+			// FormHoaDonBan
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -792,7 +792,7 @@
 			this.Controls.Add(this.txtTimHoaDon);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.table);
-			this.Name = "FormHoaDon";
+			this.Name = "FormHoaDonBan";
 			this.Text = "FormHoaDon";
 			this.Load += new System.EventHandler(this.FormHoaDon_Load);
 			this.formThemHoaDon.ResumeLayout(false);

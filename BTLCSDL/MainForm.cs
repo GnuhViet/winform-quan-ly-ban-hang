@@ -36,6 +36,9 @@ namespace BTLCSDL {
 		private ReflectionDAO sanPhamDAO;
 		private ReflectionDAO chiTietSPDAO;
 		private ReflectionDAO nhanVienDAO;
+		private ReflectionDAO hoaDonBanDAO;
+		private ReflectionDAO khachHangDAO;
+		private ReflectionDAO chiTietHoaDonBanDAO;
 		#endregion
 
 		public MainForm() {
@@ -62,12 +65,15 @@ namespace BTLCSDL {
 
 			sanPhamDAO = new SanPhamDAO(typeof(SanPham));
 			chiTietSPDAO = new ReflectionDAO(typeof(ChiTietSP));
-
 			nhanVienDAO = new NhanVienDAO(typeof(NhanVien));
+			hoaDonBanDAO = new ReflectionDAO(typeof(HoaDonBan));
+			khachHangDAO = new ReflectionDAO(typeof(KhachHang));
+			chiTietHoaDonBanDAO = new ReflectionDAO(typeof(ChiTietHDB));
 			#endregion
 
 			SanPhamDropDownMenu.IsMainMenu = true;
 			NhanVienDropDownMenu.IsMainMenu = true;
+			HoaDonDropDownMenu.IsMainMenu = true;
 		}
 
 
@@ -185,7 +191,7 @@ namespace BTLCSDL {
 
         private void btnHoaDon_Click(object sender, EventArgs e) {
 			formName.Text = "Hoá Đơn";
-			//OpenChildForm(new FormHoaDon(), sender);
+			HoaDonDropDownMenu.Show(btnHoaDon, btnHoaDon.Width, 0);
 			setOffAll();
 			setOn(btnHoaDon);
 		}
@@ -204,10 +210,10 @@ namespace BTLCSDL {
 			//setOn(btnChucVu);
 		}
 
-		private void btnChatLieu_Click(object sender, EventArgs e) {
-
+		private void btnHoaDonBan_Click(object sender, EventArgs e) {
+			OpenChildForm(new FormHoaDonBan(hoaDonBanDAO, khachHangDAO, nhanVienDAO, chiTietHoaDonBanDAO, chiTietSPDAO, sanPhamDAO), sender);
+			setOffAll();
+			setOn(btnHoaDon);
 		}
-
-
 	}
 }

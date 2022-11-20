@@ -15,28 +15,38 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace BTLCSDL.Forms {
-	public partial class FormHoaDon : Form {
-		ModelDAO<HoaDon> hdDao;
-		ModelDAO<NhanVien> nvDao;
-		ModelDAO<SanPham> spDao;
-		ChiTietHoaDonDAO cthdDao;
+	public partial class FormHoaDonBan : Form {
+		ReflectionDAO dao;
+		ReflectionDAO khDAO;
+		ReflectionDAO nvDAO;
+		ReflectionDAO cthdbDAO;
+		ReflectionDAO ctspDAO;
+		ReflectionDAO spDAO;
+
 		private bool isThem;
-		List<NhanVien> listNhanVien;
-		List<SanPham> listSanPham;
+		List<Object> listNhanVien;
+		List<Object> listSanPham;
 
-		public FormHoaDon() {
+		public FormHoaDonBan(ReflectionDAO dao, 
+				ReflectionDAO khDAO,
+				ReflectionDAO nvDAO, 
+				ReflectionDAO cthdbDAO,
+				ReflectionDAO ctspDAO,
+				ReflectionDAO spDAO) {
+
 			InitializeComponent();
-			hdDao = new HoaDonDao();
-			nvDao = new NhanVienDao();
-			spDao = new SanPhamDAO();
-			cthdDao = new ChiTietHoaDonDAO();
-
-
-			listNhanVien = ((NhanVienDao)nvDao).getListAll();
+			this.dao = dao;
+			this.khDAO = khDAO;
+			this.nvDAO = nvDAO;
+			this.cthdbDAO = cthdbDAO;
+			this.ctspDAO = ctspDAO;
+			this.spDAO = spDAO;
+			
+			listNhanVien = nvDAO.getListAll();
 
 
 			foreach (NhanVien nv in listNhanVien) {
-				cbbListNhanVien.Items.Add(nv.HoVaTen + " - " + nv.id);
+				cbbListNhanVien.Items.Add(nv.HoTenNV + " - " + nv.MaNV);
 			}
 			//txtNamSinh.CustomFormat = "yyyy-MM-dd";
 			//txtNgayBDLam.CustomFormat = "yyyy-MM-dd";
@@ -46,7 +56,7 @@ namespace BTLCSDL.Forms {
 		}
 
 		private void FormHoaDon_Load(object sender, EventArgs e) {
-			table.DataSource = ((HoaDonDao)hdDao).getAll();
+			table.DataSource = dao.getAll();
 			txtTongTienThanhToan.Text = "0";
 			txtTienKhachTra.Text = "0";
 			txtTienTraLai.Text = "0";
@@ -63,7 +73,7 @@ namespace BTLCSDL.Forms {
 				return;
 			}
 
-			table.DataSource = ((HoaDonDao)hdDao).search(Convert.ToInt32(txtTimHoaDon.Text));
+			table.DataSource = dao.search("MaHDB", txtTimHoaDon.Text);
 			// check nhung san pham da chon
 		}
 
@@ -76,7 +86,7 @@ namespace BTLCSDL.Forms {
 		private void table_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 			if (e.ColumnIndex == 0) {
 				isThem = true;
-				hdDao.delelte(Convert.ToInt32(table.CurrentRow.Cells[2].Value));
+				dao.delelte(Convert.ToInt32(table.CurrentRow.Cells[2].Value));
 				FormHoaDon_Load(sender, e);
 				return;
 			}
@@ -101,8 +111,8 @@ namespace BTLCSDL.Forms {
 		}
 
 		private void btnThemSanPham_Click(object sender, EventArgs e) {
-			panelChonSanPham.Visible = true;
-			danhSachSanPham.DataSource = ((SanPhamDAO)spDao).getDanhSach();
+			/*panelChonSanPham.Visible = true;
+			danhSachSanPham.DataSource = ((SanPhamDAO)spDAO).getDanhSach(); // get toan bo san pham voi chi tiet
 			int n = danhSachSanPham.Columns.Count;
 			for (int i = 2; i < n; i++) {
 				danhSachSanPham.Columns[i].ReadOnly = true;
@@ -110,13 +120,13 @@ namespace BTLCSDL.Forms {
 
 			// list tam thoi
 			tmp = new List<SanPham>(listSanPham);
-			CheckNhungSanPhamDaChon();
+			CheckNhungSanPhamDaChon();*/
 		}
 
 		private void loadDanhSachSanPhamHoaDon() {
-			var bindingList = new BindingList<SanPham>(listSanPham);
+/*			var bindingList = new BindingList<SanPham>(listSanPham);
 			var source = new BindingSource(bindingList, null);
-			danhSachSanPhamCuaHoaDon.DataSource = source;
+			danhSachSanPhamCuaHoaDon.DataSource = source;*/
 		}
 
 		private void btnDongFromHoaDon_Click(object sender, EventArgs e) {
@@ -126,7 +136,7 @@ namespace BTLCSDL.Forms {
 			FormHoaDon_Load(sender, e);
 		}
 
-		private HoaDon getForm() {
+		/*private HoaDon getForm() {
 			HoaDon hd = new HoaDon();
 			if (txtHoaDonID.Text != "") {
 				hd.id = Convert.ToInt32(txtHoaDonID.Text);
@@ -137,7 +147,7 @@ namespace BTLCSDL.Forms {
 			hd.NhanVienId = Convert.ToInt32(txtNhanVienID.Text);
 			hd.NgayBan = dtpNgayBan.Value;
 			return hd;
-		}
+		}*/
 
 		private void setForm() {
 			txtHoaDonID.Text = Convert.ToString(table.CurrentRow.Cells[2].Value);
@@ -149,18 +159,18 @@ namespace BTLCSDL.Forms {
 		}
 
 		private void loadListSanPham() {
-			List<ChiTietHoaDon> cthdList = cthdDao.getListByHoaDonID(Convert.ToInt32(txtHoaDonID.Text));
+/*			List<ChiTietHoaDon> cthdList = cthdbDAO.getListByHoaDonID(Convert.ToInt32(txtHoaDonID.Text));
 			listSanPham = new List<SanPham>();
 			foreach(ChiTietHoaDon cthd in cthdList) {
-				SanPham sp = ((SanPhamDAO)spDao).getById(cthd.SanPhamId);
+				SanPham sp = ((SanPhamDAO)spDAO).getById(cthd.SanPhamId);
 				sp.SoLuong = cthd.SoLuong;
 				sp.ThanhTien = sp.SoLuong * sp.DonGia;
 				listSanPham.Add(sp);
-			}
+			}*/
 		}
 
 		private void btnThemHoaDonSubmit_Click(object sender, EventArgs e) {
-			// tinh tien khach can tra
+			/*// tinh tien khach can tra
 			int TienKhachTra = Convert.ToInt32(txtTienKhachTra.Text);
 			int TongTienCanTra = (Convert.ToInt32(txtTongTienThanhToan.Text));
 			if (TienKhachTra < TongTienCanTra) {
@@ -177,7 +187,7 @@ namespace BTLCSDL.Forms {
 				return;
 			}
 			if (isThem) {
-				int createId = hdDao.create(hd);
+				int createId = dao.create(hd);
 				// create chi tiet hoa dn
 				if (createId == -1) {
 					MessageBox.Show("khong them duoc vi da ton tai ");
@@ -186,11 +196,11 @@ namespace BTLCSDL.Forms {
 
 				List<ChiTietHoaDon> list = getListCTHD(createId);
 				foreach(ChiTietHoaDon c in list) {
-					cthdDao.create(c);
+					cthdbDAO.create(c);
 				}
 
 			} else { // sua
-				List<ChiTietHoaDon> oldList = cthdDao.getListByHoaDonID(hd.id);
+				List<ChiTietHoaDon> oldList = cthdbDAO.getListByHoaDonID(hd.id);
 				List<ChiTietHoaDon> newList = getListCTHD(hd.id);
 
 
@@ -204,23 +214,23 @@ namespace BTLCSDL.Forms {
 						}					
 					}
 					if(isContain) {
-						cthdDao.update(newCTHD);
+						cthdbDAO.update(newCTHD);
 					} else {
-						cthdDao.create(newCTHD);
+						cthdbDAO.create(newCTHD);
 					}
 				}
 
-				hdDao.update(hd);
+				dao.update(hd);
 				btnDongFrom.PerformClick();
 			}
 
 			// xoa danh sach san pham neu submit
 			listSanPham = null;
 
-			FormHoaDon_Load(sender, e);
+			FormHoaDon_Load(sender, e);*/
 		}
 
-		private List<ChiTietHoaDon> getListCTHD(int hdID) {
+/*		private List<ChiTietHoaDon> getListCTHD(int hdID) {
 			List<ChiTietHoaDon> cthd = new List<ChiTietHoaDon>();
 			foreach (SanPham sp in listSanPham) {
 				ChiTietHoaDon chiTietHoaDon = new ChiTietHoaDon();
@@ -230,10 +240,10 @@ namespace BTLCSDL.Forms {
 				cthd.Add(chiTietHoaDon);
 			}
 			return cthd;
-		}
+		}*/
 
 		private void CheckNhungSanPhamDaChon() {
-			foreach (DataGridViewRow row in danhSachSanPham.Rows) {
+			/*foreach (DataGridViewRow row in danhSachSanPham.Rows) {
 				DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)row.Cells[0];
 				foreach (SanPham sp in tmp) {
 					if (sp.id == Convert.ToInt32(row.Cells[2].Value)) {
@@ -241,7 +251,7 @@ namespace BTLCSDL.Forms {
 						row.Cells[1].Value = sp.SoLuong;
 					}
 				}
-			}
+			}*/
 		}
 
 		// panel chon san pham ===================================
@@ -254,7 +264,7 @@ namespace BTLCSDL.Forms {
 		}
 
 		private void btnXacNhanSanPham_Click(object sender, EventArgs e) {
-			bool isContain = false;
+/*			bool isContain = false;
 			int index;
 			foreach(SanPham spNew in tmp) {
 				if (spNew.SoLuong == 0) {
@@ -272,17 +282,17 @@ namespace BTLCSDL.Forms {
 			txtTongTienThanhToan.Text = Tong.ToString();
 
 			panelChonSanPham.Visible = false;
-			loadDanhSachSanPhamHoaDon();
+			loadDanhSachSanPhamHoaDon();*/
 		}
 
 		private void txtTimSanPham_TextChanged(object sender, EventArgs e) {
-			danhSachSanPham.DataSource = ((SanPhamDAO)spDao).getDanhSach(txtTimSanPham.Text);
+/*			danhSachSanPham.DataSource = ((SanPhamDAO)spDAO).getDanhSach(txtTimSanPham.Text);
 			// check nhung san pham da chon
-			CheckNhungSanPhamDaChon();
+			CheckNhungSanPhamDaChon();*/
 		}
 
 		private void danhSachSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-			if (e.ColumnIndex == 0) { // nut chon
+			/*if (e.ColumnIndex == 0) { // nut chon
 				if (Convert.ToBoolean(danhSachSanPham.CurrentCell.Value)) {
 					foreach (SanPham s in tmp) {
 						if (s.id == Convert.ToInt32(danhSachSanPham.CurrentRow.Cells[2].Value)) {
@@ -310,7 +320,7 @@ namespace BTLCSDL.Forms {
 
 				tmp.Add(sp);
 				return;
-			}
+			}*/
 		}
 
 		private void danhSachSanPham_CellEndEdit(object sender, DataGridViewCellEventArgs e) {
@@ -330,13 +340,13 @@ namespace BTLCSDL.Forms {
 					return;
 				}
 
-				foreach (SanPham sp in tmp) {
+/*				foreach (SanPham sp in tmp) {
 					int idHientai = Convert.ToInt32(danhSachSanPham.CurrentRow.Cells[2].Value);
 					if (idHientai == sp.id) {
 						sp.SoLuong = SoLuong;
 						sp.ThanhTien = SoLuong * Convert.ToInt32(danhSachSanPham.CurrentRow.Cells[5].Value);
 					}
-				}
+				}*/
 			}
 		}
 

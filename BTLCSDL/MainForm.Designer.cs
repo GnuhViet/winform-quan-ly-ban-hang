@@ -47,12 +47,16 @@
 			this.NhanVienDropDownMenu = new BTLCSDL.CustomControl.RJDropdownMenu(this.components);
 			this.dsNhanVien = new System.Windows.Forms.ToolStripMenuItem();
 			this.dsChucVu = new System.Windows.Forms.ToolStripMenuItem();
+			this.HoaDonDropDownMenu = new BTLCSDL.CustomControl.RJDropdownMenu(this.components);
+			this.btnHoaDonBan = new System.Windows.Forms.ToolStripMenuItem();
+			this.btnHoaDonNhap = new System.Windows.Forms.ToolStripMenuItem();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
 			this.panelDesktopPane.SuspendLayout();
 			this.SanPhamDropDownMenu.SuspendLayout();
 			this.NhanVienDropDownMenu.SuspendLayout();
+			this.HoaDonDropDownMenu.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel4
@@ -132,6 +136,7 @@
 			this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
 			this.btnHoaDon.UseVisualStyleBackColor = true;
+			this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
 			// 
 			// btnSanPham
 			// 
@@ -268,13 +273,13 @@
 			this.SanPhamDropDownMenu.MenuItemTextColor = System.Drawing.Color.Empty;
 			this.SanPhamDropDownMenu.Name = "SanPhamDropDownMenu";
 			this.SanPhamDropDownMenu.PrimaryColor = System.Drawing.Color.Empty;
-			this.SanPhamDropDownMenu.Size = new System.Drawing.Size(181, 170);
+			this.SanPhamDropDownMenu.Size = new System.Drawing.Size(161, 148);
 			// 
 			// dsSanPham
 			// 
 			this.dsSanPham.ForeColor = System.Drawing.Color.White;
 			this.dsSanPham.Name = "dsSanPham";
-			this.dsSanPham.Size = new System.Drawing.Size(180, 24);
+			this.dsSanPham.Size = new System.Drawing.Size(160, 24);
 			this.dsSanPham.Text = "DS Sản Phẩm";
 			this.dsSanPham.Click += new System.EventHandler(this.dsSanPham_Click);
 			// 
@@ -282,7 +287,7 @@
 			// 
 			this.dsChatLieu.ForeColor = System.Drawing.Color.White;
 			this.dsChatLieu.Name = "dsChatLieu";
-			this.dsChatLieu.Size = new System.Drawing.Size(180, 24);
+			this.dsChatLieu.Size = new System.Drawing.Size(160, 24);
 			this.dsChatLieu.Text = "DS Chất Liệu";
 			this.dsChatLieu.Click += new System.EventHandler(this.dsChatLieu_Click);
 			// 
@@ -290,7 +295,7 @@
 			// 
 			this.dsTheLoai.ForeColor = System.Drawing.Color.White;
 			this.dsTheLoai.Name = "dsTheLoai";
-			this.dsTheLoai.Size = new System.Drawing.Size(180, 24);
+			this.dsTheLoai.Size = new System.Drawing.Size(160, 24);
 			this.dsTheLoai.Text = "DS Thể Loại";
 			this.dsTheLoai.Click += new System.EventHandler(this.dsTheLoai_Click);
 			// 
@@ -298,7 +303,7 @@
 			// 
 			this.dsQuocGia.ForeColor = System.Drawing.Color.White;
 			this.dsQuocGia.Name = "dsQuocGia";
-			this.dsQuocGia.Size = new System.Drawing.Size(180, 24);
+			this.dsQuocGia.Size = new System.Drawing.Size(160, 24);
 			this.dsQuocGia.Text = "DS Quốc Gia";
 			this.dsQuocGia.Click += new System.EventHandler(this.dsQuocGia_Click);
 			// 
@@ -306,7 +311,7 @@
 			// 
 			this.dsSize.ForeColor = System.Drawing.Color.White;
 			this.dsSize.Name = "dsSize";
-			this.dsSize.Size = new System.Drawing.Size(180, 24);
+			this.dsSize.Size = new System.Drawing.Size(160, 24);
 			this.dsSize.Text = "DS Size";
 			this.dsSize.Click += new System.EventHandler(this.dsSize_Click);
 			// 
@@ -314,12 +319,13 @@
 			// 
 			this.dsMauSac.ForeColor = System.Drawing.Color.White;
 			this.dsMauSac.Name = "dsMauSac";
-			this.dsMauSac.Size = new System.Drawing.Size(180, 24);
+			this.dsMauSac.Size = new System.Drawing.Size(160, 24);
 			this.dsMauSac.Text = "DS Màu Sắc";
 			this.dsMauSac.Click += new System.EventHandler(this.dsMauSac_Click);
 			// 
 			// NhanVienDropDownMenu
 			// 
+			this.NhanVienDropDownMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
 			this.NhanVienDropDownMenu.IsMainMenu = false;
 			this.NhanVienDropDownMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dsNhanVien,
@@ -350,6 +356,38 @@
 			this.dsChucVu.Text = "DS Chức Vụ";
 			this.dsChucVu.Click += new System.EventHandler(this.dsChucVu_Click);
 			// 
+			// HoaDonDropDownMenu
+			// 
+			this.HoaDonDropDownMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.HoaDonDropDownMenu.IsMainMenu = false;
+			this.HoaDonDropDownMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnHoaDonBan,
+            this.btnHoaDonNhap});
+			this.HoaDonDropDownMenu.MenuItemHeight = 25;
+			this.HoaDonDropDownMenu.MenuItemTextColor = System.Drawing.Color.Empty;
+			this.HoaDonDropDownMenu.Name = "HoaDonDropDownMenu";
+			this.HoaDonDropDownMenu.PrimaryColor = System.Drawing.Color.Empty;
+			this.HoaDonDropDownMenu.Size = new System.Drawing.Size(181, 74);
+			// 
+			// btnHoaDonBan
+			// 
+			this.btnHoaDonBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.btnHoaDonBan.Font = new System.Drawing.Font("Segoe UI", 10F);
+			this.btnHoaDonBan.ForeColor = System.Drawing.Color.White;
+			this.btnHoaDonBan.Name = "btnHoaDonBan";
+			this.btnHoaDonBan.Size = new System.Drawing.Size(168, 24);
+			this.btnHoaDonBan.Text = "Hoá Đơn Bán";
+			this.btnHoaDonBan.Click += new System.EventHandler(this.btnHoaDonBan_Click);
+			// 
+			// btnHoaDonNhap
+			// 
+			this.btnHoaDonNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.btnHoaDonNhap.Font = new System.Drawing.Font("Segoe UI", 10F);
+			this.btnHoaDonNhap.ForeColor = System.Drawing.Color.White;
+			this.btnHoaDonNhap.Name = "btnHoaDonNhap";
+			this.btnHoaDonNhap.Size = new System.Drawing.Size(168, 24);
+			this.btnHoaDonNhap.Text = "Hoá Đơn Nhập";
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,6 +410,7 @@
 			this.panelDesktopPane.PerformLayout();
 			this.SanPhamDropDownMenu.ResumeLayout(false);
 			this.NhanVienDropDownMenu.ResumeLayout(false);
+			this.HoaDonDropDownMenu.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -401,6 +440,9 @@
         private CustomControl.RJDropdownMenu NhanVienDropDownMenu;
         private System.Windows.Forms.ToolStripMenuItem dsNhanVien;
         private System.Windows.Forms.ToolStripMenuItem dsChucVu;
+        private CustomControl.RJDropdownMenu HoaDonDropDownMenu;
+        private System.Windows.Forms.ToolStripMenuItem btnHoaDonBan;
+        private System.Windows.Forms.ToolStripMenuItem btnHoaDonNhap;
     }
 }
 
