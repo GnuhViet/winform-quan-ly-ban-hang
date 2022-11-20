@@ -1,5 +1,5 @@
 ﻿namespace BTLCSDL.Forms {
-	partial class FormNhanVien {
+	partial class FormNhaCungCap {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
@@ -494,7 +494,7 @@
 			this.txtTim.Padding = new System.Windows.Forms.Padding(3);
 			this.txtTim.PasswordChar = '\0';
 			this.txtTim.PlaceholderForeColor = System.Drawing.Color.Silver;
-			this.txtTim.PlaceholderText = "Nhập Tên";
+			this.txtTim.PlaceholderText = "Nhập ";
 			this.txtTim.ReadOnly = false;
 			this.txtTim.ScrollBars = System.Windows.Forms.ScrollBars.None;
 			this.txtTim.SelectedText = "";
@@ -508,11 +508,10 @@
 			this.txtTim.TextMarginBottom = 0;
 			this.txtTim.TextMarginLeft = 3;
 			this.txtTim.TextMarginTop = 0;
-			this.txtTim.TextPlaceholder = "Nhập Tên";
+			this.txtTim.TextPlaceholder = "Nhập ";
 			this.txtTim.UseSystemPasswordChar = false;
 			this.txtTim.WordWrap = true;
 			this.txtTim.TextChange += new System.EventHandler(this.txtTim_TextChanged);
-			this.txtTim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTim_KeyPress);
 			// 
 			// btnThemNhanVien
 			// 
@@ -650,7 +649,6 @@
 			this.cbbLoaiTimKiem.Text = "Tên";
 			this.cbbLoaiTimKiem.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
 			this.cbbLoaiTimKiem.TextLeftMargin = 5;
-			this.cbbLoaiTimKiem.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiTimKiem_SelectedIndexChanged);
 			// 
 			// cbbLocChucVu
 			// 

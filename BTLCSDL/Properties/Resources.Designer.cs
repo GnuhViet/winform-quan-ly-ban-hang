@@ -103,6 +103,26 @@ namespace BTLCSDL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_buyer_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-buyer-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_buyer_32__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-buyer-32 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_close_14 {
             get {
                 object obj = ResourceManager.GetObject("icons8-close-14", resourceCulture);
@@ -266,6 +286,16 @@ namespace BTLCSDL.Properties {
         internal static System.Drawing.Bitmap icons8_statistic_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-statistic-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_truck_weight_max_loading_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-truck-weight-max-loading-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

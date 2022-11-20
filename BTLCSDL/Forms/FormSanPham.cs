@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -75,10 +76,12 @@ namespace BTLCSDL.Forms {
 			}
 			foreach (int i in HTSize.Keys) {
 				Model.Size model = (Model.Size)HTSize[i];
+				cbbLocSize.Items.Add(model.MaS + " - " + model.TenS);
 				cbbSize.Items.Add(model.MaS + " - " + model.TenS);
 			}
 			foreach (int i in HTMau.Keys) {
 				MauSac model = (MauSac)HTMau[i];
+				cbbLocMauSac.Items.Add(model.MaMS + " - " + model.TenMS);
 				cbbMauSac.Items.Add(model.MaMS + " - " + model.TenMS);
 			}
 			
@@ -154,9 +157,25 @@ namespace BTLCSDL.Forms {
 			}; test.Add(typeof(MauSac), listMauSac);
 
 			DataTable dt = null;
+
+			String val = txtTim.Text;
+			String searchField = "";
+			if (val != null && val != "") {
+				searchField = cbbLocTim.Text;
+				if (searchField == "Tên") {
+					searchField = "TenSP";
+				} else if (searchField == "Mã") {
+					searchField = "MaSP";
+				} else if (searchField == "Giá Bán") {
+					searchField = "DonGiaBan";
+				} else if (searchField == "Giá Nhập") {
+					searchField = "DonGiaNhap";
+				}
+				needFillter = true;
+			}
 			// load san pham
 			if (needFillter) {
-				dt = ((SanPhamDAO)dao).getWithMa(test);
+				dt = ((SanPhamDAO)dao).getWithMaAndSearchWithField(test, searchField, val);
 			} else {
 				dt = dao.getAll();
 			}
@@ -218,7 +237,21 @@ namespace BTLCSDL.Forms {
 		}
 
 		private void txtTim_TextChanged(object sender, EventArgs e) {
-			table.DataSource = dao.search("TenSP", txtTim.Text);
+			if(cbbLocTim.Text == "Mã" || cbbLocTim.Text.StartsWith("Giá")) {
+				if (!Regex.IsMatch(txtTim.Text.Trim(), @"^\d+$")) {
+					txtTim.Text = "";
+				}
+			}
+			FormSanPham_Load(sender, e);
+		}
+
+
+		private void txtTim_KeyPress(object sender, KeyPressEventArgs e) {
+			if (cbbLocTim.Text == "Mã" || cbbLocTim.Text.StartsWith("Giá")) {
+				if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.')) {
+					e.Handled = true;
+				}
+			}
 		}
 
 		private void cbbLocTheLoai_SelectedIndexChanged(object sender, EventArgs e) {
@@ -409,6 +442,32 @@ namespace BTLCSDL.Forms {
 		#region form-chi-tiet-san-pham
 		private void ReLoadCHTSP() {
 			DataTable dt = ChiTietSPDAO.getDataTableByField("MaSP", MaSanPhamHienTai.ToString());
+			DataTable res = dt.Clone(); // clone cau truc table
+			
+			if (cbbLocSize.Text != null && cbbLocSize.Text != "") {
+				String size = cbbLocSize.Text.Replace(" ", "").Split('-')[0];
+				foreach(DataRow row in dt.Rows) {
+					String id = row["MaS"].ToString();
+					if (id == size) {
+						res.ImportRow(row);
+					}
+				}
+				dt = res;
+			}
+
+			res = dt.Clone();
+			if (cbbLocMauSac.Text != null && cbbLocMauSac.Text != "") {
+				String size = cbbLocMauSac.Text.Replace(" ", "").Split('-')[0];
+				foreach (DataRow row in dt.Rows) {
+					String id = row["MaMS"].ToString();
+					if (id == size) {
+						res.ImportRow(row);
+					}
+				}
+				dt = res;
+			}
+
+
 			dt.Columns.Add("Tên Size", typeof(String));
 			dt.Columns.Add("Tên Màu Sắc", typeof(String));
 			foreach (DataRow row in dt.Rows) {
@@ -422,6 +481,14 @@ namespace BTLCSDL.Forms {
 			tableDSCTSP.Columns["MaS"].Visible = false;
 			tableDSCTSP.Columns["MaMS"].Visible = false;
 			tableDSCTSP.Columns["MaSP"].Visible = false;
+		}
+
+		private void cbbLocSize_SelectedIndexChanged(object sender, EventArgs e) {
+			ReLoadCHTSP();
+		}
+
+		private void cbbLocMau_SelectedIndexChanged(object sender, EventArgs e) {
+			ReLoadCHTSP();
 		}
 
 		private void btnDongFormCTSP_Click(object sender, EventArgs e) {
@@ -508,7 +575,12 @@ namespace BTLCSDL.Forms {
 			tableDSCTSP.DataSource = dt;
 		}
 
-		#endregion
+        #endregion
+
+        private void cbbLocTim_SelectedIndexChanged(object sender, EventArgs e) {
+			txtTim.PlaceholderText = "Nhập " + cbbLocTim.Text;
+        }
+
 
 	}
 }

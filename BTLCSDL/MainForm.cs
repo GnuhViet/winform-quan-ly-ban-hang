@@ -200,7 +200,7 @@ namespace BTLCSDL {
 			formName.Text = "Thống Kê";
 			//OpenChildForm(new FormThongKe(), sender);
 			setOffAll();
-			setOn(btnThongKe);
+			setOn(btnKhachHang);
 		}
 
 		private void btnChucVu_Click(object sender, EventArgs e) {
@@ -215,5 +215,12 @@ namespace BTLCSDL {
 			setOffAll();
 			setOn(btnHoaDon);
 		}
-	}
+
+        private void btnKhachHang_Click(object sender, EventArgs e) {
+			formName.Text = "Khách Hàng";
+			OpenChildForm(new FormKhachHang(khachHangDAO), sender);
+			setOffAll();
+			setOn(btnKhachHang);
+		}
+    }
 }

@@ -19,14 +19,14 @@ using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BTLCSDL.Forms {
-	public partial class FormNhanVien : Form {
+	public partial class FormNhaCungCap : Form {
 		ReflectionDAO dao;
 		ReflectionDAO chucVuDAO;
 		private List<Object> listChucVu;
 		Hashtable HTChucVu;
 		private bool isThem;
 
-		public FormNhanVien(ReflectionDAO dao, ReflectionDAO chucVuDAO) {
+		public FormNhaCungCap(ReflectionDAO dao, ReflectionDAO chucVuDAO) {
 			InitializeComponent();
 			this.dao = dao;
 			this.chucVuDAO = chucVuDAO;
@@ -53,7 +53,7 @@ namespace BTLCSDL.Forms {
 				GioiTinhLoc = gioiTinh.Text;
 			}
 
-			String fieldValue = txtTim.Text;			
+			String filedValue = txtTim.Text;			
 			String fieldName = cbbLoaiTimKiem.Text;
 
 			if (fieldName.Equals("Tên")) {
@@ -65,9 +65,8 @@ namespace BTLCSDL.Forms {
 			} else if (fieldName.Equals("Số Điện Thoại")) {
 				fieldName = "SoDT";
 			}
-			DataTable dt = null;
 
-			dt = ((NhanVienDAO)dao).getWithFillter(ChucVuLoc, GioiTinhLoc, fieldName, fieldValue);
+			DataTable dt = ((NhanVienDAO)dao).getWithFillter(ChucVuLoc, GioiTinhLoc, fieldName, filedValue);
 
 			dt.Columns.Add("Chức Vụ", typeof(String));
 			foreach (DataRow row in dt.Rows) {
@@ -177,22 +176,7 @@ namespace BTLCSDL.Forms {
 		}
 
 		private void txtTim_TextChanged(object sender, EventArgs e) {
-			// neu la tim theo ma thi chi duoc nhap so
-			if (cbbLoaiTimKiem.Text == "Mã") {
-				if (!Regex.IsMatch(txtTim.Text.Trim(), @"^\d+$")) {
-					txtTim.Text = "";
-				}
-			}
-			FormNhanVien_Load(sender, e);
-		}
-
-		private void txtTim_KeyPress(object sender, KeyPressEventArgs e) {
-			// neu la tim theo ma thi chi duoc nhap so
-			if (cbbLoaiTimKiem.Text == "Mã") {
-				if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.')) {
-					e.Handled = true;
-				}
-			}
+			FormNhanVien_Load(sender, e);		
 		}
 
 		private void btnReset_Click(object sender, EventArgs e) {
@@ -259,11 +243,5 @@ namespace BTLCSDL.Forms {
 		private void cbbLocChucVu_SelectedIndexChanged(object sender, EventArgs e) {
 			FormNhanVien_Load(sender, e);
 		}
-
-        private void cbbLoaiTimKiem_SelectedIndexChanged(object sender, EventArgs e) {
-			txtTim.PlaceholderText = "Nhập " + cbbLoaiTimKiem.Text;
-			txtTim.Text = "";
-        }
-
 	}
 }

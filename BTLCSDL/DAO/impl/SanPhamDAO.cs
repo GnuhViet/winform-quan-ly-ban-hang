@@ -14,8 +14,19 @@ namespace BTLCSDL.DAO.impl {
 		public SanPhamDAO(Type type) : base(type) {
 		}
 
-		public DataTable getWithMa(Dictionary<Type, List<String>> fillter) {
+		public DataTable getWithMaAndSearchWithField(Dictionary<Type, List<String>> fillter, String fieldName, String fieldValue) {
 			StringBuilder whereClause = new StringBuilder();
+
+			String query = "select DISTINCT SanPham.* from SanPham " +
+							"join ChiTietSP on SanPham.MaSP = ChiTietSP.MaSP ";
+
+			if (fieldName != "") {
+				if (fieldName == "MaSP") {
+					whereClause.Append($" SanPham.MaSP = {fieldValue} and ");
+				} else {
+					whereClause.Append($" {fieldName} like N'{fieldValue}%' and ");
+				}
+			}
 
 			foreach (KeyValuePair<Type, List<String>> item in fillter) {
 				String classShortName = string.Concat(Regex.Matches(((Type)item.Key).Name, "[A-Z]").OfType<Match>().Select(match => match.Value));
@@ -31,11 +42,12 @@ namespace BTLCSDL.DAO.impl {
 					whereClause.Append("and ");
 				}
 			}
-			// xoa "and " o cuoi
-			whereClause.Length -= 4;
-			String query = "select DISTINCT SanPham.* from SanPham " +
-							"join ChiTietSP on SanPham.MaSP = ChiTietSP.MaSP " +
-							"where " + whereClause.ToString();
+
+			if (whereClause.Length > 0) {
+				whereClause.Length -= 4;
+				query += "where " + whereClause.ToString();
+			}
+
 			return table(query);
 		}
 

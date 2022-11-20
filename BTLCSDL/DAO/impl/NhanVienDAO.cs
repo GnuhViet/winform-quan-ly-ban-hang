@@ -12,23 +12,42 @@ namespace BTLCSDL.DAO.impl {
 		}
 
 		public DataTable getWithFillter(String MaCV, String GioiTinh, String fieldName, String fieldValue) {
-			String query = "select * from NhanVien where ";
+			StringBuilder query = new StringBuilder("select * from NhanVien ");
 
-			if (MaCV != "") {
-				query += $"MaCV = {MaCV} and ";
+			List<String> whereClause = new List<string>();
+
+			if (MaCV != "") { 
+				whereClause.Add($"MaCV = {MaCV} "); 
 			}
 
 			if (GioiTinh != "") {
-				query += $"GioiTinh = N'{GioiTinh}' and ";
+				whereClause.Add($"GioiTinh = N'{GioiTinh}' ");
+			}
+			
+			if (fieldValue != "") {
+				if (fieldName.Equals("MaNV")) {
+					whereClause.Add($"{fieldName} = {fieldValue}");
+				} else {
+					whereClause.Add($"{fieldName} like N'{fieldValue}%'");
+				}
 			}
 
-			if (fieldName.Equals("MaNV")) {
-				query += $"{fieldName} = {fieldValue}";
-			} else {
-				query += $"{fieldName} like N'{fieldValue}%'";
+			if(whereClause.Count > 0) {
+				query.Append("where ");
+			}
+
+			bool c = false;
+			foreach(String s in whereClause) {
+				query.Append(s);
+				query.Append("and ");
+				c = true;
+			}
+			// Xoa end cuoi
+			if (c) {
+				query.Length -= 4;
 			}
 							
-			return table(query);
+			return table(query.ToString());
 		}
 	}
 }

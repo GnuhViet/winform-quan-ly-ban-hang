@@ -26,16 +26,10 @@
 			this.components = new System.ComponentModel.Container();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.btnThongKe = new System.Windows.Forms.Button();
-			this.btnNhanVien = new System.Windows.Forms.Button();
-			this.btnHoaDon = new System.Windows.Forms.Button();
-			this.btnSanPham = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
-			this.btnTrangChu = new System.Windows.Forms.Button();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.formName = new System.Windows.Forms.Label();
 			this.panelDesktopPane = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.SanPhamDropDownMenu = new BTLCSDL.CustomControl.RJDropdownMenu(this.components);
 			this.dsSanPham = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +44,14 @@
 			this.HoaDonDropDownMenu = new BTLCSDL.CustomControl.RJDropdownMenu(this.components);
 			this.btnHoaDonBan = new System.Windows.Forms.ToolStripMenuItem();
 			this.btnHoaDonNhap = new System.Windows.Forms.ToolStripMenuItem();
+			this.label1 = new System.Windows.Forms.Label();
+			this.button2 = new System.Windows.Forms.Button();
+			this.btnNhaCungCap = new System.Windows.Forms.Button();
+			this.btnKhachHang = new System.Windows.Forms.Button();
+			this.btnNhanVien = new System.Windows.Forms.Button();
+			this.btnHoaDon = new System.Windows.Forms.Button();
+			this.btnSanPham = new System.Windows.Forms.Button();
+			this.btnTrangChu = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panel3.SuspendLayout();
@@ -70,7 +72,9 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
-			this.panel1.Controls.Add(this.btnThongKe);
+			this.panel1.Controls.Add(this.button2);
+			this.panel1.Controls.Add(this.btnNhaCungCap);
+			this.panel1.Controls.Add(this.btnKhachHang);
 			this.panel1.Controls.Add(this.btnNhanVien);
 			this.panel1.Controls.Add(this.btnHoaDon);
 			this.panel1.Controls.Add(this.btnSanPham);
@@ -82,81 +86,6 @@
 			this.panel1.Size = new System.Drawing.Size(153, 884);
 			this.panel1.TabIndex = 0;
 			// 
-			// btnThongKe
-			// 
-			this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnThongKe.FlatAppearance.BorderSize = 0;
-			this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-			this.btnThongKe.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnThongKe.Image = global::BTLCSDL.Properties.Resources.icons8_statistic_32;
-			this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnThongKe.Location = new System.Drawing.Point(0, 313);
-			this.btnThongKe.Name = "btnThongKe";
-			this.btnThongKe.Size = new System.Drawing.Size(153, 64);
-			this.btnThongKe.TabIndex = 16;
-			this.btnThongKe.Text = " Thống Kê";
-			this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnThongKe.UseVisualStyleBackColor = true;
-			// 
-			// btnNhanVien
-			// 
-			this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnNhanVien.FlatAppearance.BorderSize = 0;
-			this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-			this.btnNhanVien.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnNhanVien.Image = global::BTLCSDL.Properties.Resources.icons8_staff_32;
-			this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnNhanVien.Location = new System.Drawing.Point(0, 249);
-			this.btnNhanVien.Name = "btnNhanVien";
-			this.btnNhanVien.Size = new System.Drawing.Size(153, 64);
-			this.btnNhanVien.TabIndex = 14;
-			this.btnNhanVien.Text = " Nhân Viên";
-			this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnNhanVien.UseVisualStyleBackColor = true;
-			this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
-			// 
-			// btnHoaDon
-			// 
-			this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnHoaDon.FlatAppearance.BorderSize = 0;
-			this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-			this.btnHoaDon.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnHoaDon.Image = global::BTLCSDL.Properties.Resources.bill;
-			this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnHoaDon.Location = new System.Drawing.Point(0, 185);
-			this.btnHoaDon.Name = "btnHoaDon";
-			this.btnHoaDon.Size = new System.Drawing.Size(153, 64);
-			this.btnHoaDon.TabIndex = 13;
-			this.btnHoaDon.Text = " Hoá Đơn";
-			this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnHoaDon.UseVisualStyleBackColor = true;
-			this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
-			// 
-			// btnSanPham
-			// 
-			this.btnSanPham.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnSanPham.FlatAppearance.BorderSize = 0;
-			this.btnSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-			this.btnSanPham.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnSanPham.Image = global::BTLCSDL.Properties.Resources.icons8_shopping_cart_32;
-			this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnSanPham.Location = new System.Drawing.Point(0, 121);
-			this.btnSanPham.Name = "btnSanPham";
-			this.btnSanPham.Size = new System.Drawing.Size(153, 64);
-			this.btnSanPham.TabIndex = 6;
-			this.btnSanPham.Text = " Sản Phẩm";
-			this.btnSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnSanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnSanPham.UseVisualStyleBackColor = true;
-			this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
-			// 
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
@@ -166,26 +95,6 @@
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(153, 80);
 			this.panel2.TabIndex = 0;
-			// 
-			// btnTrangChu
-			// 
-			this.btnTrangChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(150)))), ((int)(((byte)(206)))));
-			this.btnTrangChu.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.btnTrangChu.FlatAppearance.BorderSize = 0;
-			this.btnTrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnTrangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.btnTrangChu.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnTrangChu.Image = global::BTLCSDL.Properties.Resources.icons8_home_page_32;
-			this.btnTrangChu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnTrangChu.Location = new System.Drawing.Point(0, 0);
-			this.btnTrangChu.Name = "btnTrangChu";
-			this.btnTrangChu.Size = new System.Drawing.Size(153, 80);
-			this.btnTrangChu.TabIndex = 6;
-			this.btnTrangChu.Text = " Trang Chủ";
-			this.btnTrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnTrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.btnTrangChu.UseVisualStyleBackColor = false;
-			this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
 			// 
 			// panel3
 			// 
@@ -225,22 +134,6 @@
 			this.panelDesktopPane.Name = "panelDesktopPane";
 			this.panelDesktopPane.Size = new System.Drawing.Size(1366, 804);
 			this.panelDesktopPane.TabIndex = 2;
-			// 
-			// label1
-			// 
-			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F);
-			this.label1.Image = global::BTLCSDL.Properties.Resources.icons8_admin_settings_male_100__1_;
-			this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.label1.Location = new System.Drawing.Point(633, 273);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(134, 120);
-			this.label1.TabIndex = 2;
-			this.label1.Text = "   ";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			// 
 			// label2
 			// 
@@ -367,7 +260,7 @@
 			this.HoaDonDropDownMenu.MenuItemTextColor = System.Drawing.Color.Empty;
 			this.HoaDonDropDownMenu.Name = "HoaDonDropDownMenu";
 			this.HoaDonDropDownMenu.PrimaryColor = System.Drawing.Color.Empty;
-			this.HoaDonDropDownMenu.Size = new System.Drawing.Size(181, 74);
+			this.HoaDonDropDownMenu.Size = new System.Drawing.Size(169, 52);
 			// 
 			// btnHoaDonBan
 			// 
@@ -387,6 +280,154 @@
 			this.btnHoaDonNhap.Name = "btnHoaDonNhap";
 			this.btnHoaDonNhap.Size = new System.Drawing.Size(168, 24);
 			this.btnHoaDonNhap.Text = "Hoá Đơn Nhập";
+			// 
+			// label1
+			// 
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F);
+			this.label1.Image = global::BTLCSDL.Properties.Resources.icons8_admin_settings_male_100__1_;
+			this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.label1.Location = new System.Drawing.Point(633, 273);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(134, 120);
+			this.label1.TabIndex = 2;
+			this.label1.Text = "   ";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			// 
+			// button2
+			// 
+			this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button2.FlatAppearance.BorderSize = 0;
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+			this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.button2.Image = global::BTLCSDL.Properties.Resources.icons8_statistic_32;
+			this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button2.Location = new System.Drawing.Point(0, 441);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(153, 64);
+			this.button2.TabIndex = 18;
+			this.button2.Text = " Thống Kê";
+			this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.button2.UseVisualStyleBackColor = true;
+			// 
+			// btnNhaCungCap
+			// 
+			this.btnNhaCungCap.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNhaCungCap.FlatAppearance.BorderSize = 0;
+			this.btnNhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNhaCungCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+			this.btnNhaCungCap.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnNhaCungCap.Image = global::BTLCSDL.Properties.Resources.icons8_truck_weight_max_loading_32;
+			this.btnNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnNhaCungCap.Location = new System.Drawing.Point(0, 377);
+			this.btnNhaCungCap.Name = "btnNhaCungCap";
+			this.btnNhaCungCap.Size = new System.Drawing.Size(153, 64);
+			this.btnNhaCungCap.TabIndex = 17;
+			this.btnNhaCungCap.Text = " Nhà Cung Cấp";
+			this.btnNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnNhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnNhaCungCap.UseVisualStyleBackColor = true;
+			// 
+			// btnKhachHang
+			// 
+			this.btnKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnKhachHang.FlatAppearance.BorderSize = 0;
+			this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+			this.btnKhachHang.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnKhachHang.Image = global::BTLCSDL.Properties.Resources.icons8_buyer_32__1_;
+			this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnKhachHang.Location = new System.Drawing.Point(0, 313);
+			this.btnKhachHang.Name = "btnKhachHang";
+			this.btnKhachHang.Size = new System.Drawing.Size(153, 64);
+			this.btnKhachHang.TabIndex = 16;
+			this.btnKhachHang.Text = " Khách Hàng";
+			this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnKhachHang.UseVisualStyleBackColor = true;
+			this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
+			// 
+			// btnNhanVien
+			// 
+			this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnNhanVien.FlatAppearance.BorderSize = 0;
+			this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+			this.btnNhanVien.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnNhanVien.Image = global::BTLCSDL.Properties.Resources.icons8_staff_32;
+			this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnNhanVien.Location = new System.Drawing.Point(0, 249);
+			this.btnNhanVien.Name = "btnNhanVien";
+			this.btnNhanVien.Size = new System.Drawing.Size(153, 64);
+			this.btnNhanVien.TabIndex = 14;
+			this.btnNhanVien.Text = " Nhân Viên";
+			this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnNhanVien.UseVisualStyleBackColor = true;
+			this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+			// 
+			// btnHoaDon
+			// 
+			this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnHoaDon.FlatAppearance.BorderSize = 0;
+			this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+			this.btnHoaDon.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnHoaDon.Image = global::BTLCSDL.Properties.Resources.bill;
+			this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnHoaDon.Location = new System.Drawing.Point(0, 185);
+			this.btnHoaDon.Name = "btnHoaDon";
+			this.btnHoaDon.Size = new System.Drawing.Size(153, 64);
+			this.btnHoaDon.TabIndex = 13;
+			this.btnHoaDon.Text = " Hoá Đơn";
+			this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnHoaDon.UseVisualStyleBackColor = true;
+			this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
+			// 
+			// btnSanPham
+			// 
+			this.btnSanPham.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnSanPham.FlatAppearance.BorderSize = 0;
+			this.btnSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+			this.btnSanPham.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnSanPham.Image = global::BTLCSDL.Properties.Resources.icons8_shopping_cart_32;
+			this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnSanPham.Location = new System.Drawing.Point(0, 121);
+			this.btnSanPham.Name = "btnSanPham";
+			this.btnSanPham.Size = new System.Drawing.Size(153, 64);
+			this.btnSanPham.TabIndex = 6;
+			this.btnSanPham.Text = " Sản Phẩm";
+			this.btnSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnSanPham.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnSanPham.UseVisualStyleBackColor = true;
+			this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
+			// 
+			// btnTrangChu
+			// 
+			this.btnTrangChu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(150)))), ((int)(((byte)(206)))));
+			this.btnTrangChu.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnTrangChu.FlatAppearance.BorderSize = 0;
+			this.btnTrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnTrangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.btnTrangChu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnTrangChu.Image = global::BTLCSDL.Properties.Resources.icons8_home_page_32;
+			this.btnTrangChu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnTrangChu.Location = new System.Drawing.Point(0, 0);
+			this.btnTrangChu.Name = "btnTrangChu";
+			this.btnTrangChu.Size = new System.Drawing.Size(153, 80);
+			this.btnTrangChu.TabIndex = 6;
+			this.btnTrangChu.Text = " Trang Chủ";
+			this.btnTrangChu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnTrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnTrangChu.UseVisualStyleBackColor = false;
+			this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
 			// 
 			// MainForm
 			// 
@@ -427,7 +468,7 @@
         private System.Windows.Forms.Label formName;
         private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.Button btnSanPham;
-        private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.Button btnKhachHang;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnHoaDon;
         private CustomControl.RJDropdownMenu SanPhamDropDownMenu;
@@ -443,6 +484,8 @@
         private CustomControl.RJDropdownMenu HoaDonDropDownMenu;
         private System.Windows.Forms.ToolStripMenuItem btnHoaDonBan;
         private System.Windows.Forms.ToolStripMenuItem btnHoaDonNhap;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNhaCungCap;
     }
 }
 
