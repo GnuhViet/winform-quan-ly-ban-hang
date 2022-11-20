@@ -209,7 +209,7 @@ namespace BTLCSDL.DAO.impl {
 			return list;
 		}
 
-		public DataTable GetDataTableByField(String fieldName, String value) {
+		public DataTable getDataTableByField(String fieldName, String value) {
 			return table("select * from " + className + " where " + fieldName + " = " + value);
 		}
 

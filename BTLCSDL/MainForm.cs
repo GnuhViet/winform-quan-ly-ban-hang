@@ -16,25 +16,26 @@ namespace BTLCSDL {
 	public partial class MainForm : Form {
 		#region define DAO & type
 		private Type ChatLieuType;
-		private ReflectionDAO ChatLieuDAO;
+		private ReflectionDAO chatLieuDAO;
 
 		private Type TheLoaiType;
-		private ReflectionDAO TheLoaiDAO;
+		private ReflectionDAO theLoaiDAO;
 
 		private Type QuocGiaType;
-		private ReflectionDAO QuocGiaDAO;
+		private ReflectionDAO quocGiaDAO;
 
 		private Type SizeType;
-		private ReflectionDAO SizeDAO;
+		private ReflectionDAO sizeDAO;
 
 		private Type MauSacType;
-		private ReflectionDAO MauSacDAO;
+		private ReflectionDAO mauSacDAO;
 
 		private Type ChucVuType;
-		private ReflectionDAO ChucVuDAO;
+		private ReflectionDAO chucVuDAO;
 
-		private ReflectionDAO SanPhamDAO;
-		private ReflectionDAO ChiTietSPDAO;
+		private ReflectionDAO sanPhamDAO;
+		private ReflectionDAO chiTietSPDAO;
+		private ReflectionDAO nhanVienDAO;
 		#endregion
 
 		public MainForm() {
@@ -42,25 +43,27 @@ namespace BTLCSDL {
 
 			#region init DAO & TYPE
 			ChatLieuType = typeof(ChatLieu);
-			ChatLieuDAO = new ReflectionDAO(ChatLieuType);
+			chatLieuDAO = new ReflectionDAO(ChatLieuType);
 
 			TheLoaiType = typeof(TheLoai);
-			TheLoaiDAO = new ReflectionDAO(TheLoaiType);
+			theLoaiDAO = new ReflectionDAO(TheLoaiType);
 
 			QuocGiaType = typeof(QuocGia);
-			QuocGiaDAO = new ReflectionDAO(QuocGiaType);
+			quocGiaDAO = new ReflectionDAO(QuocGiaType);
 
 			SizeType = typeof(Model.Size);
-			SizeDAO = new ReflectionDAO(SizeType);
+			sizeDAO = new ReflectionDAO(SizeType);
 
 			MauSacType = typeof(Model.MauSac);
-			MauSacDAO = new ReflectionDAO(MauSacType);
+			mauSacDAO = new ReflectionDAO(MauSacType);
 
 			ChucVuType = typeof(ChucVu);
-			ChucVuDAO = new ReflectionDAO(ChucVuType);
+			chucVuDAO = new ReflectionDAO(ChucVuType);
 
-			SanPhamDAO = new SanPhamDAO(typeof(SanPham));
-			ChiTietSPDAO = new ReflectionDAO(typeof(ChiTietSP));
+			sanPhamDAO = new SanPhamDAO(typeof(SanPham));
+			chiTietSPDAO = new ReflectionDAO(typeof(ChiTietSP));
+
+			nhanVienDAO = new NhanVienDAO(typeof(NhanVien));
 			#endregion
 
 			SanPhamDropDownMenu.IsMainMenu = true;
@@ -107,42 +110,42 @@ namespace BTLCSDL {
 
 		private void dsSanPham_Click(object sender, EventArgs e) {
 			formName.Text = "Sản Phẩm";
-			OpenChildForm(new txtSanPhamHienTai(SanPhamDAO, ChatLieuDAO, TheLoaiDAO, QuocGiaDAO, SizeDAO, MauSacDAO, ChiTietSPDAO), sender);
+			OpenChildForm(new txtSanPhamHienTai(sanPhamDAO, chatLieuDAO, theLoaiDAO, quocGiaDAO, sizeDAO, mauSacDAO, chiTietSPDAO), sender);
 			setOffAll();
 			setOn(btnSanPham);
 		}
 
 		private void dsChatLieu_Click(object sender, EventArgs e) {
 			formName.Text = "Chất Liệu";
-			OpenChildForm(new CommonForm(ChatLieuDAO, ChatLieuType, formName.Text), sender);
+			OpenChildForm(new CommonForm(chatLieuDAO, ChatLieuType, formName.Text), sender);
 			setOffAll();
 			setOn(btnSanPham);
 		}
 
 		private void dsTheLoai_Click(object sender, EventArgs e) {
 			formName.Text = "Thể Loại";
-			OpenChildForm(new CommonForm(TheLoaiDAO, TheLoaiType, formName.Text), sender);
+			OpenChildForm(new CommonForm(theLoaiDAO, TheLoaiType, formName.Text), sender);
 			setOffAll();
 			setOn(btnSanPham);
 		}
 
 		private void dsQuocGia_Click(object sender, EventArgs e) {
 			formName.Text = "Quốc Gia";
-			OpenChildForm(new CommonForm(QuocGiaDAO, QuocGiaType, formName.Text), sender);
+			OpenChildForm(new CommonForm(quocGiaDAO, QuocGiaType, formName.Text), sender);
 			setOffAll();
 			setOn(btnSanPham);
 		}
 
 		private void dsSize_Click(object sender, EventArgs e) {
 			formName.Text = "Size";
-			OpenChildForm(new CommonForm(SizeDAO, SizeType, formName.Text), sender);
+			OpenChildForm(new CommonForm(sizeDAO, SizeType, formName.Text), sender);
 			setOffAll();
 			setOn(btnSanPham);
 		}
 
 		private void dsMauSac_Click(object sender, EventArgs e) {
 			formName.Text = "Màu Sắc";
-			OpenChildForm(new CommonForm(MauSacDAO, MauSacType, formName.Text), sender);
+			OpenChildForm(new CommonForm(mauSacDAO, MauSacType, formName.Text), sender);
 			setOffAll();
 			setOn(btnSanPham);
 		}
@@ -159,14 +162,14 @@ namespace BTLCSDL {
 
 		private void dsNhanVien_Click(object sender, EventArgs e) {
 			formName.Text = "Nhân Viên";
-			OpenChildForm(new FormNhanVien(), sender);
+			OpenChildForm(new FormNhanVien(nhanVienDAO, chucVuDAO), sender);
 			setOffAll();
 			setOn(btnNhanVien);
 		}
 
 		private void dsChucVu_Click(object sender, EventArgs e) {
 			formName.Text = "Chức Vụ";
-			OpenChildForm(new CommonForm(ChucVuDAO, ChucVuType, formName.Text), sender);
+			OpenChildForm(new CommonForm(chucVuDAO, ChucVuType, formName.Text), sender);
 			setOffAll();
 			setOn(btnNhanVien);
 		}
@@ -196,7 +199,7 @@ namespace BTLCSDL {
 
 		private void btnChucVu_Click(object sender, EventArgs e) {
 			formName.Text = "Chức Vụ";
-			OpenChildForm(new CommonForm(ChucVuDAO, ChucVuType, formName.Text), sender);
+			OpenChildForm(new CommonForm(chucVuDAO, ChucVuType, formName.Text), sender);
 			setOffAll();
 			//setOn(btnChucVu);
 		}

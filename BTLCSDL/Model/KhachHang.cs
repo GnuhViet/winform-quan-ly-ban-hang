@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BTLCSDL.Model {
-	internal class KhachHang : ICommonModel {
+	internal class KhachHang {
 		public int MaKH { get; set; }
 		public String HoTenKH { get; set; }
 		public String SoDT { get; set; }

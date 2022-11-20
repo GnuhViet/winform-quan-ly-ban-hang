@@ -245,6 +245,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DAO\CommonDAO.cs" />
+    <Compile Include="DAO\impl\NhanVienDAO.cs" />
     <Compile Include="DAO\impl\ReflectionDAO.cs" />
     <Compile Include="DAO\impl\SanPhamDAO.cs" />
     <Compile Include="DAO\SQLServerConnection.cs" />
@@ -279,9 +280,9 @@
     <Compile Include="Model\CommonModelIMPL\ChucVu.cs" />
     <Compile Include="Model\HoaDonBan.cs" />
     <Compile Include="Model\HoaDonNhap.cs" />
-    <Compile Include="Model\CommonModelIMPL\KhachHang.cs" />
+    <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\CommonModelIMPL\MauSac.cs" />
-    <Compile Include="Model\CommonModelIMPL\NhaCungCap.cs" />
+    <Compile Include="Model\NhaCungCap.cs" />
     <Compile Include="Model\NhanVien.cs" />
     <Compile Include="Model\CommonModelIMPL\QuocGia.cs" />
     <Compile Include="Model\SanPham.cs" />

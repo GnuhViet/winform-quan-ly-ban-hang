@@ -3,6 +3,7 @@ using BTLCSDL.DAO.impl;
 using BTLCSDL.Model;
 using Bunifu.UI.WinForms.BunifuButton;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,24 +21,67 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace BTLCSDL.Forms {
 	public partial class FormNhanVien : Form {
 		ReflectionDAO dao;
-		ReflectionDAO chucVuDao;
+		ReflectionDAO chucVuDAO;
 		private List<Object> listChucVu;
+		Hashtable HTChucVu;
 		private bool isThem;
 
-		public FormNhanVien() {
+		public FormNhanVien(ReflectionDAO dao, ReflectionDAO chucVuDAO) {
 			InitializeComponent();
-			dao = new ReflectionDAO(typeof(NhanVien));
-			chucVuDao = new ReflectionDAO(typeof(ChucVu));
+			this.dao = dao;
+			this.chucVuDAO = chucVuDAO;
+
 			txtNgaySinh.CustomFormat = "yyyy-MM-dd";
-			listChucVu = chucVuDao.getListAll();
+			listChucVu = this.chucVuDAO.getListAll();
+			HTChucVu = this.chucVuDAO.getHashtableAll();
 			foreach (ChucVu cv in listChucVu) {
 				cbbChucVu.Items.Add(cv.MaCV + " - " + cv.TenCV);
+				cbbLocChucVu.Items.Add(cv.MaCV + " - " + cv.TenCV);
 			}
 			ControlExtension.Draggable(formInput, true);
 		}
 
-		private void FormSanPham_Load(object sender, EventArgs e) {
-			table.DataSource = dao.getAll();
+		private void FormNhanVien_Load(object sender, EventArgs e) {
+			String ChucVuLoc = "";
+			if (cbbLocChucVu.Text != null && !cbbLocChucVu.Text.Equals("")) {
+				ChucVuLoc = cbbLocChucVu.Text.Trim().Split('-')[0];
+			}
+
+			String GioiTinhLoc = "";
+			var gioiTinh = panelLocGioiTinh.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+			if (gioiTinh != null) {
+				GioiTinhLoc = gioiTinh.Text;
+			}
+
+			String filedValue = txtTim.Text;			
+			String fieldName = cbbLoaiTimKiem.Text;
+
+			if (fieldName.Equals("Tên")) {
+				fieldName = "HoTenNV";
+			} else if(fieldName.Equals("Mã")) {
+				fieldName = "MaNV";
+			} else if (fieldName.Equals("Địa Chỉ")) {
+				fieldName = "DiaChi";
+			} else if (fieldName.Equals("Số Điện Thoại")) {
+				fieldName = "SoDT";
+			}
+
+			DataTable dt = ((NhanVienDAO)dao).getWithFillter(ChucVuLoc, GioiTinhLoc, fieldName, filedValue);
+
+			dt.Columns.Add("Chức Vụ", typeof(String));
+			foreach (DataRow row in dt.Rows) {
+				row["Chức Vụ"] = ((ChucVu)HTChucVu[Convert.ToInt32(row["MaCV"])]).TenCV;
+			}
+
+			table.DataSource = dt;
+			table.Columns["MaNV"].HeaderText = "Mã";
+			table.Columns["HoTenNV"].HeaderText = "Họ Tên";
+			table.Columns["NgaySinh"].HeaderText = "Ngày Sinh";
+			table.Columns["SoDT"].HeaderText = "Số Điện Thoại";
+			table.Columns["DiaChi"].HeaderText = "Địa Chỉ";
+			table.Columns["MaCV"].Visible = false;
+			table.Columns["GioiTinh"].HeaderText = "Giới Tính";
+			table.Columns["TinhTrang"].HeaderText = "Tình Trạng";		
 		}
 		//
 
@@ -47,7 +91,8 @@ namespace BTLCSDL.Forms {
 				NhanVien model = new NhanVien();
 				model.MaNV = Convert.ToInt32(table.CurrentRow.Cells[2].Value);
 				dao.delelte(model);
-				FormSanPham_Load(sender, e);
+				FormNhanVien_Load(sender, e);
+				MessageBox.Show("Đã Sửa Thành Thôi Việc");
 				return;
 			}
 
@@ -78,7 +123,7 @@ namespace BTLCSDL.Forms {
 			} else {
 				dao.update(model);
 			}
-			FormSanPham_Load(sender, e);
+			FormNhanVien_Load(sender, e);
 		}
 
 		private NhanVien getForm() {
@@ -130,17 +175,13 @@ namespace BTLCSDL.Forms {
 			}
 		}
 
-		private void btnTim_Click(object sender, EventArgs e) {
-			table.DataSource = dao.search("HoTenNV", txtTim.Text);
-		}
-
 		private void txtTim_TextChanged(object sender, EventArgs e) {
-			table.DataSource = dao.search("HoTenNV", txtTim.Text);
+			FormNhanVien_Load(sender, e);		
 		}
 
 		private void btnReset_Click(object sender, EventArgs e) {
 			txtTim.Text = "";
-			FormSanPham_Load(sender, e);
+			FormNhanVien_Load(sender, e);
 		}
 
 		private void btnThemNhanVien_Click(object sender, EventArgs e) {
@@ -164,6 +205,43 @@ namespace BTLCSDL.Forms {
 			if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.')) {
 				e.Handled = true;
 			}
+		}
+		
+
+		// radio loc
+
+		bool isLocNam = false; 
+		private void radioLocNam_CheckedChanged(object sender, EventArgs e) {
+			isLocNam = radioLocNam.Checked;
+		}
+
+		private void radioLocNam_Click(object sender, EventArgs e) {
+			if (radioLocNam.Checked && !isLocNam)
+				radioLocNam.Checked = false;
+			else {
+				radioLocNam.Checked = true;
+				isLocNam = false;
+			}
+			FormNhanVien_Load(sender, e);
+		}
+
+		bool isLocNu = false;
+		private void radioLocNu_CheckedChanged(object sender, EventArgs e) {
+			isLocNu = radioLocNu.Checked;
+		}
+
+		private void radioLocNu_Click(object sender, EventArgs e) {
+			if (radioLocNu.Checked && !isLocNu)
+				radioLocNu.Checked = false;
+			else {
+				radioLocNu.Checked = true;
+				isLocNu = false;
+			}
+			FormNhanVien_Load(sender, e);
+		}
+
+		private void cbbLocChucVu_SelectedIndexChanged(object sender, EventArgs e) {
+			FormNhanVien_Load(sender, e);
 		}
 	}
 }

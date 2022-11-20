@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BTLCSDL.Model {
-	internal class NhaCungCap : ICommonModel {
+	internal class NhaCungCap {
 		public int MaNCC { get; set; }
 		public String TenNCC { get; set; }
 		public String DiaChi { get; set; }

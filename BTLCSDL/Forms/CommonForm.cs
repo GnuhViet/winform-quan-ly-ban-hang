@@ -26,6 +26,7 @@ namespace BTLCSDL.Forms {
 
 		private PropertyInfo Ma;
 		private PropertyInfo Ten;
+		private String formName;
 
 		public CommonForm(ReflectionDAO dao ,Type type, String formName) {
 			String classShortName = string.Concat(Regex.Matches(type.Name, "[A-Z]").OfType<Match>().Select(match => match.Value));
@@ -35,6 +36,7 @@ namespace BTLCSDL.Forms {
 			this.Ma  = type.GetProperty("Ma" + classShortName);
 			this.Ten = type.GetProperty("Ten" + classShortName);
 			this.dao = dao;
+			this.formName = formName;
 
 			InitializeComponent();
 			// keo tha panel
@@ -45,6 +47,8 @@ namespace BTLCSDL.Forms {
 
 		private void Form_Load(object sender, EventArgs e) {
 			table.DataSource = dao.getAll();
+			table.Columns[Ma.Name].HeaderText = "Mã";
+			table.Columns[Ten.Name].HeaderText = formName;	
 		}
 		//
 

@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BTLCSDL.DAO.impl {
-	internal class SanPhamDAO : ReflectionDAO{
+	internal class SanPhamDAO : ReflectionDAO {
 		public SanPhamDAO(Type type) : base(type) {
 		}
 
-		public DataTable getWithFillter(Dictionary<Type, List<String>> fillter) {
+		public DataTable getWithMa(Dictionary<Type, List<String>> fillter) {
 			StringBuilder whereClause = new StringBuilder();
 
 			foreach (KeyValuePair<Type, List<String>> item in fillter) {

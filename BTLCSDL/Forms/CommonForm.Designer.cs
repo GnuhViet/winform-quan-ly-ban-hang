@@ -17,11 +17,11 @@
 		}
 
 		#region Windows Form Designer generated code
-
 		/// <summary>
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
+		/// 
 		private void InitializeComponent() {
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,10 +41,10 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtTen = new System.Windows.Forms.TextBox();
 			this.table = new Bunifu.UI.WinForms.BunifuDataGridView();
-			this.tabeBtnXoa = new System.Windows.Forms.DataGridViewImageColumn();
-			this.tableBtnSua = new System.Windows.Forms.DataGridViewImageColumn();
 			this.txtTim = new Bunifu.UI.WinForms.BunifuTextBox();
 			this.btnThem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+			this.tabeBtnXoa = new System.Windows.Forms.DataGridViewImageColumn();
+			this.tableBtnSua = new System.Windows.Forms.DataGridViewImageColumn();
 			this.formInput.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
 			this.SuspendLayout();
@@ -199,28 +199,6 @@
 			this.table.TabIndex = 26;
 			this.table.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
 			this.table.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.table_CellContentClick);
-			// 
-			// tabeBtnXoa
-			// 
-			this.tabeBtnXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.tabeBtnXoa.FillWeight = 159.3909F;
-			this.tabeBtnXoa.HeaderText = "Xoa";
-			this.tabeBtnXoa.Image = global::BTLCSDL.Properties.Resources.icons8_close_20;
-			this.tabeBtnXoa.Name = "tabeBtnXoa";
-			this.tabeBtnXoa.ReadOnly = true;
-			this.tabeBtnXoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-			this.tabeBtnXoa.Width = 40;
-			// 
-			// tableBtnSua
-			// 
-			this.tableBtnSua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.tableBtnSua.FillWeight = 40.60914F;
-			this.tableBtnSua.HeaderText = "Sua";
-			this.tableBtnSua.Image = global::BTLCSDL.Properties.Resources.icons8_option_20;
-			this.tableBtnSua.Name = "tableBtnSua";
-			this.tableBtnSua.ReadOnly = true;
-			this.tableBtnSua.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-			this.tableBtnSua.Width = 40;
 			// 
 			// txtTim
 			// 
@@ -387,6 +365,28 @@
 			this.btnThem.UseDefaultRadiusAndThickness = true;
 			this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
 			// 
+			// tabeBtnXoa
+			// 
+			this.tabeBtnXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.tabeBtnXoa.FillWeight = 159.3909F;
+			this.tabeBtnXoa.HeaderText = "Xoá";
+			this.tabeBtnXoa.Image = global::BTLCSDL.Properties.Resources.icons8_close_20;
+			this.tabeBtnXoa.Name = "tabeBtnXoa";
+			this.tabeBtnXoa.ReadOnly = true;
+			this.tabeBtnXoa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.tabeBtnXoa.Width = 40;
+			// 
+			// tableBtnSua
+			// 
+			this.tableBtnSua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.tableBtnSua.FillWeight = 40.60914F;
+			this.tableBtnSua.HeaderText = "Sửa";
+			this.tableBtnSua.Image = global::BTLCSDL.Properties.Resources.icons8_option_20;
+			this.tableBtnSua.Name = "tableBtnSua";
+			this.tableBtnSua.ReadOnly = true;
+			this.tableBtnSua.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.tableBtnSua.Width = 40;
+			// 
 			// CommonForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,10 +417,10 @@
 		private System.Windows.Forms.Button btnDongFrom;
 		private System.Windows.Forms.Button btnThemSubmit;
         private Bunifu.UI.WinForms.BunifuDataGridView table;
-        private System.Windows.Forms.DataGridViewImageColumn tabeBtnXoa;
-        private System.Windows.Forms.DataGridViewImageColumn tableBtnSua;
         private Bunifu.UI.WinForms.BunifuTextBox txtTim;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnThem;
 		private System.Windows.Forms.TextBox txtMa;
-	}
+        private System.Windows.Forms.DataGridViewImageColumn tabeBtnXoa;
+        private System.Windows.Forms.DataGridViewImageColumn tableBtnSua;
+    }
 }

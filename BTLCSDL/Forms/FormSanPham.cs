@@ -43,19 +43,15 @@ namespace BTLCSDL.Forms {
 			this.SizeDAO = SizeDAO;
 			this.MauSacDAO = MauSacDAO;
 			this.ChiTietSPDAO = ChiTietSPDAO;
-			InitializeComponent();
-			txtDonGiaBan.Controls.RemoveAt(0);
-			txtDonGiaNhap.Controls.RemoveAt(0);
-			ControlExtension.Draggable(formInputSanPham, true);
-			ControlExtension.Draggable(formDanhSachCTSP, true);
-			ControlExtension.Draggable(formInputCTSP, true);
 
 			// load list
 			HTChatLieu = ChatLieuDAO.getHashtableAll();
-			HTTheLoai  = TheLoaiDAO.getHashtableAll();
-			HTQuocGia  = QuocGiaDAO.getHashtableAll();
+			HTTheLoai = TheLoaiDAO.getHashtableAll();
+			HTQuocGia = QuocGiaDAO.getHashtableAll();
 			HTSize = SizeDAO.getHashtableAll();
 			HTMau = MauSacDAO.getHashtableAll();
+
+			InitializeComponent();
 
 			// add gia tri empty
 			cbbLocChatLieu.Items.Add("");
@@ -85,6 +81,8 @@ namespace BTLCSDL.Forms {
 				MauSac model = (MauSac)HTMau[i];
 				cbbMauSac.Items.Add(model.MaMS + " - " + model.TenMS);
 			}
+			
+
 			// add vao table
 			tableSize.DataSource = SizeDAO.getAll();
 			tableMauSac.DataSource = MauSacDAO.getAll();
@@ -92,6 +90,25 @@ namespace BTLCSDL.Forms {
 			tableSize.Columns[2].ReadOnly = true;
 			tableMauSac.Columns[1].ReadOnly = true;
 			tableMauSac.Columns[2].ReadOnly = true;
+			// sua ten cot
+			tableSize.Columns["MaS"].HeaderText = "Mã";
+			tableSize.Columns["TenS"].HeaderText = "Tên Size";
+			tableMauSac.Columns["MaMS"].HeaderText = "Mã";
+			tableMauSac.Columns["TenMS"].HeaderText = "Màu Sắc";
+
+			// config
+			txtDonGiaBan.Controls.RemoveAt(0);
+			txtDonGiaNhap.Controls.RemoveAt(0);
+			ControlExtension.Draggable(formInputSanPham, true);
+			ControlExtension.Draggable(formDanhSachCTSP, true);
+			ControlExtension.Draggable(formInputCTSP, true);
+
+
+			// an cac cot ma di
+			table.Columns["MaTL"].Visible = false;
+			table.Columns["MaCL"].Visible = false;
+			table.Columns["MaQG"].Visible = false;
+
 		}
 
 		////////
@@ -136,11 +153,33 @@ namespace BTLCSDL.Forms {
 				}
 			}; test.Add(typeof(MauSac), listMauSac);
 
+			DataTable dt = null;
+			// load san pham
 			if (needFillter) {
-				table.DataSource = ((SanPhamDAO)dao).getWithFillter(test);
+				dt = ((SanPhamDAO)dao).getWithMa(test);
 			} else {
-				table.DataSource = dao.getAll();
+				dt = dao.getAll();
 			}
+
+			// chinh chat lieu, quoc gia, mau sac
+			dt.Columns.Add("Thể Loại", typeof(String));
+			dt.Columns.Add("Chất Liệu", typeof(String));
+			dt.Columns.Add("Quốc Gia", typeof(String));
+			foreach (DataRow row in dt.Rows) {
+				row["Thể Loại"] = ((TheLoai)HTTheLoai[Convert.ToInt32(row["MaTL"])]).TenTL;
+				row["Chất Liệu"] = ((ChatLieu)HTChatLieu[Convert.ToInt32(row["MaCL"])]).TenCL;
+				row["Quốc Gia"] = ((QuocGia)HTQuocGia[Convert.ToInt32(row["MaQG"])]).TenQG;
+			}
+
+			// đổi lại tên
+			dt.Columns["MaSP"].ColumnName = "Mã";
+			dt.Columns["TenSP"].ColumnName = "Tên";
+			dt.Columns["DonGiaNhap"].ColumnName = "Giá Nhập";
+			dt.Columns["DonGiaBan"].ColumnName = "Giá Bán";
+			dt.Columns["GioiTinh"].ColumnName = "Giới Tính";
+
+			// gan gia tri cho bang
+			table.DataSource = dt;
 		}
 
 		private void table_CellContentClick(object sender, DataGridViewCellEventArgs e) {
@@ -369,14 +408,20 @@ namespace BTLCSDL.Forms {
 
 		#region form-chi-tiet-san-pham
 		private void ReLoadCHTSP() {
-			DataTable dt = ChiTietSPDAO.GetDataTableByField("MaSP", MaSanPhamHienTai.ToString());
+			DataTable dt = ChiTietSPDAO.getDataTableByField("MaSP", MaSanPhamHienTai.ToString());
 			dt.Columns.Add("Tên Size", typeof(String));
 			dt.Columns.Add("Tên Màu Sắc", typeof(String));
 			foreach (DataRow row in dt.Rows) {
 				row["Tên Size"] = ((Model.Size)HTSize[Convert.ToInt32(row["MaS"])]).TenS;
 				row["Tên Màu Sắc"] = ((MauSac)HTMau[Convert.ToInt32(row["MaMS"])]).TenMS; 
 			}
+
+			dt.Columns["SoLuong"].ColumnName = "Số Lượng";			
 			tableDSCTSP.DataSource = dt;
+			// an cac cot ma	
+			tableDSCTSP.Columns["MaS"].Visible = false;
+			tableDSCTSP.Columns["MaMS"].Visible = false;
+			tableDSCTSP.Columns["MaSP"].Visible = false;
 		}
 
 		private void btnDongFormCTSP_Click(object sender, EventArgs e) {
@@ -453,7 +498,14 @@ namespace BTLCSDL.Forms {
 
 
 		private void txtTimChiTietSP_TextChanged(object sender, EventArgs e) {
-			tableDSCTSP.DataSource = ChiTietSPDAO.search("MaCTSP", txtTimChiTietSP.Text);
+			DataTable dt = ChiTietSPDAO.search("MaCTSP", txtTimChiTietSP.Text);
+			dt.Columns.Add("Tên Size", typeof(String));
+			dt.Columns.Add("Tên Màu Sắc", typeof(String));
+			foreach (DataRow row in dt.Rows) {
+				row["Tên Size"] = ((Model.Size)HTSize[Convert.ToInt32(row["MaS"])]).TenS;
+				row["Tên Màu Sắc"] = ((MauSac)HTMau[Convert.ToInt32(row["MaMS"])]).TenMS; 
+			}
+			tableDSCTSP.DataSource = dt;
 		}
 
 		#endregion
