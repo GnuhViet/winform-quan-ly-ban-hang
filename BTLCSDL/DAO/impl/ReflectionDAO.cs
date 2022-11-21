@@ -1,4 +1,5 @@
 ﻿using BTLCSDL.Model;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -90,7 +91,54 @@ namespace BTLCSDL.DAO.impl {
 		}
 
 		// main
+		
+		public int createNoMessage(Object model) {
+			// add value
+			StringBuilder sb = new StringBuilder("");
+			foreach (var prop in properties) {
+				if (prop.Name.Equals(modelID)) {
+					continue;
+				}
+				sb.Append(mapping(prop, model) + ",");
+			}
+			// xoa ky tu , o cuoi
+			sb.Length -= 1;
 
+			// common
+			String query = insertQuery.Replace("$", sb.ToString());
+			try {
+				int id = ExecuteScalar(query);
+				return id;
+			} catch (Exception ex) {
+				MessageBox.Show("Loi: " + ex.Message);
+				return -1;
+			}
+		}
+
+		public void updateNoMessage(Object model) {
+			// add value
+			String id = "NULL";
+			StringBuilder sb = new StringBuilder("");
+			foreach (var prop in properties) {
+				if (prop.Name.Equals(modelID)) {
+					id = prop.GetValue(model).ToString(); // luu lai id
+					continue;
+				}
+				sb.Append(prop.Name + "=" + mapping(prop, model) + ",");
+			}
+			// xoa ky tu , o cuoi
+			sb.Length -= 1;
+
+			// common
+			String query = updateQuery.Replace("$", sb.ToString()).Replace("#", id);
+
+			try {
+				Execute(query);
+			} catch (Exception ex) {
+				MessageBox.Show("Lỗi: " + ex.Message);
+			}
+		}
+		
 		public int create(Object model) {
 			// add value
 			StringBuilder sb = new StringBuilder("");
@@ -166,11 +214,17 @@ namespace BTLCSDL.DAO.impl {
 					prop.SetValue(model, value);
 				} 
 				else if (prop.PropertyType == typeof(int)) {
-					int value = Convert.ToInt32(row[prop.Name].ToString());
+					int value = 0;
+					if (row[prop.Name].ToString() != "") {
+						value = Convert.ToInt32(row[prop.Name].ToString());
+					}
 					prop.SetValue(model, value);
 				} 
 				else if (prop.PropertyType == typeof(double)) {
-					double value = Convert.ToDouble(row[prop.Name].ToString());
+					double value = 0;
+					if (row[prop.Name].ToString() != "") {
+						value = Convert.ToDouble(row[prop.Name].ToString());
+					}
 					prop.SetValue(model, value);
 				} 
 				else if (prop.PropertyType == typeof(DateTime)) {

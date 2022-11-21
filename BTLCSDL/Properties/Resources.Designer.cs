@@ -133,6 +133,16 @@ namespace BTLCSDL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_checked_checkbox_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-checked-checkbox-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_close_14 {
             get {
                 object obj = ResourceManager.GetObject("icons8-close-14", resourceCulture);
@@ -186,6 +196,16 @@ namespace BTLCSDL.Properties {
         internal static System.Drawing.Bitmap icons8_country_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-country-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_done_27 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-done-27", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

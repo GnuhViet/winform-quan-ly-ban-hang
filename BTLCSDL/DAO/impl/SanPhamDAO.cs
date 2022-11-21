@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace BTLCSDL.DAO.impl {
 	internal class SanPhamDAO : ReflectionDAO {
-		public SanPhamDAO(Type type) : base(type) {
+		public SanPhamDAO() : base(typeof(SanPham)) {
 		}
 
 		public DataTable getWithMaAndSearchWithField(Dictionary<Type, List<String>> fillter, String fieldName, String fieldValue) {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTLCSDL.Model;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BTLCSDL.DAO.impl {
 	internal class NhanVienDAO : ReflectionDAO {
-		public NhanVienDAO(Type type) : base(type) {
+		public NhanVienDAO() : base(typeof(NhanVien)) {
 		}
 
 		public DataTable getWithFillter(String MaCV, String GioiTinh, String fieldName, String fieldValue) {

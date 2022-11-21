@@ -245,7 +245,6 @@ namespace BTLCSDL.Forms {
 			FormSanPham_Load(sender, e);
 		}
 
-
 		private void txtTim_KeyPress(object sender, KeyPressEventArgs e) {
 			if (cbbLocTim.Text == "Mã" || cbbLocTim.Text.StartsWith("Giá")) {
 				if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.')) {
@@ -580,7 +579,5 @@ namespace BTLCSDL.Forms {
         private void cbbLocTim_SelectedIndexChanged(object sender, EventArgs e) {
 			txtTim.PlaceholderText = "Nhập " + cbbLocTim.Text;
         }
-
-
 	}
 }

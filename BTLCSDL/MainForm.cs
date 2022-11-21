@@ -64,10 +64,11 @@ namespace BTLCSDL {
 			ChucVuType = typeof(ChucVu);
 			chucVuDAO = new ReflectionDAO(ChucVuType);
 
-			sanPhamDAO = new SanPhamDAO(typeof(SanPham));
-			chiTietSPDAO = new ReflectionDAO(typeof(ChiTietSP));
-			nhanVienDAO = new NhanVienDAO(typeof(NhanVien));
-			hoaDonBanDAO = new ReflectionDAO(typeof(HoaDonBan));
+			sanPhamDAO = new SanPhamDAO();
+			chiTietSPDAO = new ChiTietSPDAO();
+			nhanVienDAO = new NhanVienDAO();
+
+			hoaDonBanDAO = new HoaDonBanDAO();
 			khachHangDAO = new ReflectionDAO(typeof(KhachHang));
 			chiTietHoaDonBanDAO = new ReflectionDAO(typeof(ChiTietHDB));
 			nhaCungCapDAO = new ReflectionDAO(typeof(NhaCungCap));
@@ -216,7 +217,9 @@ namespace BTLCSDL {
 		}
 
 		private void btnHoaDonBan_Click(object sender, EventArgs e) {
-			OpenChildForm(new FormHoaDonBan(hoaDonBanDAO, khachHangDAO, nhanVienDAO, chiTietHoaDonBanDAO, chiTietSPDAO, sanPhamDAO), sender);
+			OpenChildForm(new FormHoaDonBan(hoaDonBanDAO, khachHangDAO, nhanVienDAO, 
+											chiTietHoaDonBanDAO, chiTietSPDAO, sanPhamDAO, 
+											sizeDAO, mauSacDAO, theLoaiDAO, chatLieuDAO, quocGiaDAO), sender);
 			setOffAll();
 			setOn(btnHoaDon);
 		}
