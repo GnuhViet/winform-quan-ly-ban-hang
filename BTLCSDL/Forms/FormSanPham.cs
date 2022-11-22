@@ -1,6 +1,7 @@
 ﻿using BTLCSDL.DAO;
 using BTLCSDL.DAO.impl;
 using BTLCSDL.Model;
+using BTLCSDL.Properties;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ using System.Windows.Forms;
 
 namespace BTLCSDL.Forms {
 	public partial class txtSanPhamHienTai : Form {
+		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(txtSanPhamHienTai));
 
 		ReflectionDAO dao;
 		ReflectionDAO ChatLieuDAO;
@@ -201,7 +203,7 @@ namespace BTLCSDL.Forms {
 			table.DataSource = dt;
 		}
 
-		private void table_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+		private void table_CellContentClick(object sender, DataGridViewCellEventArgs e) {	
 			if (e.ColumnIndex == 0) { //delete
 				isThem = true;
 				dao.delelte(Convert.ToInt32(table.CurrentRow.Cells[3].Value));
@@ -217,6 +219,8 @@ namespace BTLCSDL.Forms {
 			}
 
 			if (e.ColumnIndex == 2) {
+				formInputSanPham.Visible = false;
+
 				// luu lai san pham hien tai
 				MaSanPhamHienTai = Convert.ToInt32(table.CurrentRow.Cells[3].Value);
 				tenSanPhamHienTai = table.CurrentRow.Cells[4].Value.ToString();
@@ -234,6 +238,10 @@ namespace BTLCSDL.Forms {
 			formInputSanPham.Visible = true;
 			btnThemSubmit.Text = " thêm";
 			isThem = true;
+
+			// an 2 cai kia di neu dang hien
+			formDanhSachCTSP.Visible = false;
+			formInputCTSP.Visible = false;
 		}
 
 		private void txtTim_TextChanged(object sender, EventArgs e) {
@@ -283,7 +291,17 @@ namespace BTLCSDL.Forms {
 		#region form-input-SanPham
 
 		private void btnDongFrom_Click(object sender, EventArgs e) {
+			txtSanPhamID.Text = "";
+			txtTen.Text = "";
+			txtDonGiaBan.Value = 0;
+			txtDonGiaNhap.Value = 0;
+			cbbTheLoai.SelectedIndex = -1; txtTheLoaiID.Text = "";
+			cbbChatLieu.SelectedIndex = -1; txtChatLieuID.Text = "";
+			cbbQuocGia.SelectedIndex = -1; txtQuocGiaID.Text = "";
+			pictureAnh.Image = ((System.Drawing.Image)(resources.GetObject("pictureAnh.Image")));
 			formInputSanPham.Visible = false;
+			radioNam.Checked = false;
+			radioNu.Checked = false;
 		}
 
 		private void btnThemSubmit_Click(object sender, EventArgs e) {
@@ -300,19 +318,46 @@ namespace BTLCSDL.Forms {
 		}
 
 		private SanPham getForm() {
-			SanPham model = new SanPham();
-			if ("".Equals(txtTen.Text) || txtDonGiaBan.Value == 0) {
-				MessageBox.Show("Yeu cau nhap du ten va gia!");
+			if ("".Equals(txtTen.Text)) {
+				MessageBox.Show("Yêu cầu nhập tên");
 				return null;
 			}
-
+			if ("0".Equals(txtDonGiaBan.Text) || "".Equals(txtDonGiaBan.Text)) {
+				MessageBox.Show("Yêu cầu nhập đơn giá bán");
+				return null;
+			}
+			if ("0".Equals(txtDonGiaNhap.Text) || "".Equals(txtDonGiaNhap.Text) ) {
+				MessageBox.Show("Yêu cầu nhập đơn giá nhập");
+				return null;
+			}
+			if ("".Equals(txtTheLoaiID.Text)) {
+				MessageBox.Show("Yêu cầu chọn thể loại");
+				return null;
+			}
+			if ("".Equals(txtChatLieuID.Text)) {
+				MessageBox.Show("Yêu cầu chọn chất liệu");
+				return null;
+			}
+			if ("".Equals(txtQuocGiaID.Text)) {
+				MessageBox.Show("Yêu cầu chọn quốc gia");
+				return null;
+			}
+			if (pictureAnh.ImageLocation == null) {
+				MessageBox.Show("Yêu cầu chọn ảnh");
+				return null;
+			}
+			var gioiTinh = panelGioiTinh.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+			if (gioiTinh == null) {
+				MessageBox.Show("Yêu cầu chọn giới tính");
+				return null;
+			}
+			SanPham model = new SanPham();
 			if (!isThem) {
 				model.MaSP = Convert.ToInt32(txtSanPhamID.Text);
 			}
 			model.TenSP = txtTen.Text;
 			model.DonGiaBan = Convert.ToInt32(txtDonGiaBan.Value);
 			model.DonGiaNhap = Convert.ToInt32(txtDonGiaNhap.Value);
-			var gioiTinh = panelGioiTinh.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
 			model.GioiTinh = gioiTinh.Text;
 			// anh
 			model.Anh = pictureAnh.ImageLocation;
@@ -409,6 +454,7 @@ namespace BTLCSDL.Forms {
 		#region danh-sach-chi-tiet-san-pham
 		private void BtnDongDSCTSP_Click(object sender, EventArgs e) {
 			formDanhSachCTSP.Visible = false;
+			formInputCTSP.Visible = false;
 			MaSanPhamHienTai = -1;
 		}
 
@@ -491,6 +537,9 @@ namespace BTLCSDL.Forms {
 		}
 
 		private void btnDongFormCTSP_Click(object sender, EventArgs e) {
+			cbbSize.SelectedIndex = -1; txtMaS.Text = "";
+			cbbMauSac.SelectedIndex = -1; txtMaMS.Text = "";
+			txtSoLuong.Value = 0;		
 			formInputCTSP.Visible = false;
 		}
 
@@ -516,22 +565,38 @@ namespace BTLCSDL.Forms {
 		}
 
 		private ChiTietSP getFormCTSP() {
-			ChiTietSP model = new ChiTietSP();
+			if (cbbSize.Text == null || cbbSize.Text == "") {
+				MessageBox.Show("Chưa Chọn Size");
+				return null;
+			}
+			if (cbbMauSac.Text == null || cbbMauSac.Text == "") {
+				MessageBox.Show("Chưa Chọn Màu");
+				return null;
+			}
 			if (txtSoLuong.Value == 0) {
-				MessageBox.Show("Yeu cau nhap so luong");
+				MessageBox.Show("Chưa Nhập Số Lượng");
 				return null;
 			}
 			
+			ChiTietSP model = new ChiTietSP();
 			
 			if (!isThemCTSP) {
 				model.MaCTSP = Convert.ToInt32(txtCTSPID.Text);
 			}
 		
-
 			model.MaSP = MaSanPhamHienTai;
 			model.MaS = Convert.ToInt32(txtMaS.Text);
 			model.MaMS = Convert.ToInt32(txtMaMS.Text);
 			model.SoLuong = Convert.ToInt32(txtSoLuong.Value);
+
+			foreach(DataGridViewRow r in tableDSCTSP.Rows) {
+				if (r.Cells["MaS"].Value.ToString() == model.MaS.ToString() 
+						&& r.Cells["MaMS"].Value.ToString() == model.MaMS.ToString()) {
+					MessageBox.Show("Mặt Hàng Với Size và Màu này đã tồn tại");
+					return null;
+				}
+			}
+
 			return model;
 		}
 

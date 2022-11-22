@@ -88,6 +88,8 @@ namespace BTLCSDL.Forms {
 
 		private void btnDongFrom_Click(object sender, EventArgs e) {
 			formInput.Visible = false;
+			txtHoTenKH.Text = "";
+			txtSDT.Text = "";
 		}
 
 		private void btnThemSubmit_Click(object sender, EventArgs e) {
@@ -104,6 +106,15 @@ namespace BTLCSDL.Forms {
 		}
 
 		private KhachHang getForm() {
+			if (txtHoTenKH.Text == "") {
+				MessageBox.Show("Yêu cầu nhập tên");
+				return null;
+			}
+			if (txtSDT.Text == "") {
+				MessageBox.Show("Yêu cầu nhập SDT");
+				return null;
+			}
+
 			KhachHang model = new KhachHang();
 			if ("".Equals(txtHoTenKH.Text)) {
 				MessageBox.Show("Yeu cau nhap du ten");
@@ -145,6 +156,8 @@ namespace BTLCSDL.Forms {
 			formInput.Visible = true;
 			btnThemSubmit.Text = " thêm";
 			isThem = true;
+			txtHoTenKH.Text = "";
+			txtSDT.Text = "";
 		}
 
         private void txtSDT_TextChanged(object sender, EventArgs e) {

@@ -198,15 +198,19 @@ namespace BTLCSDL.Forms {
 				loadChiTietHoaDonBan(MaHDB);
 				setForm(MaHDB);
 				formThemHoaDon.Visible = true;
+				panelChonSanPham.Visible = false;
 			}
 		}
 		
 		private void btnThemHoaDon_Click(object sender, EventArgs e) {
 			isThem = true;
 			formThemHoaDon.Visible = true;
+			panelChonSanPham.Visible = false;
+			btnThemSubmit.Text = " Thêm";
 		}
 		
 		private void loadChiTietHoaDonBan(String MaHDB) {
+			danhSachSanPhamCuaHoaDon.Rows.Clear();
 			DataTable dt = ((ChiTietSPDAO)ctspDAO).getWithSizeMauSanPham(Convert.ToInt32(MaHDB));
 			danhSachSanPhamCuaHoaDon.Rows.Add();
 			foreach(DataRow r in dt.Rows) {
@@ -223,12 +227,15 @@ namespace BTLCSDL.Forms {
 		#region form hoa don =========================================
 		// set ma nhan vien khi chon nv
 		private void listNhanVien_SelectedIndexChanged(object sender, EventArgs e) {
+			if (((System.Windows.Forms.ComboBox)sender).SelectedIndex == -1) {
+				return;
+			}
 			txtNhanVienID.Text = cbbListNhanVien.Text.Trim().Split('-')[1];
 		}
 		// set ma khach khi chon khach
 		private void cbbListKhachHang_SelectedIndexChanged(object sender, EventArgs e) {
-			String nv = cbbListKhachHang.Text;
-			if (nv == null || nv == "") {
+			String kh = cbbListKhachHang.Text;
+			if (kh == null || kh == "") {
 				txtKhachHangID.Text = "0";
 				return;
 			}
@@ -243,27 +250,39 @@ namespace BTLCSDL.Forms {
 
 		private void btnDongFromHoaDon_Click(object sender, EventArgs e) {
 			formThemHoaDon.Visible = false;
+			panelChonSanPham.Visible = false;
 			// dua cac so ve 0
 			txtTongTienThanhToan.Text = "0";
 			txtTienKhachTra.Text = "0";
 			txtTienTraLai.Text = "0";
+			cbbListNhanVien.SelectedIndex = -1; txtNhanVienID.Text = "";
+			cbbListKhachHang.SelectedIndex = -1; txtKhachHangID.Text = "";
+
 			// clear danh sach
 			danhSachSanPhamCuaHoaDon.Rows.Clear();			
-
 			FormHoaDon_Load(sender, e);
 		}
 
 		private void btnThemHoaDonSubmit_Click(object sender, EventArgs e) {
+			// validate
+			if (danhSachSanPhamCuaHoaDon.Rows.Count == 0) {
+				MessageBox.Show("Chưa chọn sản phẩm cho hoá đơn");
+				return;
+			}
+			if (cbbListNhanVien.Text == null || cbbListNhanVien.Text == "") {
+				MessageBox.Show("Chưa chọn nhân viên");
+				return;
+			}
 			// tinh tien khach can tra
 			int TienKhachTra = Convert.ToInt32(txtTienKhachTra.Text);
 			int TongTienCanTra = (Convert.ToInt32(txtTongTienThanhToan.Text));
 			if (TienKhachTra < TongTienCanTra) {
 				txtTienKhachTra.Text = "";
-				MessageBox.Show("Tien khac tra khong duoc nho nhon so tien can tra");
+				MessageBox.Show("Không được trả ít hơn số tiền cần trả");
 				return;
 			}
 			txtTienTraLai.Text = Convert.ToString(TienKhachTra - TongTienCanTra);
-			MessageBox.Show("tra lai khach: " + txtTienTraLai.Text + "k vnd");
+			MessageBox.Show("Trả lại khách: " + txtTienTraLai.Text + "k vnd");
 
 
 			// kiem tra

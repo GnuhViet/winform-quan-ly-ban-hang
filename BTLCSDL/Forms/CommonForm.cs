@@ -71,6 +71,8 @@ namespace BTLCSDL.Forms {
 
 		private void btnDongFrom_Click(object sender, EventArgs e) {
 			formInput.Visible = false;
+			txtTen.Text = "";
+			txtMa.Text = "";
 			clearFormContent();
 		}
 
@@ -90,7 +92,7 @@ namespace BTLCSDL.Forms {
 		private Object getForm() {
 			Object model = Activator.CreateInstance(type);
 			if ("".Equals(txtTen.Text)) {
-				MessageBox.Show("Yeu cau nhap du ten");
+				MessageBox.Show("Tên Không Được Để Trống !!");
 				return null;
 			}
 			if (!isThem) {
@@ -139,6 +141,7 @@ namespace BTLCSDL.Forms {
 		private void btnThem_Click(object sender, EventArgs e) {
 			formInput.Visible = true;
 			btnThemSubmit.Text = " thêm";
+			txtTen.Text = ""; txtMa.Text = "";
 			isThem = true;
 		}
 

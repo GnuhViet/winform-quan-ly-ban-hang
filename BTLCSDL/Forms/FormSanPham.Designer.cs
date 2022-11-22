@@ -270,7 +270,7 @@
 			this.pictureAnh.AllowFocused = false;
 			this.pictureAnh.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.pictureAnh.AutoSizeHeight = true;
-			this.pictureAnh.BorderRadius = 33;
+			this.pictureAnh.BorderRadius = 86;
 			this.pictureAnh.Image = ((System.Drawing.Image)(resources.GetObject("pictureAnh.Image")));
 			this.pictureAnh.IsCircle = true;
 			this.pictureAnh.Location = new System.Drawing.Point(23, 67);
@@ -880,7 +880,6 @@
 			this.formDanhSachCTSP.Controls.Add(this.cbbLocMauSac);
 			this.formDanhSachCTSP.Controls.Add(this.label21);
 			this.formDanhSachCTSP.Controls.Add(this.label20);
-			this.formDanhSachCTSP.Controls.Add(this.formInputCTSP);
 			this.formDanhSachCTSP.Controls.Add(this.label19);
 			this.formDanhSachCTSP.Controls.Add(this.labelTenSanPhamHienTai);
 			this.formDanhSachCTSP.Controls.Add(this.btnDongDSCTSP);
@@ -889,7 +888,7 @@
 			this.formDanhSachCTSP.Controls.Add(this.label14);
 			this.formDanhSachCTSP.Controls.Add(this.txtTimChiTietSP);
 			this.formDanhSachCTSP.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.formDanhSachCTSP.Location = new System.Drawing.Point(256, 130);
+			this.formDanhSachCTSP.Location = new System.Drawing.Point(276, 156);
 			this.formDanhSachCTSP.Name = "formDanhSachCTSP";
 			this.formDanhSachCTSP.Size = new System.Drawing.Size(781, 525);
 			this.formDanhSachCTSP.TabIndex = 43;
@@ -1025,7 +1024,7 @@
 			this.formInputCTSP.Controls.Add(this.cbbSize);
 			this.formInputCTSP.Controls.Add(this.btnDongFormCTSP);
 			this.formInputCTSP.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.formInputCTSP.Location = new System.Drawing.Point(146, 111);
+			this.formInputCTSP.Location = new System.Drawing.Point(329, 257);
 			this.formInputCTSP.Name = "formInputCTSP";
 			this.formInputCTSP.Size = new System.Drawing.Size(485, 287);
 			this.formInputCTSP.TabIndex = 43;
@@ -1738,6 +1737,7 @@
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
 			this.ClientSize = new System.Drawing.Size(1350, 765);
 			this.Controls.Add(this.cbbLocTim);
+			this.Controls.Add(this.formInputCTSP);
 			this.Controls.Add(this.label13);
 			this.Controls.Add(this.formDanhSachCTSP);
 			this.Controls.Add(this.formInputSanPham);

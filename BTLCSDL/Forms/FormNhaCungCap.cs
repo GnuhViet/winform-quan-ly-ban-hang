@@ -93,6 +93,11 @@ namespace BTLCSDL.Forms {
 
 		private void btnDongFrom_Click(object sender, EventArgs e) {
 			formInput.Visible = false;
+			txtTenNCC.Text = "";
+			txtDiaChi.Text = "";
+			txtSDT.Text = "";
+			txtEmail.Text = "";
+			txtMaNCC.Text = "";
 		}
 
 		private void btnThemSubmit_Click(object sender, EventArgs e) {
@@ -109,6 +114,23 @@ namespace BTLCSDL.Forms {
 		}
 
 		private NhaCungCap getForm() {
+			if(txtTenNCC.Text == "") {
+				MessageBox.Show("Yêu Cầu Nhập Tên");
+				return null;
+			}
+			if (txtDiaChi.Text == "") {
+				MessageBox.Show("Yêu Cầu Nhập Địa Chỉ");
+				return null;
+			}
+			if (txtSDT.Text == "") {
+				MessageBox.Show("Yêu Cầu Nhập Số Điện Thoại");
+				return null;
+			}
+			if (txtEmail.Text == "") {
+				MessageBox.Show("Yêu Cầu Nhập Email");
+				return null;
+			}
+			
 			NhaCungCap model = new NhaCungCap();
 			if ("".Equals(txtTenNCC.Text)) {
 				MessageBox.Show("Yeu cau nhap du ten");
@@ -154,6 +176,11 @@ namespace BTLCSDL.Forms {
 			formInput.Visible = true;
 			btnThemSubmit.Text = " thêm";
 			isThem = true;
+			txtTenNCC.Text = "";
+			txtDiaChi.Text = "";
+			txtSDT.Text = "";
+			txtEmail.Text = "";
+			txtMaNCC.Text = "";
 		}
 
         private void txtSDT_TextChanged(object sender, EventArgs e) {

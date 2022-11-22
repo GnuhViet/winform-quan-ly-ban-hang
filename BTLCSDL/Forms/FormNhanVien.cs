@@ -112,6 +112,16 @@ namespace BTLCSDL.Forms {
 
 		private void btnDongFrom_Click(object sender, EventArgs e) {
 			formInput.Visible = false;
+			txtMaNV.Text = "";
+			txtHoTenNV.Text = "";
+			txtSDT.Text = "";
+			txtDiaChi.Text = "";
+			cbbChucVu.SelectedIndex = -1; txtMaCV.Text = "";
+			radioNam.Checked 
+				= radioNu.Checked 
+				= radioNghi.Checked 
+				= false;
+			radioDangLam.Checked = true;
 		}
 
 		private void btnThemSubmit_Click(object sender, EventArgs e) {
@@ -128,11 +138,38 @@ namespace BTLCSDL.Forms {
 		}
 
 		private NhanVien getForm() {
-			NhanVien model = new NhanVien();
+			
 			if ("".Equals(txtHoTenNV.Text)) {
-				MessageBox.Show("Yeu cau nhap du ten");
+				MessageBox.Show("Yêu Cầu Nhập Tên");
 				return null;
 			}
+			if (DateTime.Now.Year - txtNgaySinh.Value.Year < 18) {
+				MessageBox.Show("Không được nhỏ hơn 18 tuổi");
+				return null;
+			}
+			if ("".Equals(txtSDT.Text)) {
+				MessageBox.Show("Yêu Cầu Số Điện Thoại");
+				return null;
+			}
+			if ("".Equals(txtDiaChi.Text)) {
+				MessageBox.Show("Yêu Cầu Nhập Địa Chỉ");
+				return null;
+			}
+			if ("".Equals(txtMaCV.Text)) {
+				MessageBox.Show("Yêu Cầu Chọn Chức Vụ");
+				return null;
+			}
+			var gioiTinh = panelGioiTinh.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+			var tinhTrang = panelTinhTrang.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+			if (gioiTinh == null) {
+				MessageBox.Show("Yêu Cầu Chọn Giới Tính");
+				return null;
+			}
+			if (tinhTrang == null) {
+				MessageBox.Show("Yêu Cầu Chọn Tình Trạng");
+				return null;
+			}
+			NhanVien model = new NhanVien();
 			if (!isThem) {
 				model.MaNV = Convert.ToInt32(txtMaNV.Text);
 			}
@@ -141,8 +178,6 @@ namespace BTLCSDL.Forms {
 			model.SoDT     = txtSDT.Text;
 			model.DiaChi   = txtDiaChi.Text;
 			model.MaCV     = Convert.ToInt32(txtMaCV.Text);
-			var gioiTinh  = panelGioiTinh.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
-			var tinhTrang = panelTinhTrang.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
 			model.GioiTinh  = gioiTinh.Text;
 			model.TinhTrang = tinhTrang.Text;
 			return model;
@@ -207,6 +242,9 @@ namespace BTLCSDL.Forms {
 		}
 
 		private void cbbChucVu_SelectedIndexChanged(object sender, EventArgs e) {
+			if (((System.Windows.Forms.ComboBox)sender).SelectedIndex == -1) {
+				return;
+			}
 			txtMaCV.Text = cbbChucVu.Text.Trim().Split('-')[0];
 		}
 
@@ -222,7 +260,6 @@ namespace BTLCSDL.Forms {
 				e.Handled = true;
 			}
 		}
-		
 
 		// radio loc
 
