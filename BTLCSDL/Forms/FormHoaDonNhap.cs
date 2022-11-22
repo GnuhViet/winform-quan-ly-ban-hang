@@ -15,7 +15,6 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace BTLCSDL.Forms
 {
-    
     public partial class FormHoaDonNhap : Form
     {
         private int MaHDN;
@@ -347,10 +346,9 @@ namespace BTLCSDL.Forms
                 if(MessageBox.Show("Bạn có muốn sửa sản phẩm hóa đơn không? ", "Cảnh báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
 
-					ChiTietHDN hdn = new ChiTietHDN();
-					hdn.MaHDN = MaHDN;
-					cthdn.delelte(hdn);
-                    foreach (SanPhamHDN sp in listSPHD)
+					sql.Execute($"delete from ChiTietHDN where MaHDN = {MaHDN}");
+
+					foreach (SanPhamHDN sp in listSPHD)
                     {
                         tongTien += sp.ThanhTien;
                         cthdn.create(sp);

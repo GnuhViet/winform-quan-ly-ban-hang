@@ -26,7 +26,7 @@
 			this.components = new System.ComponentModel.Container();
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.button2 = new System.Windows.Forms.Button();
+			this.btnThongKe = new System.Windows.Forms.Button();
 			this.btnNhaCungCap = new System.Windows.Forms.Button();
 			this.btnKhachHang = new System.Windows.Forms.Button();
 			this.btnNhanVien = new System.Windows.Forms.Button();
@@ -72,7 +72,7 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
-			this.panel1.Controls.Add(this.button2);
+			this.panel1.Controls.Add(this.btnThongKe);
 			this.panel1.Controls.Add(this.btnNhaCungCap);
 			this.panel1.Controls.Add(this.btnKhachHang);
 			this.panel1.Controls.Add(this.btnNhanVien);
@@ -86,24 +86,25 @@
 			this.panel1.Size = new System.Drawing.Size(153, 884);
 			this.panel1.TabIndex = 0;
 			// 
-			// button2
+			// btnThongKe
 			// 
-			this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-			this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.button2.Image = global::BTLCSDL.Properties.Resources.icons8_statistic_32;
-			this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button2.Location = new System.Drawing.Point(0, 441);
-			this.button2.Name = "button2";
-			this.button2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-			this.button2.Size = new System.Drawing.Size(153, 64);
-			this.button2.TabIndex = 18;
-			this.button2.Text = " Thống Kê";
-			this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-			this.button2.UseVisualStyleBackColor = true;
+			this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
+			this.btnThongKe.FlatAppearance.BorderSize = 0;
+			this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+			this.btnThongKe.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnThongKe.Image = global::BTLCSDL.Properties.Resources.icons8_statistic_32;
+			this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnThongKe.Location = new System.Drawing.Point(0, 441);
+			this.btnThongKe.Name = "btnThongKe";
+			this.btnThongKe.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+			this.btnThongKe.Size = new System.Drawing.Size(153, 64);
+			this.btnThongKe.TabIndex = 18;
+			this.btnThongKe.Text = " Thống Kê";
+			this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+			this.btnThongKe.UseVisualStyleBackColor = true;
+			this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
 			// 
 			// btnNhaCungCap
 			// 
@@ -429,7 +430,7 @@
 			this.HoaDonDropDownMenu.MenuItemTextColor = System.Drawing.Color.Empty;
 			this.HoaDonDropDownMenu.Name = "HoaDonDropDownMenu";
 			this.HoaDonDropDownMenu.PrimaryColor = System.Drawing.Color.Empty;
-			this.HoaDonDropDownMenu.Size = new System.Drawing.Size(181, 74);
+			this.HoaDonDropDownMenu.Size = new System.Drawing.Size(169, 52);
 			// 
 			// btnHoaDonBan
 			// 
@@ -438,7 +439,7 @@
 			this.btnHoaDonBan.ForeColor = System.Drawing.Color.White;
 			this.btnHoaDonBan.Image = global::BTLCSDL.Properties.Resources.icons8_sell_32;
 			this.btnHoaDonBan.Name = "btnHoaDonBan";
-			this.btnHoaDonBan.Size = new System.Drawing.Size(180, 24);
+			this.btnHoaDonBan.Size = new System.Drawing.Size(168, 24);
 			this.btnHoaDonBan.Text = "Hoá Đơn Bán";
 			this.btnHoaDonBan.Click += new System.EventHandler(this.btnHoaDonBan_Click);
 			// 
@@ -449,7 +450,7 @@
 			this.btnHoaDonNhap.ForeColor = System.Drawing.Color.White;
 			this.btnHoaDonNhap.Image = global::BTLCSDL.Properties.Resources.icons8_warehouse_32;
 			this.btnHoaDonNhap.Name = "btnHoaDonNhap";
-			this.btnHoaDonNhap.Size = new System.Drawing.Size(180, 24);
+			this.btnHoaDonNhap.Size = new System.Drawing.Size(168, 24);
 			this.btnHoaDonNhap.Text = "Hoá Đơn Nhập";
 			this.btnHoaDonNhap.Click += new System.EventHandler(this.btnHoaDonNhap_Click);
 			// 
@@ -508,7 +509,7 @@
         private CustomControl.RJDropdownMenu HoaDonDropDownMenu;
         private System.Windows.Forms.ToolStripMenuItem btnHoaDonBan;
         private System.Windows.Forms.ToolStripMenuItem btnHoaDonNhap;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Button btnNhaCungCap;
     }
 }

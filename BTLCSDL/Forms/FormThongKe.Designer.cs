@@ -23,251 +23,1310 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			this.top10SanPhamBanChay = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.top10sp = new System.Windows.Forms.Label();
+			this.components = new System.ComponentModel.Container();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThongKe));
+			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+			Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+			this.tabControl = new System.Windows.Forms.TabControl();
+			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.danhSachSanPhamTonKho = new Bunifu.UI.WinForms.BunifuDataGridView();
+			this.btnBaoCaoDSTonKho = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
 			this.label1 = new System.Windows.Forms.Label();
-			this.bangLuong = new System.Windows.Forms.DataGridView();
-			this.chartDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.label2 = new System.Windows.Forms.Label();
-			this.txtThangBD = new System.Windows.Forms.NumericUpDown();
-			this.txtThangKT = new System.Windows.Forms.NumericUpDown();
-			this.txtNam = new System.Windows.Forms.NumericUpDown();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
+			this.panelBaoCaoBanHang = new System.Windows.Forms.TabPage();
+			this.cbbNhanVien = new Bunifu.UI.WinForms.BunifuDropdown();
+			this.lbNV = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.top10SanPhamBanChay)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.bangLuong)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtThangBD)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtThangKT)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtNam)).BeginInit();
+			this.btnBaoCaoBan = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+			this.baoCaoBan = new Bunifu.UI.WinForms.BunifuDataGridView();
+			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.label2 = new System.Windows.Forms.Label();
+			this.txtNamBaoCaoNhap = new Bunifu.UI.WinForms.BunifuTextBox();
+			this.cbbQuyBaoCaoNhap = new Bunifu.UI.WinForms.BunifuDropdown();
+			this.labelTimKiem = new System.Windows.Forms.Label();
+			this.btnBaoCaoNhap = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+			this.baoCaoNhap = new Bunifu.UI.WinForms.BunifuDataGridView();
+			this.tabPage4 = new System.Windows.Forms.TabPage();
+			this.label4 = new System.Windows.Forms.Label();
+			this.txtNamKhachHang = new Bunifu.UI.WinForms.BunifuTextBox();
+			this.cbbTopKhach = new Bunifu.UI.WinForms.BunifuDropdown();
+			this.label6 = new System.Windows.Forms.Label();
+			this.btnTopKhachHang = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+			this.topKhachHang = new Bunifu.UI.WinForms.BunifuDataGridView();
+			this.btnXuatBaoCao = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+			this.label3 = new System.Windows.Forms.Label();
+			this.txtTongTien = new System.Windows.Forms.TextBox();
+			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.tabControl.SuspendLayout();
+			this.tabPage1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.danhSachSanPhamTonKho)).BeginInit();
+			this.panelBaoCaoBanHang.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.baoCaoBan)).BeginInit();
+			this.tabPage2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.baoCaoNhap)).BeginInit();
+			this.tabPage4.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.topKhachHang)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// top10SanPhamBanChay
+			// tabControl
 			// 
-			chartArea1.Name = "ChartArea1";
-			this.top10SanPhamBanChay.ChartAreas.Add(chartArea1);
-			legend1.Name = "Legend1";
-			this.top10SanPhamBanChay.Legends.Add(legend1);
-			this.top10SanPhamBanChay.Location = new System.Drawing.Point(12, 42);
-			this.top10SanPhamBanChay.Name = "top10SanPhamBanChay";
-			this.top10SanPhamBanChay.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-			this.top10SanPhamBanChay.Size = new System.Drawing.Size(396, 168);
-			this.top10SanPhamBanChay.TabIndex = 0;
-			this.top10SanPhamBanChay.Text = "chart1";
+			this.tabControl.Controls.Add(this.tabPage1);
+			this.tabControl.Controls.Add(this.panelBaoCaoBanHang);
+			this.tabControl.Controls.Add(this.tabPage2);
+			this.tabControl.Controls.Add(this.tabPage4);
+			this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+			this.tabControl.Location = new System.Drawing.Point(0, -1);
+			this.tabControl.Name = "tabControl";
+			this.tabControl.SelectedIndex = 0;
+			this.tabControl.Size = new System.Drawing.Size(1368, 809);
+			this.tabControl.TabIndex = 0;
 			// 
-			// top10sp
+			// tabPage1
 			// 
-			this.top10sp.AutoSize = true;
-			this.top10sp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-			this.top10sp.Location = new System.Drawing.Point(52, 17);
-			this.top10sp.Name = "top10sp";
-			this.top10sp.Size = new System.Drawing.Size(282, 22);
-			this.top10sp.TabIndex = 1;
-			this.top10sp.Text = "Top 10 Sản Phẩm Bán Chạy Nhất";
+			this.tabPage1.Controls.Add(this.danhSachSanPhamTonKho);
+			this.tabPage1.Controls.Add(this.btnBaoCaoDSTonKho);
+			this.tabPage1.Controls.Add(this.label1);
+			this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.tabPage1.Location = new System.Drawing.Point(4, 34);
+			this.tabPage1.Name = "tabPage1";
+			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage1.Size = new System.Drawing.Size(1360, 771);
+			this.tabPage1.TabIndex = 0;
+			this.tabPage1.Text = "Sản Phẩm Tồn Kho";
+			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// danhSachSanPhamTonKho
+			// 
+			this.danhSachSanPhamTonKho.AllowCustomTheming = false;
+			this.danhSachSanPhamTonKho.AllowUserToAddRows = false;
+			this.danhSachSanPhamTonKho.AllowUserToDeleteRows = false;
+			this.danhSachSanPhamTonKho.AllowUserToResizeColumns = false;
+			this.danhSachSanPhamTonKho.AllowUserToResizeRows = false;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+			this.danhSachSanPhamTonKho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.danhSachSanPhamTonKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.danhSachSanPhamTonKho.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.danhSachSanPhamTonKho.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+			this.danhSachSanPhamTonKho.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.danhSachSanPhamTonKho.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this.danhSachSanPhamTonKho.ColumnHeadersHeight = 40;
+			this.danhSachSanPhamTonKho.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			this.danhSachSanPhamTonKho.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			this.danhSachSanPhamTonKho.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+			this.danhSachSanPhamTonKho.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			this.danhSachSanPhamTonKho.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+			this.danhSachSanPhamTonKho.CurrentTheme.BackColor = System.Drawing.Color.White;
+			this.danhSachSanPhamTonKho.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+			this.danhSachSanPhamTonKho.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+			this.danhSachSanPhamTonKho.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			this.danhSachSanPhamTonKho.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+			this.danhSachSanPhamTonKho.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			this.danhSachSanPhamTonKho.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+			this.danhSachSanPhamTonKho.CurrentTheme.Name = null;
+			this.danhSachSanPhamTonKho.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+			this.danhSachSanPhamTonKho.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			this.danhSachSanPhamTonKho.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+			this.danhSachSanPhamTonKho.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			this.danhSachSanPhamTonKho.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.danhSachSanPhamTonKho.DefaultCellStyle = dataGridViewCellStyle3;
+			this.danhSachSanPhamTonKho.EnableHeadersVisualStyles = false;
+			this.danhSachSanPhamTonKho.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+			this.danhSachSanPhamTonKho.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+			this.danhSachSanPhamTonKho.HeaderBgColor = System.Drawing.Color.Empty;
+			this.danhSachSanPhamTonKho.HeaderForeColor = System.Drawing.Color.White;
+			this.danhSachSanPhamTonKho.Location = new System.Drawing.Point(8, 53);
+			this.danhSachSanPhamTonKho.Name = "danhSachSanPhamTonKho";
+			this.danhSachSanPhamTonKho.ReadOnly = true;
+			this.danhSachSanPhamTonKho.RowHeadersVisible = false;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.danhSachSanPhamTonKho.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			this.danhSachSanPhamTonKho.RowTemplate.Height = 40;
+			this.danhSachSanPhamTonKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.danhSachSanPhamTonKho.Size = new System.Drawing.Size(1344, 710);
+			this.danhSachSanPhamTonKho.TabIndex = 31;
+			this.danhSachSanPhamTonKho.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+			// 
+			// btnBaoCaoDSTonKho
+			// 
+			this.btnBaoCaoDSTonKho.AllowAnimations = true;
+			this.btnBaoCaoDSTonKho.AllowMouseEffects = true;
+			this.btnBaoCaoDSTonKho.AllowToggling = false;
+			this.btnBaoCaoDSTonKho.AnimationSpeed = 200;
+			this.btnBaoCaoDSTonKho.AutoGenerateColors = false;
+			this.btnBaoCaoDSTonKho.AutoRoundBorders = false;
+			this.btnBaoCaoDSTonKho.AutoSizeLeftIcon = true;
+			this.btnBaoCaoDSTonKho.AutoSizeRightIcon = true;
+			this.btnBaoCaoDSTonKho.BackColor = System.Drawing.Color.Transparent;
+			this.btnBaoCaoDSTonKho.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoDSTonKho.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBaoCaoDSTonKho.BackgroundImage")));
+			this.btnBaoCaoDSTonKho.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoDSTonKho.ButtonText = "Xuất Excel";
+			this.btnBaoCaoDSTonKho.ButtonTextMarginLeft = 0;
+			this.btnBaoCaoDSTonKho.ColorContrastOnClick = 45;
+			this.btnBaoCaoDSTonKho.ColorContrastOnHover = 45;
+			this.btnBaoCaoDSTonKho.Cursor = System.Windows.Forms.Cursors.Default;
+			borderEdges1.BottomLeft = true;
+			borderEdges1.BottomRight = true;
+			borderEdges1.TopLeft = true;
+			borderEdges1.TopRight = true;
+			this.btnBaoCaoDSTonKho.CustomizableEdges = borderEdges1;
+			this.btnBaoCaoDSTonKho.DialogResult = System.Windows.Forms.DialogResult.None;
+			this.btnBaoCaoDSTonKho.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+			this.btnBaoCaoDSTonKho.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.btnBaoCaoDSTonKho.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnBaoCaoDSTonKho.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+			this.btnBaoCaoDSTonKho.Font = new System.Drawing.Font("Segoe UI", 14F);
+			this.btnBaoCaoDSTonKho.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoDSTonKho.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnBaoCaoDSTonKho.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+			this.btnBaoCaoDSTonKho.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+			this.btnBaoCaoDSTonKho.IconMarginLeft = 11;
+			this.btnBaoCaoDSTonKho.IconPadding = 10;
+			this.btnBaoCaoDSTonKho.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnBaoCaoDSTonKho.IconRightCursor = System.Windows.Forms.Cursors.Default;
+			this.btnBaoCaoDSTonKho.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+			this.btnBaoCaoDSTonKho.IconSize = 25;
+			this.btnBaoCaoDSTonKho.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoDSTonKho.IdleBorderRadius = 25;
+			this.btnBaoCaoDSTonKho.IdleBorderThickness = 1;
+			this.btnBaoCaoDSTonKho.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoDSTonKho.IdleIconLeftImage = null;
+			this.btnBaoCaoDSTonKho.IdleIconRightImage = null;
+			this.btnBaoCaoDSTonKho.IndicateFocus = false;
+			this.btnBaoCaoDSTonKho.Location = new System.Drawing.Point(1252, 10);
+			this.btnBaoCaoDSTonKho.Name = "btnBaoCaoDSTonKho";
+			this.btnBaoCaoDSTonKho.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+			this.btnBaoCaoDSTonKho.OnDisabledState.BorderRadius = 25;
+			this.btnBaoCaoDSTonKho.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoDSTonKho.OnDisabledState.BorderThickness = 1;
+			this.btnBaoCaoDSTonKho.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.btnBaoCaoDSTonKho.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnBaoCaoDSTonKho.OnDisabledState.IconLeftImage = null;
+			this.btnBaoCaoDSTonKho.OnDisabledState.IconRightImage = null;
+			this.btnBaoCaoDSTonKho.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.btnBaoCaoDSTonKho.onHoverState.BorderRadius = 25;
+			this.btnBaoCaoDSTonKho.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoDSTonKho.onHoverState.BorderThickness = 1;
+			this.btnBaoCaoDSTonKho.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.btnBaoCaoDSTonKho.onHoverState.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoDSTonKho.onHoverState.IconLeftImage = null;
+			this.btnBaoCaoDSTonKho.onHoverState.IconRightImage = null;
+			this.btnBaoCaoDSTonKho.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoDSTonKho.OnIdleState.BorderRadius = 25;
+			this.btnBaoCaoDSTonKho.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoDSTonKho.OnIdleState.BorderThickness = 1;
+			this.btnBaoCaoDSTonKho.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoDSTonKho.OnIdleState.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoDSTonKho.OnIdleState.IconLeftImage = null;
+			this.btnBaoCaoDSTonKho.OnIdleState.IconRightImage = null;
+			this.btnBaoCaoDSTonKho.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+			this.btnBaoCaoDSTonKho.OnPressedState.BorderRadius = 25;
+			this.btnBaoCaoDSTonKho.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoDSTonKho.OnPressedState.BorderThickness = 1;
+			this.btnBaoCaoDSTonKho.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+			this.btnBaoCaoDSTonKho.OnPressedState.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoDSTonKho.OnPressedState.IconLeftImage = null;
+			this.btnBaoCaoDSTonKho.OnPressedState.IconRightImage = null;
+			this.btnBaoCaoDSTonKho.Size = new System.Drawing.Size(100, 37);
+			this.btnBaoCaoDSTonKho.TabIndex = 29;
+			this.btnBaoCaoDSTonKho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.btnBaoCaoDSTonKho.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+			this.btnBaoCaoDSTonKho.TextMarginLeft = 0;
+			this.btnBaoCaoDSTonKho.TextPadding = new System.Windows.Forms.Padding(0);
+			this.btnBaoCaoDSTonKho.UseDefaultRadiusAndThickness = true;
+			this.btnBaoCaoDSTonKho.Click += new System.EventHandler(this.btnBaoCaoDSTonKho_Click);
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-			this.label1.Location = new System.Drawing.Point(553, 17);
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+			this.label1.Location = new System.Drawing.Point(501, 18);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(196, 22);
-			this.label1.TabIndex = 2;
-			this.label1.Text = "Bảng Lương Nhân Viên";
+			this.label1.Size = new System.Drawing.Size(343, 29);
+			this.label1.TabIndex = 28;
+			this.label1.Text = "Danh Sách Sản Phẩm Tồn Kho";
 			// 
-			// bangLuong
+			// panelBaoCaoBanHang
 			// 
-			this.bangLuong.AllowUserToAddRows = false;
-			this.bangLuong.AllowUserToDeleteRows = false;
-			this.bangLuong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.bangLuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.bangLuong.Location = new System.Drawing.Point(430, 42);
-			this.bangLuong.Name = "bangLuong";
-			this.bangLuong.ReadOnly = true;
-			this.bangLuong.RowHeadersVisible = false;
-			this.bangLuong.Size = new System.Drawing.Size(448, 168);
-			this.bangLuong.TabIndex = 5;
+			this.panelBaoCaoBanHang.Controls.Add(this.txtTongTien);
+			this.panelBaoCaoBanHang.Controls.Add(this.label3);
+			this.panelBaoCaoBanHang.Controls.Add(this.cbbNhanVien);
+			this.panelBaoCaoBanHang.Controls.Add(this.lbNV);
+			this.panelBaoCaoBanHang.Controls.Add(this.label5);
+			this.panelBaoCaoBanHang.Controls.Add(this.btnBaoCaoBan);
+			this.panelBaoCaoBanHang.Controls.Add(this.baoCaoBan);
+			this.panelBaoCaoBanHang.Location = new System.Drawing.Point(4, 34);
+			this.panelBaoCaoBanHang.Name = "panelBaoCaoBanHang";
+			this.panelBaoCaoBanHang.Size = new System.Drawing.Size(1360, 771);
+			this.panelBaoCaoBanHang.TabIndex = 2;
+			this.panelBaoCaoBanHang.Text = "Báo Cáo Bán Hàng";
+			this.panelBaoCaoBanHang.UseVisualStyleBackColor = true;
 			// 
-			// chartDoanhThu
+			// cbbNhanVien
 			// 
-			chartArea2.Name = "ChartArea1";
-			this.chartDoanhThu.ChartAreas.Add(chartArea2);
-			legend2.Name = "Legend1";
-			this.chartDoanhThu.Legends.Add(legend2);
-			this.chartDoanhThu.Location = new System.Drawing.Point(12, 264);
-			this.chartDoanhThu.Name = "chartDoanhThu";
-			this.chartDoanhThu.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-			series1.ChartArea = "ChartArea1";
-			series1.Legend = "Legend1";
-			series1.Name = "Tháng";
-			this.chartDoanhThu.Series.Add(series1);
-			this.chartDoanhThu.Size = new System.Drawing.Size(866, 267);
-			this.chartDoanhThu.TabIndex = 6;
-			this.chartDoanhThu.Text = "chart1";
+			this.cbbNhanVien.BackColor = System.Drawing.Color.Transparent;
+			this.cbbNhanVien.BackgroundColor = System.Drawing.Color.White;
+			this.cbbNhanVien.BorderColor = System.Drawing.Color.Silver;
+			this.cbbNhanVien.BorderRadius = 13;
+			this.cbbNhanVien.Color = System.Drawing.Color.Silver;
+			this.cbbNhanVien.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+			this.cbbNhanVien.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			this.cbbNhanVien.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.cbbNhanVien.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			this.cbbNhanVien.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			this.cbbNhanVien.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+			this.cbbNhanVien.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.cbbNhanVien.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+			this.cbbNhanVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbbNhanVien.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+			this.cbbNhanVien.FillDropDown = true;
+			this.cbbNhanVien.FillIndicator = false;
+			this.cbbNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.cbbNhanVien.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.cbbNhanVien.ForeColor = System.Drawing.Color.Black;
+			this.cbbNhanVien.FormattingEnabled = true;
+			this.cbbNhanVien.Icon = null;
+			this.cbbNhanVien.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+			this.cbbNhanVien.IndicatorColor = System.Drawing.Color.Gray;
+			this.cbbNhanVien.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+			this.cbbNhanVien.ItemBackColor = System.Drawing.Color.White;
+			this.cbbNhanVien.ItemBorderColor = System.Drawing.Color.White;
+			this.cbbNhanVien.ItemForeColor = System.Drawing.Color.Black;
+			this.cbbNhanVien.ItemHeight = 26;
+			this.cbbNhanVien.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+			this.cbbNhanVien.ItemHighLightForeColor = System.Drawing.Color.White;
+			this.cbbNhanVien.Items.AddRange(new object[] {
+            ""});
+			this.cbbNhanVien.ItemTopMargin = 3;
+			this.cbbNhanVien.Location = new System.Drawing.Point(119, 15);
+			this.cbbNhanVien.Name = "cbbNhanVien";
+			this.cbbNhanVien.Size = new System.Drawing.Size(151, 32);
+			this.cbbNhanVien.Sorted = true;
+			this.cbbNhanVien.TabIndex = 57;
+			this.cbbNhanVien.Text = null;
+			this.cbbNhanVien.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+			this.cbbNhanVien.TextLeftMargin = 5;
+			this.cbbNhanVien.SelectedIndexChanged += new System.EventHandler(this.cbbNhanVien_SelectedIndexChanged);
 			// 
-			// label2
+			// lbNV
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-			this.label2.Location = new System.Drawing.Point(52, 239);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(313, 22);
-			this.label2.TabIndex = 7;
-			this.label2.Text = "Doanh Thu Khoảng Thời Gian(tháng):";
-			// 
-			// txtThangBD
-			// 
-			this.txtThangBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.txtThangBD.Location = new System.Drawing.Point(543, 233);
-			this.txtThangBD.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-			this.txtThangBD.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.txtThangBD.Name = "txtThangBD";
-			this.txtThangBD.Size = new System.Drawing.Size(48, 29);
-			this.txtThangBD.TabIndex = 8;
-			this.txtThangBD.Value = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-			this.txtThangBD.ValueChanged += new System.EventHandler(this.txtThangBD_ValueChanged);
-			// 
-			// txtThangKT
-			// 
-			this.txtThangKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.txtThangKT.Location = new System.Drawing.Point(684, 233);
-			this.txtThangKT.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-			this.txtThangKT.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-			this.txtThangKT.Name = "txtThangKT";
-			this.txtThangKT.Size = new System.Drawing.Size(47, 29);
-			this.txtThangKT.TabIndex = 9;
-			this.txtThangKT.Value = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-			this.txtThangKT.ValueChanged += new System.EventHandler(this.txtThangBD_ValueChanged);
-			// 
-			// txtNam
-			// 
-			this.txtNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.txtNam.Location = new System.Drawing.Point(795, 233);
-			this.txtNam.Maximum = new decimal(new int[] {
-            2030,
-            0,
-            0,
-            0});
-			this.txtNam.Minimum = new decimal(new int[] {
-            2015,
-            0,
-            0,
-            0});
-			this.txtNam.Name = "txtNam";
-			this.txtNam.Size = new System.Drawing.Size(83, 29);
-			this.txtNam.TabIndex = 10;
-			this.txtNam.Value = new decimal(new int[] {
-            2022,
-            0,
-            0,
-            0});
-			this.txtNam.ValueChanged += new System.EventHandler(this.txtThangBD_ValueChanged);
-			// 
-			// label3
-			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-			this.label3.Location = new System.Drawing.Point(460, 239);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(77, 22);
-			this.label3.TabIndex = 11;
-			this.label3.Text = "Bắt dầu:";
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-			this.label4.Location = new System.Drawing.Point(597, 237);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(81, 22);
-			this.label4.TabIndex = 12;
-			this.label4.Text = "Kết thúc:";
+			this.lbNV.AutoSize = true;
+			this.lbNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+			this.lbNV.Location = new System.Drawing.Point(821, 14);
+			this.lbNV.Name = "lbNV";
+			this.lbNV.Size = new System.Drawing.Size(366, 29);
+			this.lbNV.TabIndex = 56;
+			this.lbNV.Text = "Danh Sách Hoá Đơn Và Tiền Bán";
 			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-			this.label5.Location = new System.Drawing.Point(737, 238);
+			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.label5.Location = new System.Drawing.Point(8, 23);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(52, 22);
-			this.label5.TabIndex = 13;
-			this.label5.Text = "Năm:";
+			this.label5.Size = new System.Drawing.Size(105, 24);
+			this.label5.TabIndex = 53;
+			this.label5.Text = "Nhân Viên:";
+			// 
+			// btnBaoCaoBan
+			// 
+			this.btnBaoCaoBan.AllowAnimations = true;
+			this.btnBaoCaoBan.AllowMouseEffects = true;
+			this.btnBaoCaoBan.AllowToggling = false;
+			this.btnBaoCaoBan.AnimationSpeed = 200;
+			this.btnBaoCaoBan.AutoGenerateColors = false;
+			this.btnBaoCaoBan.AutoRoundBorders = false;
+			this.btnBaoCaoBan.AutoSizeLeftIcon = true;
+			this.btnBaoCaoBan.AutoSizeRightIcon = true;
+			this.btnBaoCaoBan.BackColor = System.Drawing.Color.Transparent;
+			this.btnBaoCaoBan.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoBan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBaoCaoBan.BackgroundImage")));
+			this.btnBaoCaoBan.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoBan.ButtonText = "Xuất Excel";
+			this.btnBaoCaoBan.ButtonTextMarginLeft = 0;
+			this.btnBaoCaoBan.ColorContrastOnClick = 45;
+			this.btnBaoCaoBan.ColorContrastOnHover = 45;
+			this.btnBaoCaoBan.Cursor = System.Windows.Forms.Cursors.Default;
+			borderEdges2.BottomLeft = true;
+			borderEdges2.BottomRight = true;
+			borderEdges2.TopLeft = true;
+			borderEdges2.TopRight = true;
+			this.btnBaoCaoBan.CustomizableEdges = borderEdges2;
+			this.btnBaoCaoBan.DialogResult = System.Windows.Forms.DialogResult.None;
+			this.btnBaoCaoBan.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+			this.btnBaoCaoBan.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.btnBaoCaoBan.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnBaoCaoBan.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+			this.btnBaoCaoBan.Font = new System.Drawing.Font("Segoe UI", 14F);
+			this.btnBaoCaoBan.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoBan.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnBaoCaoBan.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+			this.btnBaoCaoBan.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+			this.btnBaoCaoBan.IconMarginLeft = 11;
+			this.btnBaoCaoBan.IconPadding = 10;
+			this.btnBaoCaoBan.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnBaoCaoBan.IconRightCursor = System.Windows.Forms.Cursors.Default;
+			this.btnBaoCaoBan.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+			this.btnBaoCaoBan.IconSize = 25;
+			this.btnBaoCaoBan.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoBan.IdleBorderRadius = 25;
+			this.btnBaoCaoBan.IdleBorderThickness = 1;
+			this.btnBaoCaoBan.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoBan.IdleIconLeftImage = null;
+			this.btnBaoCaoBan.IdleIconRightImage = null;
+			this.btnBaoCaoBan.IndicateFocus = false;
+			this.btnBaoCaoBan.Location = new System.Drawing.Point(1252, 10);
+			this.btnBaoCaoBan.Name = "btnBaoCaoBan";
+			this.btnBaoCaoBan.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+			this.btnBaoCaoBan.OnDisabledState.BorderRadius = 25;
+			this.btnBaoCaoBan.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoBan.OnDisabledState.BorderThickness = 1;
+			this.btnBaoCaoBan.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.btnBaoCaoBan.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnBaoCaoBan.OnDisabledState.IconLeftImage = null;
+			this.btnBaoCaoBan.OnDisabledState.IconRightImage = null;
+			this.btnBaoCaoBan.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.btnBaoCaoBan.onHoverState.BorderRadius = 25;
+			this.btnBaoCaoBan.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoBan.onHoverState.BorderThickness = 1;
+			this.btnBaoCaoBan.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.btnBaoCaoBan.onHoverState.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoBan.onHoverState.IconLeftImage = null;
+			this.btnBaoCaoBan.onHoverState.IconRightImage = null;
+			this.btnBaoCaoBan.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoBan.OnIdleState.BorderRadius = 25;
+			this.btnBaoCaoBan.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoBan.OnIdleState.BorderThickness = 1;
+			this.btnBaoCaoBan.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoBan.OnIdleState.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoBan.OnIdleState.IconLeftImage = null;
+			this.btnBaoCaoBan.OnIdleState.IconRightImage = null;
+			this.btnBaoCaoBan.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+			this.btnBaoCaoBan.OnPressedState.BorderRadius = 25;
+			this.btnBaoCaoBan.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoBan.OnPressedState.BorderThickness = 1;
+			this.btnBaoCaoBan.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+			this.btnBaoCaoBan.OnPressedState.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoBan.OnPressedState.IconLeftImage = null;
+			this.btnBaoCaoBan.OnPressedState.IconRightImage = null;
+			this.btnBaoCaoBan.Size = new System.Drawing.Size(100, 37);
+			this.btnBaoCaoBan.TabIndex = 32;
+			this.btnBaoCaoBan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.btnBaoCaoBan.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+			this.btnBaoCaoBan.TextMarginLeft = 0;
+			this.btnBaoCaoBan.TextPadding = new System.Windows.Forms.Padding(0);
+			this.btnBaoCaoBan.UseDefaultRadiusAndThickness = true;
+			this.btnBaoCaoBan.Click += new System.EventHandler(this.btnBaoCaoBan_Click);
+			// 
+			// baoCaoBan
+			// 
+			this.baoCaoBan.AllowCustomTheming = false;
+			this.baoCaoBan.AllowUserToAddRows = false;
+			this.baoCaoBan.AllowUserToDeleteRows = false;
+			this.baoCaoBan.AllowUserToResizeColumns = false;
+			this.baoCaoBan.AllowUserToResizeRows = false;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+			this.baoCaoBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			this.baoCaoBan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.baoCaoBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.baoCaoBan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+			this.baoCaoBan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.DodgerBlue;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.baoCaoBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			this.baoCaoBan.ColumnHeadersHeight = 40;
+			this.baoCaoBan.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			this.baoCaoBan.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			this.baoCaoBan.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+			this.baoCaoBan.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			this.baoCaoBan.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+			this.baoCaoBan.CurrentTheme.BackColor = System.Drawing.Color.White;
+			this.baoCaoBan.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+			this.baoCaoBan.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+			this.baoCaoBan.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			this.baoCaoBan.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+			this.baoCaoBan.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			this.baoCaoBan.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+			this.baoCaoBan.CurrentTheme.Name = null;
+			this.baoCaoBan.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+			this.baoCaoBan.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			this.baoCaoBan.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+			this.baoCaoBan.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			this.baoCaoBan.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.baoCaoBan.DefaultCellStyle = dataGridViewCellStyle7;
+			this.baoCaoBan.EnableHeadersVisualStyles = false;
+			this.baoCaoBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+			this.baoCaoBan.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+			this.baoCaoBan.HeaderBgColor = System.Drawing.Color.Empty;
+			this.baoCaoBan.HeaderForeColor = System.Drawing.Color.White;
+			this.baoCaoBan.Location = new System.Drawing.Point(8, 50);
+			this.baoCaoBan.Name = "baoCaoBan";
+			this.baoCaoBan.ReadOnly = true;
+			this.baoCaoBan.RowHeadersVisible = false;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.baoCaoBan.RowsDefaultCellStyle = dataGridViewCellStyle8;
+			this.baoCaoBan.RowTemplate.Height = 40;
+			this.baoCaoBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.baoCaoBan.Size = new System.Drawing.Size(1344, 710);
+			this.baoCaoBan.TabIndex = 30;
+			this.baoCaoBan.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+			// 
+			// tabPage2
+			// 
+			this.tabPage2.Controls.Add(this.label2);
+			this.tabPage2.Controls.Add(this.txtNamBaoCaoNhap);
+			this.tabPage2.Controls.Add(this.cbbQuyBaoCaoNhap);
+			this.tabPage2.Controls.Add(this.labelTimKiem);
+			this.tabPage2.Controls.Add(this.btnBaoCaoNhap);
+			this.tabPage2.Controls.Add(this.baoCaoNhap);
+			this.tabPage2.Location = new System.Drawing.Point(4, 34);
+			this.tabPage2.Name = "tabPage2";
+			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage2.Size = new System.Drawing.Size(1360, 771);
+			this.tabPage2.TabIndex = 1;
+			this.tabPage2.Text = "Báo Cáo Nhập Hàng";
+			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+			this.label2.Location = new System.Drawing.Point(447, 18);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(382, 29);
+			this.label2.TabIndex = 52;
+			this.label2.Text = "Danh Sách Hoá Đơn Và Tiền Nhập";
+			// 
+			// txtNamBaoCaoNhap
+			// 
+			this.txtNamBaoCaoNhap.AcceptsReturn = false;
+			this.txtNamBaoCaoNhap.AcceptsTab = false;
+			this.txtNamBaoCaoNhap.AnimationSpeed = 200;
+			this.txtNamBaoCaoNhap.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.txtNamBaoCaoNhap.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.txtNamBaoCaoNhap.BackColor = System.Drawing.Color.Transparent;
+			this.txtNamBaoCaoNhap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtNamBaoCaoNhap.BackgroundImage")));
+			this.txtNamBaoCaoNhap.BorderColorActive = System.Drawing.Color.DodgerBlue;
+			this.txtNamBaoCaoNhap.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.txtNamBaoCaoNhap.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.txtNamBaoCaoNhap.BorderColorIdle = System.Drawing.Color.Silver;
+			this.txtNamBaoCaoNhap.BorderRadius = 25;
+			this.txtNamBaoCaoNhap.BorderThickness = 2;
+			this.txtNamBaoCaoNhap.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+			this.txtNamBaoCaoNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtNamBaoCaoNhap.DefaultFont = new System.Drawing.Font("Segoe UI", 14F);
+			this.txtNamBaoCaoNhap.DefaultText = "";
+			this.txtNamBaoCaoNhap.FillColor = System.Drawing.Color.White;
+			this.txtNamBaoCaoNhap.HideSelection = true;
+			this.txtNamBaoCaoNhap.IconLeft = null;
+			this.txtNamBaoCaoNhap.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtNamBaoCaoNhap.IconPadding = 10;
+			this.txtNamBaoCaoNhap.IconRight = null;
+			this.txtNamBaoCaoNhap.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtNamBaoCaoNhap.Lines = new string[0];
+			this.txtNamBaoCaoNhap.Location = new System.Drawing.Point(146, 10);
+			this.txtNamBaoCaoNhap.MaxLength = 32767;
+			this.txtNamBaoCaoNhap.MinimumSize = new System.Drawing.Size(1, 1);
+			this.txtNamBaoCaoNhap.Modified = false;
+			this.txtNamBaoCaoNhap.Multiline = false;
+			this.txtNamBaoCaoNhap.Name = "txtNamBaoCaoNhap";
+			stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+			stateProperties1.FillColor = System.Drawing.Color.Empty;
+			stateProperties1.ForeColor = System.Drawing.Color.Empty;
+			stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtNamBaoCaoNhap.OnActiveState = stateProperties1;
+			stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+			this.txtNamBaoCaoNhap.OnDisabledState = stateProperties2;
+			stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			stateProperties3.FillColor = System.Drawing.Color.Empty;
+			stateProperties3.ForeColor = System.Drawing.Color.Empty;
+			stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtNamBaoCaoNhap.OnHoverState = stateProperties3;
+			stateProperties4.BorderColor = System.Drawing.Color.Silver;
+			stateProperties4.FillColor = System.Drawing.Color.White;
+			stateProperties4.ForeColor = System.Drawing.Color.Empty;
+			stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtNamBaoCaoNhap.OnIdleState = stateProperties4;
+			this.txtNamBaoCaoNhap.Padding = new System.Windows.Forms.Padding(3);
+			this.txtNamBaoCaoNhap.PasswordChar = '\0';
+			this.txtNamBaoCaoNhap.PlaceholderForeColor = System.Drawing.Color.Silver;
+			this.txtNamBaoCaoNhap.PlaceholderText = "Nhập Năm";
+			this.txtNamBaoCaoNhap.ReadOnly = false;
+			this.txtNamBaoCaoNhap.ScrollBars = System.Windows.Forms.ScrollBars.None;
+			this.txtNamBaoCaoNhap.SelectedText = "";
+			this.txtNamBaoCaoNhap.SelectionLength = 0;
+			this.txtNamBaoCaoNhap.SelectionStart = 0;
+			this.txtNamBaoCaoNhap.ShortcutsEnabled = true;
+			this.txtNamBaoCaoNhap.Size = new System.Drawing.Size(122, 53);
+			this.txtNamBaoCaoNhap.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+			this.txtNamBaoCaoNhap.TabIndex = 51;
+			this.txtNamBaoCaoNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.txtNamBaoCaoNhap.TextMarginBottom = 0;
+			this.txtNamBaoCaoNhap.TextMarginLeft = 3;
+			this.txtNamBaoCaoNhap.TextMarginTop = 0;
+			this.txtNamBaoCaoNhap.TextPlaceholder = "Nhập Năm";
+			this.txtNamBaoCaoNhap.UseSystemPasswordChar = false;
+			this.txtNamBaoCaoNhap.WordWrap = true;
+			this.txtNamBaoCaoNhap.TextChange += new System.EventHandler(this.txtValidate_TextChange);
+			this.txtNamBaoCaoNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValidate_KeyPress);
+			// 
+			// cbbQuyBaoCaoNhap
+			// 
+			this.cbbQuyBaoCaoNhap.BackColor = System.Drawing.Color.Transparent;
+			this.cbbQuyBaoCaoNhap.BackgroundColor = System.Drawing.Color.White;
+			this.cbbQuyBaoCaoNhap.BorderColor = System.Drawing.Color.Silver;
+			this.cbbQuyBaoCaoNhap.BorderRadius = 13;
+			this.cbbQuyBaoCaoNhap.Color = System.Drawing.Color.Silver;
+			this.cbbQuyBaoCaoNhap.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+			this.cbbQuyBaoCaoNhap.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			this.cbbQuyBaoCaoNhap.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.cbbQuyBaoCaoNhap.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			this.cbbQuyBaoCaoNhap.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			this.cbbQuyBaoCaoNhap.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+			this.cbbQuyBaoCaoNhap.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.cbbQuyBaoCaoNhap.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+			this.cbbQuyBaoCaoNhap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbbQuyBaoCaoNhap.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+			this.cbbQuyBaoCaoNhap.FillDropDown = true;
+			this.cbbQuyBaoCaoNhap.FillIndicator = false;
+			this.cbbQuyBaoCaoNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.cbbQuyBaoCaoNhap.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.cbbQuyBaoCaoNhap.ForeColor = System.Drawing.Color.Black;
+			this.cbbQuyBaoCaoNhap.FormattingEnabled = true;
+			this.cbbQuyBaoCaoNhap.Icon = null;
+			this.cbbQuyBaoCaoNhap.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+			this.cbbQuyBaoCaoNhap.IndicatorColor = System.Drawing.Color.Gray;
+			this.cbbQuyBaoCaoNhap.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+			this.cbbQuyBaoCaoNhap.ItemBackColor = System.Drawing.Color.White;
+			this.cbbQuyBaoCaoNhap.ItemBorderColor = System.Drawing.Color.White;
+			this.cbbQuyBaoCaoNhap.ItemForeColor = System.Drawing.Color.Black;
+			this.cbbQuyBaoCaoNhap.ItemHeight = 26;
+			this.cbbQuyBaoCaoNhap.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+			this.cbbQuyBaoCaoNhap.ItemHighLightForeColor = System.Drawing.Color.White;
+			this.cbbQuyBaoCaoNhap.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3",
+            "4"});
+			this.cbbQuyBaoCaoNhap.ItemTopMargin = 3;
+			this.cbbQuyBaoCaoNhap.Location = new System.Drawing.Point(54, 15);
+			this.cbbQuyBaoCaoNhap.Name = "cbbQuyBaoCaoNhap";
+			this.cbbQuyBaoCaoNhap.Size = new System.Drawing.Size(51, 32);
+			this.cbbQuyBaoCaoNhap.TabIndex = 50;
+			this.cbbQuyBaoCaoNhap.Text = null;
+			this.cbbQuyBaoCaoNhap.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+			this.cbbQuyBaoCaoNhap.TextLeftMargin = 5;
+			// 
+			// labelTimKiem
+			// 
+			this.labelTimKiem.AutoSize = true;
+			this.labelTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.labelTimKiem.Location = new System.Drawing.Point(8, 23);
+			this.labelTimKiem.Name = "labelTimKiem";
+			this.labelTimKiem.Size = new System.Drawing.Size(50, 24);
+			this.labelTimKiem.TabIndex = 49;
+			this.labelTimKiem.Text = "Quý:";
+			// 
+			// btnBaoCaoNhap
+			// 
+			this.btnBaoCaoNhap.AllowAnimations = true;
+			this.btnBaoCaoNhap.AllowMouseEffects = true;
+			this.btnBaoCaoNhap.AllowToggling = false;
+			this.btnBaoCaoNhap.AnimationSpeed = 200;
+			this.btnBaoCaoNhap.AutoGenerateColors = false;
+			this.btnBaoCaoNhap.AutoRoundBorders = false;
+			this.btnBaoCaoNhap.AutoSizeLeftIcon = true;
+			this.btnBaoCaoNhap.AutoSizeRightIcon = true;
+			this.btnBaoCaoNhap.BackColor = System.Drawing.Color.Transparent;
+			this.btnBaoCaoNhap.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoNhap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBaoCaoNhap.BackgroundImage")));
+			this.btnBaoCaoNhap.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoNhap.ButtonText = "Xuất Excel";
+			this.btnBaoCaoNhap.ButtonTextMarginLeft = 0;
+			this.btnBaoCaoNhap.ColorContrastOnClick = 45;
+			this.btnBaoCaoNhap.ColorContrastOnHover = 45;
+			this.btnBaoCaoNhap.Cursor = System.Windows.Forms.Cursors.Default;
+			borderEdges3.BottomLeft = true;
+			borderEdges3.BottomRight = true;
+			borderEdges3.TopLeft = true;
+			borderEdges3.TopRight = true;
+			this.btnBaoCaoNhap.CustomizableEdges = borderEdges3;
+			this.btnBaoCaoNhap.DialogResult = System.Windows.Forms.DialogResult.None;
+			this.btnBaoCaoNhap.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+			this.btnBaoCaoNhap.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.btnBaoCaoNhap.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnBaoCaoNhap.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+			this.btnBaoCaoNhap.Font = new System.Drawing.Font("Segoe UI", 14F);
+			this.btnBaoCaoNhap.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoNhap.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnBaoCaoNhap.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+			this.btnBaoCaoNhap.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+			this.btnBaoCaoNhap.IconMarginLeft = 11;
+			this.btnBaoCaoNhap.IconPadding = 10;
+			this.btnBaoCaoNhap.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnBaoCaoNhap.IconRightCursor = System.Windows.Forms.Cursors.Default;
+			this.btnBaoCaoNhap.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+			this.btnBaoCaoNhap.IconSize = 25;
+			this.btnBaoCaoNhap.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoNhap.IdleBorderRadius = 25;
+			this.btnBaoCaoNhap.IdleBorderThickness = 1;
+			this.btnBaoCaoNhap.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoNhap.IdleIconLeftImage = null;
+			this.btnBaoCaoNhap.IdleIconRightImage = null;
+			this.btnBaoCaoNhap.IndicateFocus = false;
+			this.btnBaoCaoNhap.Location = new System.Drawing.Point(1252, 10);
+			this.btnBaoCaoNhap.Name = "btnBaoCaoNhap";
+			this.btnBaoCaoNhap.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+			this.btnBaoCaoNhap.OnDisabledState.BorderRadius = 25;
+			this.btnBaoCaoNhap.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoNhap.OnDisabledState.BorderThickness = 1;
+			this.btnBaoCaoNhap.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.btnBaoCaoNhap.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnBaoCaoNhap.OnDisabledState.IconLeftImage = null;
+			this.btnBaoCaoNhap.OnDisabledState.IconRightImage = null;
+			this.btnBaoCaoNhap.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.btnBaoCaoNhap.onHoverState.BorderRadius = 25;
+			this.btnBaoCaoNhap.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoNhap.onHoverState.BorderThickness = 1;
+			this.btnBaoCaoNhap.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.btnBaoCaoNhap.onHoverState.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoNhap.onHoverState.IconLeftImage = null;
+			this.btnBaoCaoNhap.onHoverState.IconRightImage = null;
+			this.btnBaoCaoNhap.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoNhap.OnIdleState.BorderRadius = 25;
+			this.btnBaoCaoNhap.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoNhap.OnIdleState.BorderThickness = 1;
+			this.btnBaoCaoNhap.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnBaoCaoNhap.OnIdleState.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoNhap.OnIdleState.IconLeftImage = null;
+			this.btnBaoCaoNhap.OnIdleState.IconRightImage = null;
+			this.btnBaoCaoNhap.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+			this.btnBaoCaoNhap.OnPressedState.BorderRadius = 25;
+			this.btnBaoCaoNhap.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnBaoCaoNhap.OnPressedState.BorderThickness = 1;
+			this.btnBaoCaoNhap.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+			this.btnBaoCaoNhap.OnPressedState.ForeColor = System.Drawing.Color.White;
+			this.btnBaoCaoNhap.OnPressedState.IconLeftImage = null;
+			this.btnBaoCaoNhap.OnPressedState.IconRightImage = null;
+			this.btnBaoCaoNhap.Size = new System.Drawing.Size(100, 37);
+			this.btnBaoCaoNhap.TabIndex = 32;
+			this.btnBaoCaoNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.btnBaoCaoNhap.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+			this.btnBaoCaoNhap.TextMarginLeft = 0;
+			this.btnBaoCaoNhap.TextPadding = new System.Windows.Forms.Padding(0);
+			this.btnBaoCaoNhap.UseDefaultRadiusAndThickness = true;
+			this.btnBaoCaoNhap.Click += new System.EventHandler(this.btnBaoCaoNhap_Click);
+			// 
+			// baoCaoNhap
+			// 
+			this.baoCaoNhap.AllowCustomTheming = false;
+			this.baoCaoNhap.AllowUserToAddRows = false;
+			this.baoCaoNhap.AllowUserToDeleteRows = false;
+			this.baoCaoNhap.AllowUserToResizeColumns = false;
+			this.baoCaoNhap.AllowUserToResizeRows = false;
+			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+			this.baoCaoNhap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+			this.baoCaoNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.baoCaoNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.baoCaoNhap.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+			this.baoCaoNhap.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle10.BackColor = System.Drawing.Color.DodgerBlue;
+			dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.baoCaoNhap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+			this.baoCaoNhap.ColumnHeadersHeight = 40;
+			this.baoCaoNhap.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			this.baoCaoNhap.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			this.baoCaoNhap.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+			this.baoCaoNhap.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			this.baoCaoNhap.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+			this.baoCaoNhap.CurrentTheme.BackColor = System.Drawing.Color.White;
+			this.baoCaoNhap.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+			this.baoCaoNhap.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+			this.baoCaoNhap.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			this.baoCaoNhap.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+			this.baoCaoNhap.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			this.baoCaoNhap.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+			this.baoCaoNhap.CurrentTheme.Name = null;
+			this.baoCaoNhap.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+			this.baoCaoNhap.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			this.baoCaoNhap.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+			this.baoCaoNhap.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			this.baoCaoNhap.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.baoCaoNhap.DefaultCellStyle = dataGridViewCellStyle11;
+			this.baoCaoNhap.EnableHeadersVisualStyles = false;
+			this.baoCaoNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+			this.baoCaoNhap.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+			this.baoCaoNhap.HeaderBgColor = System.Drawing.Color.Empty;
+			this.baoCaoNhap.HeaderForeColor = System.Drawing.Color.White;
+			this.baoCaoNhap.Location = new System.Drawing.Point(8, 50);
+			this.baoCaoNhap.Name = "baoCaoNhap";
+			this.baoCaoNhap.ReadOnly = true;
+			this.baoCaoNhap.RowHeadersVisible = false;
+			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.baoCaoNhap.RowsDefaultCellStyle = dataGridViewCellStyle12;
+			this.baoCaoNhap.RowTemplate.Height = 40;
+			this.baoCaoNhap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.baoCaoNhap.Size = new System.Drawing.Size(1344, 710);
+			this.baoCaoNhap.TabIndex = 30;
+			this.baoCaoNhap.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+			// 
+			// tabPage4
+			// 
+			this.tabPage4.Controls.Add(this.label4);
+			this.tabPage4.Controls.Add(this.txtNamKhachHang);
+			this.tabPage4.Controls.Add(this.cbbTopKhach);
+			this.tabPage4.Controls.Add(this.label6);
+			this.tabPage4.Controls.Add(this.btnTopKhachHang);
+			this.tabPage4.Controls.Add(this.topKhachHang);
+			this.tabPage4.Location = new System.Drawing.Point(4, 34);
+			this.tabPage4.Name = "tabPage4";
+			this.tabPage4.Size = new System.Drawing.Size(1360, 771);
+			this.tabPage4.TabIndex = 3;
+			this.tabPage4.Text = "Top Khách Hàng";
+			this.tabPage4.UseVisualStyleBackColor = true;
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+			this.label4.Location = new System.Drawing.Point(546, 18);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(193, 29);
+			this.label4.TabIndex = 60;
+			this.label4.Text = "Top Khách Hàng";
+			// 
+			// txtNamKhachHang
+			// 
+			this.txtNamKhachHang.AcceptsReturn = false;
+			this.txtNamKhachHang.AcceptsTab = false;
+			this.txtNamKhachHang.AnimationSpeed = 200;
+			this.txtNamKhachHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.txtNamKhachHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.txtNamKhachHang.BackColor = System.Drawing.Color.Transparent;
+			this.txtNamKhachHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtNamKhachHang.BackgroundImage")));
+			this.txtNamKhachHang.BorderColorActive = System.Drawing.Color.DodgerBlue;
+			this.txtNamKhachHang.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.txtNamKhachHang.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.txtNamKhachHang.BorderColorIdle = System.Drawing.Color.Silver;
+			this.txtNamKhachHang.BorderRadius = 25;
+			this.txtNamKhachHang.BorderThickness = 2;
+			this.txtNamKhachHang.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+			this.txtNamKhachHang.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtNamKhachHang.DefaultFont = new System.Drawing.Font("Segoe UI", 14F);
+			this.txtNamKhachHang.DefaultText = "";
+			this.txtNamKhachHang.FillColor = System.Drawing.Color.White;
+			this.txtNamKhachHang.HideSelection = true;
+			this.txtNamKhachHang.IconLeft = null;
+			this.txtNamKhachHang.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtNamKhachHang.IconPadding = 10;
+			this.txtNamKhachHang.IconRight = null;
+			this.txtNamKhachHang.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtNamKhachHang.Lines = new string[0];
+			this.txtNamKhachHang.Location = new System.Drawing.Point(146, 10);
+			this.txtNamKhachHang.MaxLength = 32767;
+			this.txtNamKhachHang.MinimumSize = new System.Drawing.Size(1, 1);
+			this.txtNamKhachHang.Modified = false;
+			this.txtNamKhachHang.Multiline = false;
+			this.txtNamKhachHang.Name = "txtNamKhachHang";
+			stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+			stateProperties5.FillColor = System.Drawing.Color.Empty;
+			stateProperties5.ForeColor = System.Drawing.Color.Empty;
+			stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtNamKhachHang.OnActiveState = stateProperties5;
+			stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+			this.txtNamKhachHang.OnDisabledState = stateProperties6;
+			stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			stateProperties7.FillColor = System.Drawing.Color.Empty;
+			stateProperties7.ForeColor = System.Drawing.Color.Empty;
+			stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtNamKhachHang.OnHoverState = stateProperties7;
+			stateProperties8.BorderColor = System.Drawing.Color.Silver;
+			stateProperties8.FillColor = System.Drawing.Color.White;
+			stateProperties8.ForeColor = System.Drawing.Color.Empty;
+			stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtNamKhachHang.OnIdleState = stateProperties8;
+			this.txtNamKhachHang.Padding = new System.Windows.Forms.Padding(3);
+			this.txtNamKhachHang.PasswordChar = '\0';
+			this.txtNamKhachHang.PlaceholderForeColor = System.Drawing.Color.Silver;
+			this.txtNamKhachHang.PlaceholderText = "Nhập Năm";
+			this.txtNamKhachHang.ReadOnly = false;
+			this.txtNamKhachHang.ScrollBars = System.Windows.Forms.ScrollBars.None;
+			this.txtNamKhachHang.SelectedText = "";
+			this.txtNamKhachHang.SelectionLength = 0;
+			this.txtNamKhachHang.SelectionStart = 0;
+			this.txtNamKhachHang.ShortcutsEnabled = true;
+			this.txtNamKhachHang.Size = new System.Drawing.Size(123, 53);
+			this.txtNamKhachHang.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+			this.txtNamKhachHang.TabIndex = 59;
+			this.txtNamKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.txtNamKhachHang.TextMarginBottom = 0;
+			this.txtNamKhachHang.TextMarginLeft = 3;
+			this.txtNamKhachHang.TextMarginTop = 0;
+			this.txtNamKhachHang.TextPlaceholder = "Nhập Năm";
+			this.txtNamKhachHang.UseSystemPasswordChar = false;
+			this.txtNamKhachHang.WordWrap = true;
+			this.txtNamKhachHang.TextChange += new System.EventHandler(this.txtValidate_TextChange);
+			this.txtNamKhachHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValidate_KeyPress);
+			// 
+			// cbbTopKhach
+			// 
+			this.cbbTopKhach.BackColor = System.Drawing.Color.Transparent;
+			this.cbbTopKhach.BackgroundColor = System.Drawing.Color.White;
+			this.cbbTopKhach.BorderColor = System.Drawing.Color.Silver;
+			this.cbbTopKhach.BorderRadius = 13;
+			this.cbbTopKhach.Color = System.Drawing.Color.Silver;
+			this.cbbTopKhach.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+			this.cbbTopKhach.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			this.cbbTopKhach.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.cbbTopKhach.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			this.cbbTopKhach.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			this.cbbTopKhach.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+			this.cbbTopKhach.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+			this.cbbTopKhach.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+			this.cbbTopKhach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbbTopKhach.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+			this.cbbTopKhach.FillDropDown = true;
+			this.cbbTopKhach.FillIndicator = false;
+			this.cbbTopKhach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.cbbTopKhach.Font = new System.Drawing.Font("Segoe UI", 12F);
+			this.cbbTopKhach.ForeColor = System.Drawing.Color.Black;
+			this.cbbTopKhach.FormattingEnabled = true;
+			this.cbbTopKhach.Icon = null;
+			this.cbbTopKhach.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+			this.cbbTopKhach.IndicatorColor = System.Drawing.Color.Gray;
+			this.cbbTopKhach.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+			this.cbbTopKhach.ItemBackColor = System.Drawing.Color.White;
+			this.cbbTopKhach.ItemBorderColor = System.Drawing.Color.White;
+			this.cbbTopKhach.ItemForeColor = System.Drawing.Color.Black;
+			this.cbbTopKhach.ItemHeight = 26;
+			this.cbbTopKhach.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+			this.cbbTopKhach.ItemHighLightForeColor = System.Drawing.Color.White;
+			this.cbbTopKhach.Items.AddRange(new object[] {
+            "",
+            "1",
+            "2",
+            "3",
+            "4"});
+			this.cbbTopKhach.ItemTopMargin = 3;
+			this.cbbTopKhach.Location = new System.Drawing.Point(54, 15);
+			this.cbbTopKhach.Name = "cbbTopKhach";
+			this.cbbTopKhach.Size = new System.Drawing.Size(51, 32);
+			this.cbbTopKhach.TabIndex = 58;
+			this.cbbTopKhach.Text = "1";
+			this.cbbTopKhach.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+			this.cbbTopKhach.TextLeftMargin = 5;
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.label6.Location = new System.Drawing.Point(8, 23);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(50, 24);
+			this.label6.TabIndex = 57;
+			this.label6.Text = "Quý:";
+			// 
+			// btnTopKhachHang
+			// 
+			this.btnTopKhachHang.AllowAnimations = true;
+			this.btnTopKhachHang.AllowMouseEffects = true;
+			this.btnTopKhachHang.AllowToggling = false;
+			this.btnTopKhachHang.AnimationSpeed = 200;
+			this.btnTopKhachHang.AutoGenerateColors = false;
+			this.btnTopKhachHang.AutoRoundBorders = false;
+			this.btnTopKhachHang.AutoSizeLeftIcon = true;
+			this.btnTopKhachHang.AutoSizeRightIcon = true;
+			this.btnTopKhachHang.BackColor = System.Drawing.Color.Transparent;
+			this.btnTopKhachHang.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnTopKhachHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTopKhachHang.BackgroundImage")));
+			this.btnTopKhachHang.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnTopKhachHang.ButtonText = "Xuất Excel";
+			this.btnTopKhachHang.ButtonTextMarginLeft = 0;
+			this.btnTopKhachHang.ColorContrastOnClick = 45;
+			this.btnTopKhachHang.ColorContrastOnHover = 45;
+			this.btnTopKhachHang.Cursor = System.Windows.Forms.Cursors.Default;
+			borderEdges4.BottomLeft = true;
+			borderEdges4.BottomRight = true;
+			borderEdges4.TopLeft = true;
+			borderEdges4.TopRight = true;
+			this.btnTopKhachHang.CustomizableEdges = borderEdges4;
+			this.btnTopKhachHang.DialogResult = System.Windows.Forms.DialogResult.None;
+			this.btnTopKhachHang.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+			this.btnTopKhachHang.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.btnTopKhachHang.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnTopKhachHang.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+			this.btnTopKhachHang.Font = new System.Drawing.Font("Segoe UI", 14F);
+			this.btnTopKhachHang.ForeColor = System.Drawing.Color.White;
+			this.btnTopKhachHang.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnTopKhachHang.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+			this.btnTopKhachHang.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+			this.btnTopKhachHang.IconMarginLeft = 11;
+			this.btnTopKhachHang.IconPadding = 10;
+			this.btnTopKhachHang.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnTopKhachHang.IconRightCursor = System.Windows.Forms.Cursors.Default;
+			this.btnTopKhachHang.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+			this.btnTopKhachHang.IconSize = 25;
+			this.btnTopKhachHang.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnTopKhachHang.IdleBorderRadius = 25;
+			this.btnTopKhachHang.IdleBorderThickness = 1;
+			this.btnTopKhachHang.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnTopKhachHang.IdleIconLeftImage = null;
+			this.btnTopKhachHang.IdleIconRightImage = null;
+			this.btnTopKhachHang.IndicateFocus = false;
+			this.btnTopKhachHang.Location = new System.Drawing.Point(1252, 10);
+			this.btnTopKhachHang.Name = "btnTopKhachHang";
+			this.btnTopKhachHang.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+			this.btnTopKhachHang.OnDisabledState.BorderRadius = 25;
+			this.btnTopKhachHang.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnTopKhachHang.OnDisabledState.BorderThickness = 1;
+			this.btnTopKhachHang.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.btnTopKhachHang.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnTopKhachHang.OnDisabledState.IconLeftImage = null;
+			this.btnTopKhachHang.OnDisabledState.IconRightImage = null;
+			this.btnTopKhachHang.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.btnTopKhachHang.onHoverState.BorderRadius = 25;
+			this.btnTopKhachHang.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnTopKhachHang.onHoverState.BorderThickness = 1;
+			this.btnTopKhachHang.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.btnTopKhachHang.onHoverState.ForeColor = System.Drawing.Color.White;
+			this.btnTopKhachHang.onHoverState.IconLeftImage = null;
+			this.btnTopKhachHang.onHoverState.IconRightImage = null;
+			this.btnTopKhachHang.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnTopKhachHang.OnIdleState.BorderRadius = 25;
+			this.btnTopKhachHang.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnTopKhachHang.OnIdleState.BorderThickness = 1;
+			this.btnTopKhachHang.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(150)))), ((int)(((byte)(202)))));
+			this.btnTopKhachHang.OnIdleState.ForeColor = System.Drawing.Color.White;
+			this.btnTopKhachHang.OnIdleState.IconLeftImage = null;
+			this.btnTopKhachHang.OnIdleState.IconRightImage = null;
+			this.btnTopKhachHang.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+			this.btnTopKhachHang.OnPressedState.BorderRadius = 25;
+			this.btnTopKhachHang.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnTopKhachHang.OnPressedState.BorderThickness = 1;
+			this.btnTopKhachHang.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+			this.btnTopKhachHang.OnPressedState.ForeColor = System.Drawing.Color.White;
+			this.btnTopKhachHang.OnPressedState.IconLeftImage = null;
+			this.btnTopKhachHang.OnPressedState.IconRightImage = null;
+			this.btnTopKhachHang.Size = new System.Drawing.Size(100, 37);
+			this.btnTopKhachHang.TabIndex = 32;
+			this.btnTopKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.btnTopKhachHang.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+			this.btnTopKhachHang.TextMarginLeft = 0;
+			this.btnTopKhachHang.TextPadding = new System.Windows.Forms.Padding(0);
+			this.btnTopKhachHang.UseDefaultRadiusAndThickness = true;
+			this.btnTopKhachHang.Click += new System.EventHandler(this.btnTopKhachHang_Click);
+			// 
+			// topKhachHang
+			// 
+			this.topKhachHang.AllowCustomTheming = false;
+			this.topKhachHang.AllowUserToAddRows = false;
+			this.topKhachHang.AllowUserToDeleteRows = false;
+			this.topKhachHang.AllowUserToResizeColumns = false;
+			this.topKhachHang.AllowUserToResizeRows = false;
+			dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+			this.topKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+			this.topKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.topKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.topKhachHang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+			this.topKhachHang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle14.BackColor = System.Drawing.Color.DodgerBlue;
+			dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.topKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+			this.topKhachHang.ColumnHeadersHeight = 40;
+			this.topKhachHang.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			this.topKhachHang.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			this.topKhachHang.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+			this.topKhachHang.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			this.topKhachHang.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+			this.topKhachHang.CurrentTheme.BackColor = System.Drawing.Color.White;
+			this.topKhachHang.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+			this.topKhachHang.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+			this.topKhachHang.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			this.topKhachHang.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+			this.topKhachHang.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			this.topKhachHang.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+			this.topKhachHang.CurrentTheme.Name = null;
+			this.topKhachHang.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+			this.topKhachHang.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			this.topKhachHang.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+			this.topKhachHang.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			this.topKhachHang.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.topKhachHang.DefaultCellStyle = dataGridViewCellStyle15;
+			this.topKhachHang.EnableHeadersVisualStyles = false;
+			this.topKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+			this.topKhachHang.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+			this.topKhachHang.HeaderBgColor = System.Drawing.Color.Empty;
+			this.topKhachHang.HeaderForeColor = System.Drawing.Color.White;
+			this.topKhachHang.Location = new System.Drawing.Point(8, 50);
+			this.topKhachHang.Name = "topKhachHang";
+			this.topKhachHang.ReadOnly = true;
+			this.topKhachHang.RowHeadersVisible = false;
+			dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.topKhachHang.RowsDefaultCellStyle = dataGridViewCellStyle16;
+			this.topKhachHang.RowTemplate.Height = 40;
+			this.topKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.topKhachHang.Size = new System.Drawing.Size(1344, 710);
+			this.topKhachHang.TabIndex = 30;
+			this.topKhachHang.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+			// 
+			// btnXuatBaoCao
+			// 
+			this.btnXuatBaoCao.AllowAnimations = true;
+			this.btnXuatBaoCao.AllowMouseEffects = true;
+			this.btnXuatBaoCao.AllowToggling = false;
+			this.btnXuatBaoCao.AnimationSpeed = 200;
+			this.btnXuatBaoCao.AutoGenerateColors = false;
+			this.btnXuatBaoCao.AutoRoundBorders = false;
+			this.btnXuatBaoCao.AutoSizeLeftIcon = true;
+			this.btnXuatBaoCao.AutoSizeRightIcon = true;
+			this.btnXuatBaoCao.BackColor = System.Drawing.Color.Transparent;
+			this.btnXuatBaoCao.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.btnXuatBaoCao.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXuatBaoCao.BackgroundImage")));
+			this.btnXuatBaoCao.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnXuatBaoCao.ButtonText = "Xuất Báo Cáo";
+			this.btnXuatBaoCao.ButtonTextMarginLeft = 0;
+			this.btnXuatBaoCao.ColorContrastOnClick = 45;
+			this.btnXuatBaoCao.ColorContrastOnHover = 45;
+			this.btnXuatBaoCao.Cursor = System.Windows.Forms.Cursors.Default;
+			borderEdges5.BottomLeft = true;
+			borderEdges5.BottomRight = true;
+			borderEdges5.TopLeft = true;
+			borderEdges5.TopRight = true;
+			this.btnXuatBaoCao.CustomizableEdges = borderEdges5;
+			this.btnXuatBaoCao.DialogResult = System.Windows.Forms.DialogResult.None;
+			this.btnXuatBaoCao.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.btnXuatBaoCao.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.btnXuatBaoCao.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnXuatBaoCao.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+			this.btnXuatBaoCao.Font = new System.Drawing.Font("Segoe UI", 14F);
+			this.btnXuatBaoCao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnXuatBaoCao.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnXuatBaoCao.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+			this.btnXuatBaoCao.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+			this.btnXuatBaoCao.IconMarginLeft = 11;
+			this.btnXuatBaoCao.IconPadding = 10;
+			this.btnXuatBaoCao.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnXuatBaoCao.IconRightCursor = System.Windows.Forms.Cursors.Default;
+			this.btnXuatBaoCao.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+			this.btnXuatBaoCao.IconSize = 25;
+			this.btnXuatBaoCao.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.btnXuatBaoCao.IdleBorderRadius = 25;
+			this.btnXuatBaoCao.IdleBorderThickness = 1;
+			this.btnXuatBaoCao.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.btnXuatBaoCao.IdleIconLeftImage = null;
+			this.btnXuatBaoCao.IdleIconRightImage = null;
+			this.btnXuatBaoCao.IndicateFocus = false;
+			this.btnXuatBaoCao.Location = new System.Drawing.Point(1223, 3);
+			this.btnXuatBaoCao.Name = "btnXuatBaoCao";
+			this.btnXuatBaoCao.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.btnXuatBaoCao.OnDisabledState.BorderRadius = 25;
+			this.btnXuatBaoCao.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnXuatBaoCao.OnDisabledState.BorderThickness = 1;
+			this.btnXuatBaoCao.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.btnXuatBaoCao.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+			this.btnXuatBaoCao.OnDisabledState.IconLeftImage = null;
+			this.btnXuatBaoCao.OnDisabledState.IconRightImage = null;
+			this.btnXuatBaoCao.onHoverState.BorderColor = System.Drawing.Color.LightSkyBlue;
+			this.btnXuatBaoCao.onHoverState.BorderRadius = 25;
+			this.btnXuatBaoCao.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnXuatBaoCao.onHoverState.BorderThickness = 1;
+			this.btnXuatBaoCao.onHoverState.FillColor = System.Drawing.Color.LightSkyBlue;
+			this.btnXuatBaoCao.onHoverState.ForeColor = System.Drawing.Color.White;
+			this.btnXuatBaoCao.onHoverState.IconLeftImage = null;
+			this.btnXuatBaoCao.onHoverState.IconRightImage = null;
+			this.btnXuatBaoCao.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.btnXuatBaoCao.OnIdleState.BorderRadius = 25;
+			this.btnXuatBaoCao.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnXuatBaoCao.OnIdleState.BorderThickness = 1;
+			this.btnXuatBaoCao.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(54)))), ((int)(((byte)(92)))));
+			this.btnXuatBaoCao.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.btnXuatBaoCao.OnIdleState.IconLeftImage = null;
+			this.btnXuatBaoCao.OnIdleState.IconRightImage = null;
+			this.btnXuatBaoCao.OnPressedState.BorderColor = System.Drawing.Color.SteelBlue;
+			this.btnXuatBaoCao.OnPressedState.BorderRadius = 25;
+			this.btnXuatBaoCao.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+			this.btnXuatBaoCao.OnPressedState.BorderThickness = 1;
+			this.btnXuatBaoCao.OnPressedState.FillColor = System.Drawing.Color.SteelBlue;
+			this.btnXuatBaoCao.OnPressedState.ForeColor = System.Drawing.Color.White;
+			this.btnXuatBaoCao.OnPressedState.IconLeftImage = null;
+			this.btnXuatBaoCao.OnPressedState.IconRightImage = null;
+			this.btnXuatBaoCao.Size = new System.Drawing.Size(133, 27);
+			this.btnXuatBaoCao.TabIndex = 33;
+			this.btnXuatBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.btnXuatBaoCao.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+			this.btnXuatBaoCao.TextMarginLeft = 0;
+			this.btnXuatBaoCao.TextPadding = new System.Windows.Forms.Padding(0);
+			this.btnXuatBaoCao.UseDefaultRadiusAndThickness = true;
+			this.btnXuatBaoCao.Click += new System.EventHandler(this.btnXuatBaoCao_Click);
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+			this.label3.Location = new System.Drawing.Point(303, 14);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(179, 29);
+			this.label3.TabIndex = 59;
+			this.label3.Text = "Tổng Tiền Bán:";
+			// 
+			// txtTongTien
+			// 
+			this.txtTongTien.Location = new System.Drawing.Point(488, 11);
+			this.txtTongTien.Name = "txtTongTien";
+			this.txtTongTien.ReadOnly = true;
+			this.txtTongTien.Size = new System.Drawing.Size(261, 32);
+			this.txtTongTien.TabIndex = 60;
+			this.txtTongTien.Text = "  -Chưa Chọn Nhân Viên-";
+			// 
+			// contextMenuStrip1
+			// 
+			this.contextMenuStrip1.Name = "contextMenuStrip1";
+			this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
 			// 
 			// FormThongKe
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-			this.ClientSize = new System.Drawing.Size(1350, 765);
-			this.Controls.Add(this.label5);
-			this.Controls.Add(this.label4);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.txtNam);
-			this.Controls.Add(this.txtThangKT);
-			this.Controls.Add(this.txtThangBD);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.chartDoanhThu);
-			this.Controls.Add(this.bangLuong);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.top10sp);
-			this.Controls.Add(this.top10SanPhamBanChay);
+			this.ClientSize = new System.Drawing.Size(1368, 805);
+			this.Controls.Add(this.btnXuatBaoCao);
+			this.Controls.Add(this.tabControl);
 			this.Name = "FormThongKe";
-			this.Text = "FormThongKe";
+			this.Text = "FromThongKe";
 			this.Load += new System.EventHandler(this.FormThongKe_Load);
-			((System.ComponentModel.ISupportInitialize)(this.top10SanPhamBanChay)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.bangLuong)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtThangBD)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtThangKT)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtNam)).EndInit();
+			this.tabControl.ResumeLayout(false);
+			this.tabPage1.ResumeLayout(false);
+			this.tabPage1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.danhSachSanPhamTonKho)).EndInit();
+			this.panelBaoCaoBanHang.ResumeLayout(false);
+			this.panelBaoCaoBanHang.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.baoCaoBan)).EndInit();
+			this.tabPage2.ResumeLayout(false);
+			this.tabPage2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.baoCaoNhap)).EndInit();
+			this.tabPage4.ResumeLayout(false);
+			this.tabPage4.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.topKhachHang)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart top10SanPhamBanChay;
-        private System.Windows.Forms.Label top10sp;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.DataGridView bangLuong;
-		private System.Windows.Forms.DataVisualization.Charting.Chart chartDoanhThu;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.NumericUpDown txtThangBD;
-		private System.Windows.Forms.NumericUpDown txtThangKT;
-		private System.Windows.Forms.NumericUpDown txtNam;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage panelBaoCaoBanHang;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnBaoCaoDSTonKho;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnBaoCaoNhap;
+        private Bunifu.UI.WinForms.BunifuDataGridView baoCaoNhap;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnBaoCaoBan;
+        private Bunifu.UI.WinForms.BunifuDataGridView baoCaoBan;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnTopKhachHang;
+        private Bunifu.UI.WinForms.BunifuDataGridView topKhachHang;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnXuatBaoCao;
+        private Bunifu.UI.WinForms.BunifuDropdown cbbQuyBaoCaoNhap;
+        private System.Windows.Forms.Label labelTimKiem;
+        private Bunifu.UI.WinForms.BunifuTextBox txtNamBaoCaoNhap;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbNV;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private Bunifu.UI.WinForms.BunifuTextBox txtNamKhachHang;
+        private Bunifu.UI.WinForms.BunifuDropdown cbbTopKhach;
+        private System.Windows.Forms.Label label6;
+        private Bunifu.UI.WinForms.BunifuDataGridView danhSachSanPhamTonKho;
+		private Bunifu.UI.WinForms.BunifuDropdown cbbNhanVien;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.TextBox txtTongTien;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 	}
 }

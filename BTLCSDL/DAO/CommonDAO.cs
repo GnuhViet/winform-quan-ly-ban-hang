@@ -27,7 +27,7 @@ namespace BTLCSDL.DAO {
 			return dataTable;
 		}
 
-		protected void Execute(string query) {
+		public void Execute(string query) {
 			SqlConnection con = connection.getConnection();
 			con.Open();
 			sqlCommand = new SqlCommand(query, con);
@@ -35,7 +35,7 @@ namespace BTLCSDL.DAO {
 			con.Close();
 		}
 
-		protected int ExecuteScalar(string query) {
+		public int ExecuteScalar(string query) {
 			SqlConnection con = connection.getConnection();
 			query += "; SELECT SCOPE_IDENTITY();";
 			SqlCommand cmd = new SqlCommand(query, con);

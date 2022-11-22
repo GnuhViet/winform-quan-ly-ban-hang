@@ -1,4 +1,5 @@
-﻿using BTLCSDL.DAO.impl;
+﻿using BTLCSDL.DAO;
+using BTLCSDL.DAO.impl;
 using BTLCSDL.Forms;
 using BTLCSDL.Model;
 using System;
@@ -43,6 +44,7 @@ namespace BTLCSDL {
 		private ReflectionDAO chiTietHoaDonBanDAO;
 		private ReflectionDAO chiTietHoaDonNhapDAO;
 
+		private BaoCaoDAO baoCaoDAO;
 		#endregion
 
 		public MainForm() {
@@ -77,6 +79,8 @@ namespace BTLCSDL {
 			nhaCungCapDAO = new ReflectionDAO(typeof(NhaCungCap));
 			hoaDonNhapDAO = new ReflectionDAO(typeof(HoaDonNhap));
 			chiTietHoaDonNhapDAO = new ReflectionDAO(typeof(ChiTietHDN));
+
+			baoCaoDAO = new BaoCaoDAO();
 			#endregion
 
 			SanPhamDropDownMenu.IsMainMenu = true;
@@ -240,9 +244,9 @@ namespace BTLCSDL {
 
 		private void btnThongKe_Click(object sender, EventArgs e) {
 			formName.Text = "Thống Kê";
-			//OpenChildForm(new FormThongKe(), sender);
+			OpenChildForm(new FormThongKe(baoCaoDAO, nhanVienDAO), sender);
 			setOffAll();
-			setOn(btnKhachHang);
+			setOn(btnThongKe);
 		}
-	}
+    }
 }

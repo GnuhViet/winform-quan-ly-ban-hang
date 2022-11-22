@@ -399,6 +399,9 @@ namespace BTLCSDL.Forms {
 
 			for (int i = 0; i < cbbListKhachHang.Items.Count; i++) {
 				string value = cbbListKhachHang.GetItemText(cbbListKhachHang.Items[i]);
+				if (value == "") {
+					continue;
+				}
 				if (value.Replace(" ", "").Split('-')[1] == hdb.MaKH.ToString()) {
 					cbbListKhachHang.Text = value;
 				}

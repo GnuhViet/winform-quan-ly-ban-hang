@@ -50,3 +50,13 @@ E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.FormHoaDonBan.resourc
 E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.FormKhachHang.resources
 E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.FormNhaCungCap.resources
 E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.FormHoaDonNhap.resources
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.FormThongKe.resources
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\bin\Debug\ClosedXML.xml
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\bin\Debug\DocumentFormat.OpenXml.xml
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\bin\Debug\ExcelNumberFormat.xml
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\bin\Debug\SixLabors.Fonts.xml
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\bin\Debug\System.ValueTuple.xml
