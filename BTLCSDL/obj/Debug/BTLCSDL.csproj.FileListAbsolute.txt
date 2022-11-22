@@ -49,3 +49,4 @@ E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.txtSanPhamHienTai.res
 E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.FormHoaDonBan.resources
 E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.FormKhachHang.resources
 E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.FormNhaCungCap.resources
+E:\CsharpWorkSpace\BTLCSDL\BTLCSDL\obj\Debug\BTLCSDL.Forms.FormHoaDonNhap.resources

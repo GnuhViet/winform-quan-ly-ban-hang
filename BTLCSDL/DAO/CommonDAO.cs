@@ -15,7 +15,7 @@ namespace BTLCSDL.DAO {
 			connection = new SQLServerConnection();
 		}
 
-		protected DataTable table(string query) {
+		public DataTable table(string query) {
 			DataTable dataTable = new DataTable();
 			SqlConnection con = connection.getConnection();
 

@@ -321,7 +321,7 @@
 			this.SanPhamDropDownMenu.MenuItemTextColor = System.Drawing.Color.Empty;
 			this.SanPhamDropDownMenu.Name = "SanPhamDropDownMenu";
 			this.SanPhamDropDownMenu.PrimaryColor = System.Drawing.Color.Empty;
-			this.SanPhamDropDownMenu.Size = new System.Drawing.Size(181, 170);
+			this.SanPhamDropDownMenu.Size = new System.Drawing.Size(161, 148);
 			// 
 			// dsSanPham
 			// 
@@ -329,7 +329,7 @@
 			this.dsSanPham.ForeColor = System.Drawing.Color.White;
 			this.dsSanPham.Image = global::BTLCSDL.Properties.Resources.icons8_package_32;
 			this.dsSanPham.Name = "dsSanPham";
-			this.dsSanPham.Size = new System.Drawing.Size(180, 24);
+			this.dsSanPham.Size = new System.Drawing.Size(160, 24);
 			this.dsSanPham.Text = "DS Sản Phẩm";
 			this.dsSanPham.Click += new System.EventHandler(this.dsSanPham_Click);
 			// 
@@ -339,7 +339,7 @@
 			this.dsChatLieu.ForeColor = System.Drawing.Color.White;
 			this.dsChatLieu.Image = global::BTLCSDL.Properties.Resources.icons8_leather_32;
 			this.dsChatLieu.Name = "dsChatLieu";
-			this.dsChatLieu.Size = new System.Drawing.Size(180, 24);
+			this.dsChatLieu.Size = new System.Drawing.Size(160, 24);
 			this.dsChatLieu.Text = "DS Chất Liệu";
 			this.dsChatLieu.Click += new System.EventHandler(this.dsChatLieu_Click);
 			// 
@@ -429,7 +429,7 @@
 			this.HoaDonDropDownMenu.MenuItemTextColor = System.Drawing.Color.Empty;
 			this.HoaDonDropDownMenu.Name = "HoaDonDropDownMenu";
 			this.HoaDonDropDownMenu.PrimaryColor = System.Drawing.Color.Empty;
-			this.HoaDonDropDownMenu.Size = new System.Drawing.Size(169, 52);
+			this.HoaDonDropDownMenu.Size = new System.Drawing.Size(181, 74);
 			// 
 			// btnHoaDonBan
 			// 
@@ -438,7 +438,7 @@
 			this.btnHoaDonBan.ForeColor = System.Drawing.Color.White;
 			this.btnHoaDonBan.Image = global::BTLCSDL.Properties.Resources.icons8_sell_32;
 			this.btnHoaDonBan.Name = "btnHoaDonBan";
-			this.btnHoaDonBan.Size = new System.Drawing.Size(168, 24);
+			this.btnHoaDonBan.Size = new System.Drawing.Size(180, 24);
 			this.btnHoaDonBan.Text = "Hoá Đơn Bán";
 			this.btnHoaDonBan.Click += new System.EventHandler(this.btnHoaDonBan_Click);
 			// 
@@ -449,8 +449,9 @@
 			this.btnHoaDonNhap.ForeColor = System.Drawing.Color.White;
 			this.btnHoaDonNhap.Image = global::BTLCSDL.Properties.Resources.icons8_warehouse_32;
 			this.btnHoaDonNhap.Name = "btnHoaDonNhap";
-			this.btnHoaDonNhap.Size = new System.Drawing.Size(168, 24);
+			this.btnHoaDonNhap.Size = new System.Drawing.Size(180, 24);
 			this.btnHoaDonNhap.Text = "Hoá Đơn Nhập";
+			this.btnHoaDonNhap.Click += new System.EventHandler(this.btnHoaDonNhap_Click);
 			// 
 			// MainForm
 			// 

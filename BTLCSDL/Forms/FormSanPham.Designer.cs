@@ -270,7 +270,7 @@
 			this.pictureAnh.AllowFocused = false;
 			this.pictureAnh.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.pictureAnh.AutoSizeHeight = true;
-			this.pictureAnh.BorderRadius = 86;
+			this.pictureAnh.BorderRadius = 33;
 			this.pictureAnh.Image = ((System.Drawing.Image)(resources.GetObject("pictureAnh.Image")));
 			this.pictureAnh.IsCircle = true;
 			this.pictureAnh.Location = new System.Drawing.Point(23, 67);

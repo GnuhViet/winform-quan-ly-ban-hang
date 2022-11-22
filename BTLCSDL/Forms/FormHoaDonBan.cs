@@ -35,7 +35,6 @@ namespace BTLCSDL.Forms {
 		private bool isThem;
 		List<Object> listNhanVien;
 		List<Object> listKhachHang;
-		List<Object> listSanPham;
 
 		Hashtable HTSize;
 		Hashtable HTMauSac;
@@ -83,8 +82,6 @@ namespace BTLCSDL.Forms {
 			HTKhachHang = khDAO.getHashtableAll();
 			HTNhanVien = nvDAO.getHashtableAll();
 			
-			
-
 			MapChiTietSP = ((ChiTietSPDAO)ctspDAO).getMapAllWithMaSPKey();
 
 			// add du lieu vao cbb
@@ -158,7 +155,7 @@ namespace BTLCSDL.Forms {
 		}
 
 		#region form-ngoai-cung
-
+		// tim kiem
 		private void txtTim_TextChanged(object sender, EventArgs e) {
 			// neu la tim theo ma thi chi duoc nhap so
 			if (cbbLoaiTimKiem.Text == "Mã") {
@@ -182,8 +179,8 @@ namespace BTLCSDL.Forms {
 			txtTimHoaDon.PlaceholderText = "Nhập " + cbbLoaiTimKiem.Text;
 			txtTimHoaDon.Text = "";
 		}
-
-
+		
+		// them - sua - xoa
 		private void table_CellContentClick(object sender, DataGridViewCellEventArgs e) {
 			if (e.ColumnIndex == 0) {
 				isThem = true;
@@ -203,7 +200,7 @@ namespace BTLCSDL.Forms {
 				formThemHoaDon.Visible = true;
 			}
 		}
-
+		
 		private void btnThemHoaDon_Click(object sender, EventArgs e) {
 			isThem = true;
 			formThemHoaDon.Visible = true;
@@ -221,40 +218,14 @@ namespace BTLCSDL.Forms {
 			}
 			danhSachSanPhamCuaHoaDon.Rows.RemoveAt(Top);
 		}
-
-		private void setForm(String MaHDB) {
-			HoaDonBan hdb = (HoaDonBan)dao.getListByField("MaHDB", MaHDB)[0];
-			txtHoaDonID.Text = hdb.MaHDB.ToString();
-			txtTongTienThanhToan.Text = hdb.TongTien.ToString();
-			dtpNgayBan.Value = hdb.NgayBan;
-
-			for (int i = 0; i < cbbListNhanVien.Items.Count; i++) {
-				string value = cbbListNhanVien.GetItemText(cbbListNhanVien.Items[i]);
-				if (value.Replace(" ", "").Split('-')[1] == hdb.MaNV.ToString()) {
-					cbbListNhanVien.Text = value;
-				}
-			}
-
-			if (hdb.MaKH == 0) {
-				txtKhachHangID.Text = "0";
-				return;
-			}
-
-			for (int i = 0; i < cbbListKhachHang.Items.Count; i++) {
-				string value = cbbListKhachHang.GetItemText(cbbListKhachHang.Items[i]);
-				if (value.Replace(" ", "").Split('-')[1] == hdb.MaKH.ToString()) {
-					cbbListKhachHang.Text = value;
-				}
-			}
-		}
-
 		#endregion
 
 		#region form hoa don =========================================
+		// set ma nhan vien khi chon nv
 		private void listNhanVien_SelectedIndexChanged(object sender, EventArgs e) {
 			txtNhanVienID.Text = cbbListNhanVien.Text.Trim().Split('-')[1];
 		}
-
+		// set ma khach khi chon khach
 		private void cbbListKhachHang_SelectedIndexChanged(object sender, EventArgs e) {
 			String nv = cbbListKhachHang.Text;
 			if (nv == null || nv == "") {
@@ -263,7 +234,7 @@ namespace BTLCSDL.Forms {
 			}
 			txtKhachHangID.Text = cbbListKhachHang.Text.Trim().Split('-')[1];
 		}
-
+		
 		private void btnChinhSuaDSSP_Click(object sender, EventArgs e) {
 			panelChonSanPham.Visible = true;
 			copyData(danhSachSanPhamCuaHoaDon, dsSanPhamDaChon);
@@ -272,9 +243,6 @@ namespace BTLCSDL.Forms {
 
 		private void btnDongFromHoaDon_Click(object sender, EventArgs e) {
 			formThemHoaDon.Visible = false;
-			// xoa danh sach san pham neu submit
-			listSanPham = null;
-
 			// dua cac so ve 0
 			txtTongTienThanhToan.Text = "0";
 			txtTienKhachTra.Text = "0";
@@ -386,10 +354,36 @@ namespace BTLCSDL.Forms {
 				btnDongFrom.PerformClick();
 			}
 
-			// xoa danh sach san pham neu submit
-			listSanPham = null;
+			// load lai so luong san pham
+			MapChiTietSP = ((ChiTietSPDAO)ctspDAO).getMapAllWithMaSPKey();
 
 			FormHoaDon_Load(sender, e);
+		}
+
+		private void setForm(String MaHDB) {
+			HoaDonBan hdb = (HoaDonBan)dao.getListByField("MaHDB", MaHDB)[0];
+			txtHoaDonID.Text = hdb.MaHDB.ToString();
+			txtTongTienThanhToan.Text = hdb.TongTien.ToString();
+			dtpNgayBan.Value = hdb.NgayBan;
+
+			for (int i = 0; i < cbbListNhanVien.Items.Count; i++) {
+				string value = cbbListNhanVien.GetItemText(cbbListNhanVien.Items[i]);
+				if (value.Replace(" ", "").Split('-')[1] == hdb.MaNV.ToString()) {
+					cbbListNhanVien.Text = value;
+				}
+			}
+
+			if (hdb.MaKH == 0) {
+				txtKhachHangID.Text = "0";
+				return;
+			}
+
+			for (int i = 0; i < cbbListKhachHang.Items.Count; i++) {
+				string value = cbbListKhachHang.GetItemText(cbbListKhachHang.Items[i]);
+				if (value.Replace(" ", "").Split('-')[1] == hdb.MaKH.ToString()) {
+					cbbListKhachHang.Text = value;
+				}
+			}
 		}
 
 		private HoaDonBan getForm() {
@@ -427,7 +421,8 @@ namespace BTLCSDL.Forms {
 			}
 			return cthd;
 		}
-
+		
+		// validate nhap so
 		private void txtTienKhachTra_TextChanged(object sender, EventArgs e) {
 			if (!Regex.IsMatch(txtTienKhachTra.Text.Trim(), @"^\d+$")) {
 				txtTienKhachTra.Text = "0";
@@ -553,23 +548,8 @@ namespace BTLCSDL.Forms {
 			}
 			txtTongTienThanhToan.Text = TongTien.ToString();
 		}
-
-		private void copyData(DataGridView source, DataGridView des) {
-			des.Rows.Clear();
-			DataGridViewRow row = new DataGridViewRow();
-			for (int i = 0; i < source.Rows.Count; i++) {
-				row = (DataGridViewRow)source.Rows[i].Clone();
-				int intColIndex = 0;
-				foreach (DataGridViewCell cell in source.Rows[i].Cells) {
-					row.Cells[intColIndex].Value = cell.Value;
-					intColIndex++;
-				}
-				des.Rows.Add(row);
-			}
-			des.AllowUserToAddRows = false;
-			des.Refresh();
-		}
-
+		
+		// tim kiem va loc
 		private void txtTimSanPham_TextChanged(object sender, EventArgs e) {
 			if (cbbLocTim.Text == "Mã" || cbbLocTim.Text.StartsWith("Giá")) {
 				if (!Regex.IsMatch(txtTimSanPham.Text.Trim(), @"^\d+$")) {
@@ -618,8 +598,8 @@ namespace BTLCSDL.Forms {
 			}
 			DataGridViewComboBoxCell cbbSize = (DataGridViewComboBoxCell)danhSachSanPham.Rows[e.RowIndex].Cells[2];
 			DataGridViewComboBoxCell cbbMauSac = (DataGridViewComboBoxCell)danhSachSanPham.Rows[e.RowIndex].Cells[3];
-
 			String MaSP = danhSachSanPham.Rows[e.RowIndex].Cells[5].Value.ToString(); // Mã sản phẩm
+			
 			if (cbbSize.Value != null && cbbMauSac.Value != null) {
 				// tinh so luong
 				int size = Convert.ToInt32(cbbSize.Value.ToString().Replace(" ", "").Split('-')[0]);
@@ -700,7 +680,7 @@ namespace BTLCSDL.Forms {
 			}
 		}
 		
-		// Nhap so Luong mua
+		// Validate Nhap so Luong mua
 		private void danhSachSanPham_CellEndEdit(object sender, DataGridViewCellEventArgs e) {
 			if (e.ColumnIndex == 1) {
 				if (((DataGridViewComboBoxCell)danhSachSanPham.CurrentRow.Cells[2]).Value == null) {
@@ -809,5 +789,22 @@ namespace BTLCSDL.Forms {
 		}
 		#endregion
 
+
+		// utils
+		private void copyData(DataGridView source, DataGridView des) {
+			des.Rows.Clear();
+			DataGridViewRow row = new DataGridViewRow();
+			for (int i = 0; i < source.Rows.Count; i++) {
+				row = (DataGridViewRow)source.Rows[i].Clone();
+				int intColIndex = 0;
+				foreach (DataGridViewCell cell in source.Rows[i].Cells) {
+					row.Cells[intColIndex].Value = cell.Value;
+					intColIndex++;
+				}
+				des.Rows.Add(row);
+			}
+			des.AllowUserToAddRows = false;
+			des.Refresh();
+		}
 	}
 }

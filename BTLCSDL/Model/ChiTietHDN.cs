@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BTLCSDL.Model {
 	internal class ChiTietHDN {
-		public int MaCTHDB { get; set; }
+		public int MaCTHDN { get; set; }
 		public int MaHDN { get; set; }
 		public int MaCTSP { get; set; }
 		public int SoLuong { get; set; }

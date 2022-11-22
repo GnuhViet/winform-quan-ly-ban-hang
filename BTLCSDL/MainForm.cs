@@ -37,9 +37,12 @@ namespace BTLCSDL {
 		private ReflectionDAO chiTietSPDAO;
 		private ReflectionDAO nhanVienDAO;
 		private ReflectionDAO hoaDonBanDAO;
+		private ReflectionDAO hoaDonNhapDAO;
 		private ReflectionDAO khachHangDAO;
 		private ReflectionDAO nhaCungCapDAO;
 		private ReflectionDAO chiTietHoaDonBanDAO;
+		private ReflectionDAO chiTietHoaDonNhapDAO;
+
 		#endregion
 
 		public MainForm() {
@@ -72,6 +75,8 @@ namespace BTLCSDL {
 			khachHangDAO = new ReflectionDAO(typeof(KhachHang));
 			chiTietHoaDonBanDAO = new ReflectionDAO(typeof(ChiTietHDB));
 			nhaCungCapDAO = new ReflectionDAO(typeof(NhaCungCap));
+			hoaDonNhapDAO = new ReflectionDAO(typeof(HoaDonNhap));
+			chiTietHoaDonNhapDAO = new ReflectionDAO(typeof(ChiTietHDN));
 			#endregion
 
 			SanPhamDropDownMenu.IsMainMenu = true;
@@ -110,6 +115,14 @@ namespace BTLCSDL {
 			childForm.BringToFront();
 			childForm.Show();
 			//lblTitle.Text = childForm.Text;
+		}
+
+
+		private void btnTrangChu_Click(object sender, EventArgs e) {
+			formName.Text = "Trang Chủ";
+			if (activeForm != null)
+				activeForm.Close();
+			setOffAll();
 		}
 
 		#region san pham
@@ -163,7 +176,6 @@ namespace BTLCSDL {
 		}
 		#endregion
 
-
 		#region nhan vien 
 		private void btnNhanVien_Click(object sender, EventArgs e) {
 			//OpenChildForm(new FormNhanVien(), sender);
@@ -185,46 +197,34 @@ namespace BTLCSDL {
 			setOffAll();
 			setOn(btnNhanVien);
 		}
-
 		#endregion
 
-		private void btnTrangChu_Click(object sender, EventArgs e) {
-			formName.Text = "Trang Chủ";
-			if (activeForm != null)
-				activeForm.Close();
-			setOffAll();
-		}
-
-        private void btnHoaDon_Click(object sender, EventArgs e) {
+		#region hoa don
+		private void btnHoaDon_Click(object sender, EventArgs e) {
 			formName.Text = "Hoá Đơn";
 			HoaDonDropDownMenu.Show(btnHoaDon, btnHoaDon.Width, 0);
 			setOffAll();
 			setOn(btnHoaDon);
 		}
 
-		private void btnThongKe_Click(object sender, EventArgs e) {
-			formName.Text = "Thống Kê";
-			//OpenChildForm(new FormThongKe(), sender);
-			setOffAll();
-			setOn(btnKhachHang);
-		}
-
-		private void btnChucVu_Click(object sender, EventArgs e) {
-			formName.Text = "Chức Vụ";
-			OpenChildForm(new CommonForm(chucVuDAO, ChucVuType, formName.Text), sender);
-			setOffAll();
-			//setOn(btnChucVu);
-		}
-
 		private void btnHoaDonBan_Click(object sender, EventArgs e) {
-			OpenChildForm(new FormHoaDonBan(hoaDonBanDAO, khachHangDAO, nhanVienDAO, 
-											chiTietHoaDonBanDAO, chiTietSPDAO, sanPhamDAO, 
+			OpenChildForm(new FormHoaDonBan(hoaDonBanDAO, khachHangDAO, nhanVienDAO,
+											chiTietHoaDonBanDAO, chiTietSPDAO, sanPhamDAO,
 											sizeDAO, mauSacDAO, theLoaiDAO, chatLieuDAO, quocGiaDAO), sender);
+			formName.Text = "Hoá Đơn Bán";
 			setOffAll();
 			setOn(btnHoaDon);
 		}
 
-        private void btnKhachHang_Click(object sender, EventArgs e) {
+		private void btnHoaDonNhap_Click(object sender, EventArgs e) {
+			OpenChildForm(new FormHoaDonNhap(hoaDonNhapDAO, chiTietHoaDonNhapDAO, nhaCungCapDAO, nhanVienDAO), sender);
+			formName.Text = "Hoá Đơn Nhập";
+			setOffAll();
+			setOn(btnHoaDon);
+		}
+		#endregion
+
+		private void btnKhachHang_Click(object sender, EventArgs e) {
 			formName.Text = "Khách Hàng";
 			OpenChildForm(new FormKhachHang(khachHangDAO), sender);
 			setOffAll();
@@ -237,5 +237,12 @@ namespace BTLCSDL {
 			setOffAll();
 			setOn(btnNhaCungCap);
 		}
-    }
+
+		private void btnThongKe_Click(object sender, EventArgs e) {
+			formName.Text = "Thống Kê";
+			//OpenChildForm(new FormThongKe(), sender);
+			setOffAll();
+			setOn(btnKhachHang);
+		}
+	}
 }

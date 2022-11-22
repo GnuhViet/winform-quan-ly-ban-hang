@@ -111,7 +111,7 @@ namespace BTLCSDL.Forms {
 			table.Columns["MaTL"].Visible = false;
 			table.Columns["MaCL"].Visible = false;
 			table.Columns["MaQG"].Visible = false;
-
+			pictureAnh.BorderRadius = 33;
 		}
 
 		////////
