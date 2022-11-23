@@ -47,7 +47,7 @@ namespace BTLCSDL.Forms {
 			save.FileName = "untitled";
 			save.Filter = "Excel (*.xlsx)|*.xlsx";
 			txtNamBaoCaoNhap.Size = new System.Drawing.Size(123, 37);
-			txtNamKhachHang.Size = new System.Drawing.Size(123, 37);
+			txtTopKhach.Size = new System.Drawing.Size(123, 37);
 			
 			quyHienTai = ((month + 2) / 3).ToString();
 		}
@@ -67,8 +67,9 @@ namespace BTLCSDL.Forms {
 		private void addWorksheet(DataTable dt, XLWorkbook wb, String sheetName, String title) {
 			var ws = wb.Worksheets.Add(sheetName);
 			ws.Cell("B2").Value = title;
-
+			ws.Cell("B1").Value =  "Ngày tạo Báo Cáo: " + DateTime.Now.ToShortDateString();	
 			ws.Range("B2:E2").Row(1).Merge();
+			ws.Range("B1:D1").Row(1).Merge();
 
 			ws.Cell(4, 2).InsertTable(dt);
 			ws.Columns().AdjustToContents();
@@ -76,6 +77,7 @@ namespace BTLCSDL.Forms {
 
 			ws.Cells().Style.Border.LeftBorder = XLBorderStyleValues.Thin;
 			ws.Cell("B2").Style.Border.LeftBorder = XLBorderStyleValues.None;
+			ws.Cell("B1").Style.Border.LeftBorder = XLBorderStyleValues.None;
 		}
 
 		private void saveFile(XLWorkbook wb) {
@@ -125,8 +127,8 @@ namespace BTLCSDL.Forms {
 		}
 
 		private void btnTaoBaoCaoKhach_Click(object sender, EventArgs e) {
-			String nam = txtNamBaoCaoNhap.Text;
-			String quy = cbbQuyBaoCaoNhap.Text;
+			String nam = txtTopKhach.Text;
+			String quy = cbbTopKhach.Text;
 
 			if (quy == "" || quy == null) {
 				MessageBox.Show("Chưa chọn quý");

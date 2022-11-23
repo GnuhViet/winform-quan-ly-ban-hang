@@ -200,7 +200,7 @@ namespace BTLCSDL.DAO.impl {
 			try {
 				Execute(query);
 			} catch (Exception ex) {
-				MessageBox.Show("Loi: " + ex.Message);
+				MessageBox.Show("Không Thể Xoá Vì\nDữ Liệu Đang Cần Sử Dụng Trong Bảng Khác!!\n-Cần Xoá Các Dữ Liệu Liên Quan Trước");
 			}
 		}
 

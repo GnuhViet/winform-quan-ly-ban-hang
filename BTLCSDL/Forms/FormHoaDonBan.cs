@@ -376,7 +376,9 @@ namespace BTLCSDL.Forms {
 			// load lai so luong san pham
 			MapChiTietSP = ((ChiTietSPDAO)ctspDAO).getMapAllWithMaSPKey();
 
+			String TongTien = txtTongTienThanhToan.Text;
 			FormHoaDon_Load(sender, e);
+			txtTongTienThanhToan.Text = TongTien;
 		}
 
 		private void setForm(String MaHDB) {

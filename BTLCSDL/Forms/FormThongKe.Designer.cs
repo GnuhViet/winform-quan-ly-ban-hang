@@ -24,36 +24,38 @@
 		/// </summary>
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThongKe));
-			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.tabControl = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.btnBaoCaoDSTonKho = new System.Windows.Forms.Button();
 			this.danhSachSanPhamTonKho = new Bunifu.UI.WinForms.BunifuDataGridView();
 			this.label1 = new System.Windows.Forms.Label();
 			this.panelBaoCaoBanHang = new System.Windows.Forms.TabPage();
+			this.btnBaoCaoBan = new System.Windows.Forms.Button();
 			this.txtTongTien = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.cbbNhanVien = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -61,25 +63,23 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.baoCaoBan = new Bunifu.UI.WinForms.BunifuDataGridView();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.btnTaoBaoCaoNhap = new System.Windows.Forms.Button();
+			this.btnBaoCaoNhap = new System.Windows.Forms.Button();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtNamBaoCaoNhap = new Bunifu.UI.WinForms.BunifuTextBox();
 			this.cbbQuyBaoCaoNhap = new Bunifu.UI.WinForms.BunifuDropdown();
 			this.labelTimKiem = new System.Windows.Forms.Label();
 			this.baoCaoNhap = new Bunifu.UI.WinForms.BunifuDataGridView();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
+			this.btnTopKhachHang = new System.Windows.Forms.Button();
+			this.btnTaoBaoCaoKhach = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
-			this.txtNamKhachHang = new Bunifu.UI.WinForms.BunifuTextBox();
+			this.txtTopKhach = new Bunifu.UI.WinForms.BunifuTextBox();
 			this.cbbTopKhach = new Bunifu.UI.WinForms.BunifuDropdown();
 			this.label6 = new System.Windows.Forms.Label();
 			this.topKhachHang = new Bunifu.UI.WinForms.BunifuDataGridView();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.btnBaoCaoDSTonKho = new System.Windows.Forms.Button();
 			this.btnXuatBaoCao = new System.Windows.Forms.Button();
-			this.btnBaoCaoBan = new System.Windows.Forms.Button();
-			this.btnBaoCaoNhap = new System.Windows.Forms.Button();
-			this.btnTaoBaoCaoNhap = new System.Windows.Forms.Button();
-			this.btnTaoBaoCaoKhach = new System.Windows.Forms.Button();
-			this.btnTopKhachHang = new System.Windows.Forms.Button();
 			this.tabControl.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.danhSachSanPhamTonKho)).BeginInit();
@@ -118,6 +118,16 @@
 			this.tabPage1.Text = "Sản Phẩm Tồn Kho";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
+			// btnBaoCaoDSTonKho
+			// 
+			this.btnBaoCaoDSTonKho.Location = new System.Drawing.Point(1225, 16);
+			this.btnBaoCaoDSTonKho.Name = "btnBaoCaoDSTonKho";
+			this.btnBaoCaoDSTonKho.Size = new System.Drawing.Size(128, 31);
+			this.btnBaoCaoDSTonKho.TabIndex = 32;
+			this.btnBaoCaoDSTonKho.Text = "Xuất Excel";
+			this.btnBaoCaoDSTonKho.UseVisualStyleBackColor = true;
+			this.btnBaoCaoDSTonKho.Click += new System.EventHandler(this.btnBaoCaoDSTonKho_Click);
+			// 
 			// danhSachSanPhamTonKho
 			// 
 			this.danhSachSanPhamTonKho.AllowCustomTheming = false;
@@ -125,21 +135,21 @@
 			this.danhSachSanPhamTonKho.AllowUserToDeleteRows = false;
 			this.danhSachSanPhamTonKho.AllowUserToResizeColumns = false;
 			this.danhSachSanPhamTonKho.AllowUserToResizeRows = false;
-			dataGridViewCellStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle53.ForeColor = System.Drawing.Color.Black;
-			this.danhSachSanPhamTonKho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle53;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+			this.danhSachSanPhamTonKho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.danhSachSanPhamTonKho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.danhSachSanPhamTonKho.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.danhSachSanPhamTonKho.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.danhSachSanPhamTonKho.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle54.BackColor = System.Drawing.Color.DodgerBlue;
-			dataGridViewCellStyle54.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle54.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-			dataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.danhSachSanPhamTonKho.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle54;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.danhSachSanPhamTonKho.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.danhSachSanPhamTonKho.ColumnHeadersHeight = 40;
 			this.danhSachSanPhamTonKho.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
 			this.danhSachSanPhamTonKho.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -159,14 +169,14 @@
 			this.danhSachSanPhamTonKho.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
 			this.danhSachSanPhamTonKho.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
 			this.danhSachSanPhamTonKho.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle55.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle55.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle55.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle55.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle55.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.danhSachSanPhamTonKho.DefaultCellStyle = dataGridViewCellStyle55;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.danhSachSanPhamTonKho.DefaultCellStyle = dataGridViewCellStyle3;
 			this.danhSachSanPhamTonKho.EnableHeadersVisualStyles = false;
 			this.danhSachSanPhamTonKho.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
 			this.danhSachSanPhamTonKho.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -176,8 +186,8 @@
 			this.danhSachSanPhamTonKho.Name = "danhSachSanPhamTonKho";
 			this.danhSachSanPhamTonKho.ReadOnly = true;
 			this.danhSachSanPhamTonKho.RowHeadersVisible = false;
-			dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.danhSachSanPhamTonKho.RowsDefaultCellStyle = dataGridViewCellStyle56;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.danhSachSanPhamTonKho.RowsDefaultCellStyle = dataGridViewCellStyle4;
 			this.danhSachSanPhamTonKho.RowTemplate.Height = 40;
 			this.danhSachSanPhamTonKho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.danhSachSanPhamTonKho.Size = new System.Drawing.Size(1344, 710);
@@ -209,6 +219,17 @@
 			this.panelBaoCaoBanHang.TabIndex = 2;
 			this.panelBaoCaoBanHang.Text = "Báo Cáo Bán Hàng";
 			this.panelBaoCaoBanHang.UseVisualStyleBackColor = true;
+			// 
+			// btnBaoCaoBan
+			// 
+			this.btnBaoCaoBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.btnBaoCaoBan.Location = new System.Drawing.Point(1225, 16);
+			this.btnBaoCaoBan.Name = "btnBaoCaoBan";
+			this.btnBaoCaoBan.Size = new System.Drawing.Size(128, 31);
+			this.btnBaoCaoBan.TabIndex = 61;
+			this.btnBaoCaoBan.Text = "Xuất Excel";
+			this.btnBaoCaoBan.UseVisualStyleBackColor = true;
+			this.btnBaoCaoBan.Click += new System.EventHandler(this.btnBaoCaoBan_Click);
 			// 
 			// txtTongTien
 			// 
@@ -302,21 +323,21 @@
 			this.baoCaoBan.AllowUserToDeleteRows = false;
 			this.baoCaoBan.AllowUserToResizeColumns = false;
 			this.baoCaoBan.AllowUserToResizeRows = false;
-			dataGridViewCellStyle57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle57.ForeColor = System.Drawing.Color.Black;
-			this.baoCaoBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle57;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+			this.baoCaoBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
 			this.baoCaoBan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.baoCaoBan.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.baoCaoBan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.baoCaoBan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle58.BackColor = System.Drawing.Color.DodgerBlue;
-			dataGridViewCellStyle58.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle58.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle58.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-			dataGridViewCellStyle58.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.baoCaoBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle58;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.DodgerBlue;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.baoCaoBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			this.baoCaoBan.ColumnHeadersHeight = 40;
 			this.baoCaoBan.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
 			this.baoCaoBan.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -336,14 +357,14 @@
 			this.baoCaoBan.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
 			this.baoCaoBan.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
 			this.baoCaoBan.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle59.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle59.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle59.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle59.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle59.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.baoCaoBan.DefaultCellStyle = dataGridViewCellStyle59;
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.baoCaoBan.DefaultCellStyle = dataGridViewCellStyle7;
 			this.baoCaoBan.EnableHeadersVisualStyles = false;
 			this.baoCaoBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
 			this.baoCaoBan.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -353,8 +374,8 @@
 			this.baoCaoBan.Name = "baoCaoBan";
 			this.baoCaoBan.ReadOnly = true;
 			this.baoCaoBan.RowHeadersVisible = false;
-			dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.baoCaoBan.RowsDefaultCellStyle = dataGridViewCellStyle60;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.baoCaoBan.RowsDefaultCellStyle = dataGridViewCellStyle8;
 			this.baoCaoBan.RowTemplate.Height = 40;
 			this.baoCaoBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.baoCaoBan.Size = new System.Drawing.Size(1344, 710);
@@ -377,6 +398,27 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Báo Cáo Nhập Hàng";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// btnTaoBaoCaoNhap
+			// 
+			this.btnTaoBaoCaoNhap.Location = new System.Drawing.Point(311, 10);
+			this.btnTaoBaoCaoNhap.Name = "btnTaoBaoCaoNhap";
+			this.btnTaoBaoCaoNhap.Size = new System.Drawing.Size(148, 37);
+			this.btnTaoBaoCaoNhap.TabIndex = 63;
+			this.btnTaoBaoCaoNhap.Text = "Tạo Báo Cáo";
+			this.btnTaoBaoCaoNhap.UseVisualStyleBackColor = true;
+			this.btnTaoBaoCaoNhap.Click += new System.EventHandler(this.btnTaoBaoCaoNhap_Click);
+			// 
+			// btnBaoCaoNhap
+			// 
+			this.btnBaoCaoNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.btnBaoCaoNhap.Location = new System.Drawing.Point(1225, 16);
+			this.btnBaoCaoNhap.Name = "btnBaoCaoNhap";
+			this.btnBaoCaoNhap.Size = new System.Drawing.Size(128, 31);
+			this.btnBaoCaoNhap.TabIndex = 62;
+			this.btnBaoCaoNhap.Text = "Xuất Excel";
+			this.btnBaoCaoNhap.UseVisualStyleBackColor = true;
+			this.btnBaoCaoNhap.Click += new System.EventHandler(this.btnBaoCaoNhap_Click);
 			// 
 			// label2
 			// 
@@ -421,26 +463,26 @@
 			this.txtNamBaoCaoNhap.Modified = false;
 			this.txtNamBaoCaoNhap.Multiline = false;
 			this.txtNamBaoCaoNhap.Name = "txtNamBaoCaoNhap";
-			stateProperties29.BorderColor = System.Drawing.Color.DodgerBlue;
-			stateProperties29.FillColor = System.Drawing.Color.Empty;
-			stateProperties29.ForeColor = System.Drawing.Color.Empty;
-			stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtNamBaoCaoNhap.OnActiveState = stateProperties29;
-			stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-			stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-			stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-			stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-			this.txtNamBaoCaoNhap.OnDisabledState = stateProperties30;
-			stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-			stateProperties31.FillColor = System.Drawing.Color.Empty;
-			stateProperties31.ForeColor = System.Drawing.Color.Empty;
-			stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtNamBaoCaoNhap.OnHoverState = stateProperties31;
-			stateProperties32.BorderColor = System.Drawing.Color.Silver;
-			stateProperties32.FillColor = System.Drawing.Color.White;
-			stateProperties32.ForeColor = System.Drawing.Color.Empty;
-			stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtNamBaoCaoNhap.OnIdleState = stateProperties32;
+			stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+			stateProperties1.FillColor = System.Drawing.Color.Empty;
+			stateProperties1.ForeColor = System.Drawing.Color.Empty;
+			stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtNamBaoCaoNhap.OnActiveState = stateProperties1;
+			stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+			this.txtNamBaoCaoNhap.OnDisabledState = stateProperties2;
+			stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			stateProperties3.FillColor = System.Drawing.Color.Empty;
+			stateProperties3.ForeColor = System.Drawing.Color.Empty;
+			stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtNamBaoCaoNhap.OnHoverState = stateProperties3;
+			stateProperties4.BorderColor = System.Drawing.Color.Silver;
+			stateProperties4.FillColor = System.Drawing.Color.White;
+			stateProperties4.ForeColor = System.Drawing.Color.Empty;
+			stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtNamBaoCaoNhap.OnIdleState = stateProperties4;
 			this.txtNamBaoCaoNhap.Padding = new System.Windows.Forms.Padding(3);
 			this.txtNamBaoCaoNhap.PasswordChar = '\0';
 			this.txtNamBaoCaoNhap.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -527,21 +569,21 @@
 			this.baoCaoNhap.AllowUserToDeleteRows = false;
 			this.baoCaoNhap.AllowUserToResizeColumns = false;
 			this.baoCaoNhap.AllowUserToResizeRows = false;
-			dataGridViewCellStyle61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle61.ForeColor = System.Drawing.Color.Black;
-			this.baoCaoNhap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle61;
+			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+			this.baoCaoNhap.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
 			this.baoCaoNhap.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.baoCaoNhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.baoCaoNhap.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.baoCaoNhap.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle62.BackColor = System.Drawing.Color.DodgerBlue;
-			dataGridViewCellStyle62.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle62.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle62.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-			dataGridViewCellStyle62.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.baoCaoNhap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle62;
+			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle10.BackColor = System.Drawing.Color.DodgerBlue;
+			dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.baoCaoNhap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
 			this.baoCaoNhap.ColumnHeadersHeight = 40;
 			this.baoCaoNhap.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
 			this.baoCaoNhap.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -561,14 +603,14 @@
 			this.baoCaoNhap.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
 			this.baoCaoNhap.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
 			this.baoCaoNhap.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle63.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle63.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle63.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle63.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle63.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.baoCaoNhap.DefaultCellStyle = dataGridViewCellStyle63;
+			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.baoCaoNhap.DefaultCellStyle = dataGridViewCellStyle11;
 			this.baoCaoNhap.EnableHeadersVisualStyles = false;
 			this.baoCaoNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
 			this.baoCaoNhap.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -578,8 +620,8 @@
 			this.baoCaoNhap.Name = "baoCaoNhap";
 			this.baoCaoNhap.ReadOnly = true;
 			this.baoCaoNhap.RowHeadersVisible = false;
-			dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.baoCaoNhap.RowsDefaultCellStyle = dataGridViewCellStyle64;
+			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.baoCaoNhap.RowsDefaultCellStyle = dataGridViewCellStyle12;
 			this.baoCaoNhap.RowTemplate.Height = 40;
 			this.baoCaoNhap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.baoCaoNhap.Size = new System.Drawing.Size(1344, 710);
@@ -591,7 +633,7 @@
 			this.tabPage4.Controls.Add(this.btnTopKhachHang);
 			this.tabPage4.Controls.Add(this.btnTaoBaoCaoKhach);
 			this.tabPage4.Controls.Add(this.label4);
-			this.tabPage4.Controls.Add(this.txtNamKhachHang);
+			this.tabPage4.Controls.Add(this.txtTopKhach);
 			this.tabPage4.Controls.Add(this.cbbTopKhach);
 			this.tabPage4.Controls.Add(this.label6);
 			this.tabPage4.Controls.Add(this.topKhachHang);
@@ -601,6 +643,27 @@
 			this.tabPage4.TabIndex = 3;
 			this.tabPage4.Text = "Top Khách Hàng";
 			this.tabPage4.UseVisualStyleBackColor = true;
+			// 
+			// btnTopKhachHang
+			// 
+			this.btnTopKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+			this.btnTopKhachHang.Location = new System.Drawing.Point(1225, 16);
+			this.btnTopKhachHang.Name = "btnTopKhachHang";
+			this.btnTopKhachHang.Size = new System.Drawing.Size(128, 31);
+			this.btnTopKhachHang.TabIndex = 65;
+			this.btnTopKhachHang.Text = "Xuất Excel";
+			this.btnTopKhachHang.UseVisualStyleBackColor = true;
+			this.btnTopKhachHang.Click += new System.EventHandler(this.btnTopKhachHang_Click);
+			// 
+			// btnTaoBaoCaoKhach
+			// 
+			this.btnTaoBaoCaoKhach.Location = new System.Drawing.Point(311, 10);
+			this.btnTaoBaoCaoKhach.Name = "btnTaoBaoCaoKhach";
+			this.btnTaoBaoCaoKhach.Size = new System.Drawing.Size(148, 37);
+			this.btnTaoBaoCaoKhach.TabIndex = 64;
+			this.btnTaoBaoCaoKhach.Text = "Tạo Báo Cáo";
+			this.btnTaoBaoCaoKhach.UseVisualStyleBackColor = true;
+			this.btnTaoBaoCaoKhach.Click += new System.EventHandler(this.btnTaoBaoCaoKhach_Click);
 			// 
 			// label4
 			// 
@@ -612,79 +675,79 @@
 			this.label4.TabIndex = 60;
 			this.label4.Text = "Top Khách Hàng";
 			// 
-			// txtNamKhachHang
+			// txtTopKhach
 			// 
-			this.txtNamKhachHang.AcceptsReturn = false;
-			this.txtNamKhachHang.AcceptsTab = false;
-			this.txtNamKhachHang.AnimationSpeed = 200;
-			this.txtNamKhachHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.txtNamKhachHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.txtNamKhachHang.BackColor = System.Drawing.Color.Transparent;
-			this.txtNamKhachHang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtNamKhachHang.BackgroundImage")));
-			this.txtNamKhachHang.BorderColorActive = System.Drawing.Color.DodgerBlue;
-			this.txtNamKhachHang.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-			this.txtNamKhachHang.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-			this.txtNamKhachHang.BorderColorIdle = System.Drawing.Color.Silver;
-			this.txtNamKhachHang.BorderRadius = 25;
-			this.txtNamKhachHang.BorderThickness = 2;
-			this.txtNamKhachHang.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-			this.txtNamKhachHang.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtNamKhachHang.DefaultFont = new System.Drawing.Font("Segoe UI", 14F);
-			this.txtNamKhachHang.DefaultText = "";
-			this.txtNamKhachHang.FillColor = System.Drawing.Color.White;
-			this.txtNamKhachHang.HideSelection = true;
-			this.txtNamKhachHang.IconLeft = null;
-			this.txtNamKhachHang.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtNamKhachHang.IconPadding = 10;
-			this.txtNamKhachHang.IconRight = null;
-			this.txtNamKhachHang.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-			this.txtNamKhachHang.Lines = new string[0];
-			this.txtNamKhachHang.Location = new System.Drawing.Point(146, 10);
-			this.txtNamKhachHang.MaxLength = 32767;
-			this.txtNamKhachHang.MinimumSize = new System.Drawing.Size(1, 1);
-			this.txtNamKhachHang.Modified = false;
-			this.txtNamKhachHang.Multiline = false;
-			this.txtNamKhachHang.Name = "txtNamKhachHang";
-			stateProperties25.BorderColor = System.Drawing.Color.DodgerBlue;
-			stateProperties25.FillColor = System.Drawing.Color.Empty;
-			stateProperties25.ForeColor = System.Drawing.Color.Empty;
-			stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtNamKhachHang.OnActiveState = stateProperties25;
-			stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-			stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-			stateProperties26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-			stateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-			this.txtNamKhachHang.OnDisabledState = stateProperties26;
-			stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-			stateProperties27.FillColor = System.Drawing.Color.Empty;
-			stateProperties27.ForeColor = System.Drawing.Color.Empty;
-			stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtNamKhachHang.OnHoverState = stateProperties27;
-			stateProperties28.BorderColor = System.Drawing.Color.Silver;
-			stateProperties28.FillColor = System.Drawing.Color.White;
-			stateProperties28.ForeColor = System.Drawing.Color.Empty;
-			stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
-			this.txtNamKhachHang.OnIdleState = stateProperties28;
-			this.txtNamKhachHang.Padding = new System.Windows.Forms.Padding(3);
-			this.txtNamKhachHang.PasswordChar = '\0';
-			this.txtNamKhachHang.PlaceholderForeColor = System.Drawing.Color.Silver;
-			this.txtNamKhachHang.PlaceholderText = "Nhập Năm";
-			this.txtNamKhachHang.ReadOnly = false;
-			this.txtNamKhachHang.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.txtNamKhachHang.SelectedText = "";
-			this.txtNamKhachHang.SelectionLength = 0;
-			this.txtNamKhachHang.SelectionStart = 0;
-			this.txtNamKhachHang.ShortcutsEnabled = true;
-			this.txtNamKhachHang.Size = new System.Drawing.Size(123, 53);
-			this.txtNamKhachHang.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-			this.txtNamKhachHang.TabIndex = 59;
-			this.txtNamKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-			this.txtNamKhachHang.TextMarginBottom = 0;
-			this.txtNamKhachHang.TextMarginLeft = 3;
-			this.txtNamKhachHang.TextMarginTop = 0;
-			this.txtNamKhachHang.TextPlaceholder = "Nhập Năm";
-			this.txtNamKhachHang.UseSystemPasswordChar = false;
-			this.txtNamKhachHang.WordWrap = true;
+			this.txtTopKhach.AcceptsReturn = false;
+			this.txtTopKhach.AcceptsTab = false;
+			this.txtTopKhach.AnimationSpeed = 200;
+			this.txtTopKhach.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.txtTopKhach.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.txtTopKhach.BackColor = System.Drawing.Color.Transparent;
+			this.txtTopKhach.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtTopKhach.BackgroundImage")));
+			this.txtTopKhach.BorderColorActive = System.Drawing.Color.DodgerBlue;
+			this.txtTopKhach.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			this.txtTopKhach.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			this.txtTopKhach.BorderColorIdle = System.Drawing.Color.Silver;
+			this.txtTopKhach.BorderRadius = 25;
+			this.txtTopKhach.BorderThickness = 2;
+			this.txtTopKhach.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+			this.txtTopKhach.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTopKhach.DefaultFont = new System.Drawing.Font("Segoe UI", 14F);
+			this.txtTopKhach.DefaultText = "";
+			this.txtTopKhach.FillColor = System.Drawing.Color.White;
+			this.txtTopKhach.HideSelection = true;
+			this.txtTopKhach.IconLeft = null;
+			this.txtTopKhach.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTopKhach.IconPadding = 10;
+			this.txtTopKhach.IconRight = null;
+			this.txtTopKhach.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+			this.txtTopKhach.Lines = new string[0];
+			this.txtTopKhach.Location = new System.Drawing.Point(146, 10);
+			this.txtTopKhach.MaxLength = 32767;
+			this.txtTopKhach.MinimumSize = new System.Drawing.Size(1, 1);
+			this.txtTopKhach.Modified = false;
+			this.txtTopKhach.Multiline = false;
+			this.txtTopKhach.Name = "txtTopKhach";
+			stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+			stateProperties5.FillColor = System.Drawing.Color.Empty;
+			stateProperties5.ForeColor = System.Drawing.Color.Empty;
+			stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtTopKhach.OnActiveState = stateProperties5;
+			stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+			stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+			stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+			this.txtTopKhach.OnDisabledState = stateProperties6;
+			stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+			stateProperties7.FillColor = System.Drawing.Color.Empty;
+			stateProperties7.ForeColor = System.Drawing.Color.Empty;
+			stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtTopKhach.OnHoverState = stateProperties7;
+			stateProperties8.BorderColor = System.Drawing.Color.Silver;
+			stateProperties8.FillColor = System.Drawing.Color.White;
+			stateProperties8.ForeColor = System.Drawing.Color.Empty;
+			stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+			this.txtTopKhach.OnIdleState = stateProperties8;
+			this.txtTopKhach.Padding = new System.Windows.Forms.Padding(3);
+			this.txtTopKhach.PasswordChar = '\0';
+			this.txtTopKhach.PlaceholderForeColor = System.Drawing.Color.Silver;
+			this.txtTopKhach.PlaceholderText = "Nhập Năm";
+			this.txtTopKhach.ReadOnly = false;
+			this.txtTopKhach.ScrollBars = System.Windows.Forms.ScrollBars.None;
+			this.txtTopKhach.SelectedText = "";
+			this.txtTopKhach.SelectionLength = 0;
+			this.txtTopKhach.SelectionStart = 0;
+			this.txtTopKhach.ShortcutsEnabled = true;
+			this.txtTopKhach.Size = new System.Drawing.Size(123, 53);
+			this.txtTopKhach.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+			this.txtTopKhach.TabIndex = 59;
+			this.txtTopKhach.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+			this.txtTopKhach.TextMarginBottom = 0;
+			this.txtTopKhach.TextMarginLeft = 3;
+			this.txtTopKhach.TextMarginTop = 0;
+			this.txtTopKhach.TextPlaceholder = "Nhập Năm";
+			this.txtTopKhach.UseSystemPasswordChar = false;
+			this.txtTopKhach.WordWrap = true;
 			// 
 			// cbbTopKhach
 			// 
@@ -730,6 +793,7 @@
 			this.cbbTopKhach.Name = "cbbTopKhach";
 			this.cbbTopKhach.Size = new System.Drawing.Size(51, 32);
 			this.cbbTopKhach.TabIndex = 58;
+			this.cbbTopKhach.Text = null;
 			this.cbbTopKhach.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
 			this.cbbTopKhach.TextLeftMargin = 5;
 			// 
@@ -750,21 +814,21 @@
 			this.topKhachHang.AllowUserToDeleteRows = false;
 			this.topKhachHang.AllowUserToResizeColumns = false;
 			this.topKhachHang.AllowUserToResizeRows = false;
-			dataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle49.ForeColor = System.Drawing.Color.Black;
-			this.topKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle49;
+			dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+			this.topKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
 			this.topKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.topKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.topKhachHang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.topKhachHang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle50.BackColor = System.Drawing.Color.DodgerBlue;
-			dataGridViewCellStyle50.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle50.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-			dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.topKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle50;
+			dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle14.BackColor = System.Drawing.Color.DodgerBlue;
+			dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+			dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.topKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
 			this.topKhachHang.ColumnHeadersHeight = 40;
 			this.topKhachHang.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
 			this.topKhachHang.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -784,14 +848,14 @@
 			this.topKhachHang.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
 			this.topKhachHang.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
 			this.topKhachHang.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle51.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle51.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle51.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.topKhachHang.DefaultCellStyle = dataGridViewCellStyle51;
+			dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.topKhachHang.DefaultCellStyle = dataGridViewCellStyle15;
 			this.topKhachHang.EnableHeadersVisualStyles = false;
 			this.topKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
 			this.topKhachHang.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -801,8 +865,8 @@
 			this.topKhachHang.Name = "topKhachHang";
 			this.topKhachHang.ReadOnly = true;
 			this.topKhachHang.RowHeadersVisible = false;
-			dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.topKhachHang.RowsDefaultCellStyle = dataGridViewCellStyle52;
+			dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.topKhachHang.RowsDefaultCellStyle = dataGridViewCellStyle16;
 			this.topKhachHang.RowTemplate.Height = 40;
 			this.topKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.topKhachHang.Size = new System.Drawing.Size(1344, 710);
@@ -814,16 +878,6 @@
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
 			this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
 			// 
-			// btnBaoCaoDSTonKho
-			// 
-			this.btnBaoCaoDSTonKho.Location = new System.Drawing.Point(1225, 16);
-			this.btnBaoCaoDSTonKho.Name = "btnBaoCaoDSTonKho";
-			this.btnBaoCaoDSTonKho.Size = new System.Drawing.Size(128, 31);
-			this.btnBaoCaoDSTonKho.TabIndex = 32;
-			this.btnBaoCaoDSTonKho.Text = "Xuất Excel";
-			this.btnBaoCaoDSTonKho.UseVisualStyleBackColor = true;
-			this.btnBaoCaoDSTonKho.Click += new System.EventHandler(this.btnBaoCaoDSTonKho_Click);
-			// 
 			// btnXuatBaoCao
 			// 
 			this.btnXuatBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -834,59 +888,6 @@
 			this.btnXuatBaoCao.Text = "Xuất Toàn Bộ Báo Cáo";
 			this.btnXuatBaoCao.UseVisualStyleBackColor = true;
 			this.btnXuatBaoCao.Click += new System.EventHandler(this.btnXuatBaoCao_Click);
-			// 
-			// btnBaoCaoBan
-			// 
-			this.btnBaoCaoBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.btnBaoCaoBan.Location = new System.Drawing.Point(1225, 16);
-			this.btnBaoCaoBan.Name = "btnBaoCaoBan";
-			this.btnBaoCaoBan.Size = new System.Drawing.Size(128, 31);
-			this.btnBaoCaoBan.TabIndex = 61;
-			this.btnBaoCaoBan.Text = "Xuất Excel";
-			this.btnBaoCaoBan.UseVisualStyleBackColor = true;
-			this.btnBaoCaoBan.Click += new System.EventHandler(this.btnBaoCaoBan_Click);
-			// 
-			// btnBaoCaoNhap
-			// 
-			this.btnBaoCaoNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.btnBaoCaoNhap.Location = new System.Drawing.Point(1225, 16);
-			this.btnBaoCaoNhap.Name = "btnBaoCaoNhap";
-			this.btnBaoCaoNhap.Size = new System.Drawing.Size(128, 31);
-			this.btnBaoCaoNhap.TabIndex = 62;
-			this.btnBaoCaoNhap.Text = "Xuất Excel";
-			this.btnBaoCaoNhap.UseVisualStyleBackColor = true;
-			this.btnBaoCaoNhap.Click += new System.EventHandler(this.btnBaoCaoNhap_Click);
-			// 
-			// btnTaoBaoCaoNhap
-			// 
-			this.btnTaoBaoCaoNhap.Location = new System.Drawing.Point(311, 10);
-			this.btnTaoBaoCaoNhap.Name = "btnTaoBaoCaoNhap";
-			this.btnTaoBaoCaoNhap.Size = new System.Drawing.Size(148, 37);
-			this.btnTaoBaoCaoNhap.TabIndex = 63;
-			this.btnTaoBaoCaoNhap.Text = "Tạo Báo Cáo";
-			this.btnTaoBaoCaoNhap.UseVisualStyleBackColor = true;
-			this.btnTaoBaoCaoNhap.Click += new System.EventHandler(this.btnTaoBaoCaoNhap_Click);
-			// 
-			// btnTaoBaoCaoKhach
-			// 
-			this.btnTaoBaoCaoKhach.Location = new System.Drawing.Point(311, 10);
-			this.btnTaoBaoCaoKhach.Name = "btnTaoBaoCaoKhach";
-			this.btnTaoBaoCaoKhach.Size = new System.Drawing.Size(148, 37);
-			this.btnTaoBaoCaoKhach.TabIndex = 64;
-			this.btnTaoBaoCaoKhach.Text = "Tạo Báo Cáo";
-			this.btnTaoBaoCaoKhach.UseVisualStyleBackColor = true;
-			this.btnTaoBaoCaoKhach.Click += new System.EventHandler(this.btnTaoBaoCaoKhach_Click);
-			// 
-			// btnTopKhachHang
-			// 
-			this.btnTopKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-			this.btnTopKhachHang.Location = new System.Drawing.Point(1225, 16);
-			this.btnTopKhachHang.Name = "btnTopKhachHang";
-			this.btnTopKhachHang.Size = new System.Drawing.Size(128, 31);
-			this.btnTopKhachHang.TabIndex = 65;
-			this.btnTopKhachHang.Text = "Xuất Excel";
-			this.btnTopKhachHang.UseVisualStyleBackColor = true;
-			this.btnTopKhachHang.Click += new System.EventHandler(this.btnTopKhachHang_Click);
 			// 
 			// FormThongKe
 			// 
@@ -933,7 +934,7 @@
         private System.Windows.Forms.Label lbNV;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private Bunifu.UI.WinForms.BunifuTextBox txtNamKhachHang;
+        private Bunifu.UI.WinForms.BunifuTextBox txtTopKhach;
         private Bunifu.UI.WinForms.BunifuDropdown cbbTopKhach;
         private System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuDataGridView danhSachSanPhamTonKho;

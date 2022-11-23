@@ -18,7 +18,7 @@ namespace BTLCSDL.DAO.impl {
 			StringBuilder whereClause = new StringBuilder();
 
 			String query = "select DISTINCT SanPham.* from SanPham " +
-							"join ChiTietSP on SanPham.MaSP = ChiTietSP.MaSP ";
+							"left join ChiTietSP on SanPham.MaSP = ChiTietSP.MaSP ";
 
 			if (fieldName != "") {
 				if (fieldName == "MaSP") {
@@ -32,21 +32,52 @@ namespace BTLCSDL.DAO.impl {
 				String classShortName = string.Concat(Regex.Matches(((Type)item.Key).Name, "[A-Z]").OfType<Match>().Select(match => match.Value));
 				String id = "Ma" + classShortName;
 
-				if (((List<String>)item.Value).Count > 0) {
-					foreach (String listValue in item.Value) {
-						whereClause.Append(id + " = " + listValue + " or ");
+				int size = ((List<String>)item.Value).Count;
+				if (size > 0) {
+					/*
+					select *
+					from SanPham
+					where MaSP in (select MaSP
+								   from ChiTietSP
+								   where MaS in (1, 10)
+								   group by MaSP
+								   having count(distinct MaS) = 2) 
+					 */
+					if (id == "MaS" || id == "MaMS") { // bang n-n
+						StringBuilder subQuery = new StringBuilder($"select MaSP from ChiTietSP where {id} in (");
+						foreach (String listValue in item.Value) {
+							subQuery.Append(listValue + ",");
+						}
+						// xoa dau ",", thay = ")"
+						subQuery.Length -= 1;
+						subQuery.Append($") group by MaSP having count(distinct {id}) = {size}");
+						whereClause.Append("SanPham.MaSP in (" + subQuery.ToString() + ") ");
+						// thay = "and "
+						whereClause.Append("and ");
+					} 
+					else { // bang 1-n
+						if (((List<String>)item.Value).Count > 0) {
+							foreach (String listValue in item.Value) {
+								whereClause.Append(id + " = " + listValue + " or ");
+							}
+							// xoa chu "or "
+							whereClause.Length -= 3;
+							// thay = "and "
+							whereClause.Append("and ");
+						}
 					}
-					// xoa chu "or "
-					whereClause.Length -= 3;
-					// thay = "and "
-					whereClause.Append("and ");
 				}
 			}
 
 			if (whereClause.Length > 0) {
+				// xoa chu end thua
 				whereClause.Length -= 4;
 				query += "where " + whereClause.ToString();
 			}
+
+			// phai loc xem thang nao phai thoa man du cac tieu chi la co nhieu size va co nhieu mau
+
+			DataTable tb = new DataTable();
 
 			return table(query);
 		}

@@ -173,13 +173,13 @@ namespace BTLCSDL.Forms
                     hoaDonNhap.MaNCC = Convert.ToInt32(cmbNCC.SelectedValue);
                     hoaDonNhap.MaNV = Convert.ToInt32(cmbNV.SelectedValue);
                     hoaDonNhap.TongTien = 0;
-                    hdn.create(hoaDonNhap);
+                    hdn.createNoMessage(hoaDonNhap);
                     DataTable dt = sql.table("select max(MaHDN) max from HoaDonNhap");
                     MaHDN = Convert.ToInt32(dt.Rows[0]["max"]);
                     foreach (ChiTietHDN item in listSPHD)
                     {
                         item.MaHDN = MaHDN;
-                        cthdn.create(item);
+                        cthdn.createNoMessage(item);
                     }
                     MessageBox.Show("Thêm hóa đơn thành công");
                     formThemHDN.Visible = false;

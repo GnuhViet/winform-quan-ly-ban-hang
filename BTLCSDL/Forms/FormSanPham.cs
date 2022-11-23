@@ -167,7 +167,11 @@ namespace BTLCSDL.Forms {
 				if (searchField == "Tên") {
 					searchField = "TenSP";
 				} else if (searchField == "Mã") {
-					searchField = "MaSP";
+					if (val != "") {
+						searchField = "MaSP";
+					} else {
+						searchField = "TenSP";
+					}
 				} else if (searchField == "Giá Bán") {
 					searchField = "DonGiaBan";
 				} else if (searchField == "Giá Nhập") {
@@ -206,12 +210,15 @@ namespace BTLCSDL.Forms {
 		private void table_CellContentClick(object sender, DataGridViewCellEventArgs e) {	
 			if (e.ColumnIndex == 0) { //delete
 				isThem = true;
-				dao.delelte(Convert.ToInt32(table.CurrentRow.Cells[3].Value));
+				SanPham sp = new SanPham();
+				sp.MaSP = Convert.ToInt32(table.CurrentRow.Cells[3].Value);
+				dao.delelte(sp);
 				FormSanPham_Load(sender, e);
 				return;
 			}
 
 			if (e.ColumnIndex == 1) {
+				emptyFormInputSanPham();
 				isThem = false;
 				btnThemSubmit.Text = " sửa";
 				setForm();
@@ -235,6 +242,8 @@ namespace BTLCSDL.Forms {
 		}
 
 		private void btnThemSanPham_Click(object sender, EventArgs e) {
+			emptyFormInputSanPham();
+
 			formInputSanPham.Visible = true;
 			btnThemSubmit.Text = " thêm";
 			isThem = true;
@@ -289,8 +298,7 @@ namespace BTLCSDL.Forms {
 		#endregion
 
 		#region form-input-SanPham
-
-		private void btnDongFrom_Click(object sender, EventArgs e) {
+		private void emptyFormInputSanPham() {
 			txtSanPhamID.Text = "";
 			txtTen.Text = "";
 			txtDonGiaBan.Value = 0;
@@ -299,6 +307,9 @@ namespace BTLCSDL.Forms {
 			cbbChatLieu.SelectedIndex = -1; txtChatLieuID.Text = "";
 			cbbQuocGia.SelectedIndex = -1; txtQuocGiaID.Text = "";
 			pictureAnh.Image = ((System.Drawing.Image)(resources.GetObject("pictureAnh.Image")));
+		}
+		private void btnDongFrom_Click(object sender, EventArgs e) {
+			emptyFormInputSanPham();
 			formInputSanPham.Visible = false;
 			radioNam.Checked = false;
 			radioNu.Checked = false;
@@ -384,6 +395,7 @@ namespace BTLCSDL.Forms {
 			String path = table.CurrentRow.Cells[8].Value.ToString();
 			if (!"".Equals(path)) {
 				pictureAnh.Image = Image.FromFile(path);
+				pictureAnh.ImageLocation = path;
 			}
 
 			// cbb
@@ -588,12 +600,14 @@ namespace BTLCSDL.Forms {
 			model.MaS = Convert.ToInt32(txtMaS.Text);
 			model.MaMS = Convert.ToInt32(txtMaMS.Text);
 			model.SoLuong = Convert.ToInt32(txtSoLuong.Value);
-
-			foreach(DataGridViewRow r in tableDSCTSP.Rows) {
-				if (r.Cells["MaS"].Value.ToString() == model.MaS.ToString() 
-						&& r.Cells["MaMS"].Value.ToString() == model.MaMS.ToString()) {
-					MessageBox.Show("Mặt Hàng Với Size và Màu này đã tồn tại");
-					return null;
+			
+			if (isThem) {
+				foreach (DataGridViewRow r in tableDSCTSP.Rows) {
+					if (r.Cells["MaS"].Value.ToString() == model.MaS.ToString()
+							&& r.Cells["MaMS"].Value.ToString() == model.MaMS.ToString()) {
+						MessageBox.Show("Mặt Hàng Với Size và Màu này đã tồn tại");
+						return null;
+					}
 				}
 			}
 
