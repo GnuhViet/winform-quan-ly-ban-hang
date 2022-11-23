@@ -1,6 +1,7 @@
 USE [QLBanGiay]
 GO
-/****** Object:  Trigger [dbo].[tg_SoLuongKhiBan]    Script Date: 22/11/2022 4:37:21 CH ******/
+--1
+/****** Object:  Trigger [dbo].[tg_SoLuongKhiBan]    Script Date: 23/11/2022 8:22:32 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -27,7 +28,8 @@ begin
 	) a
 	where a.MaCTSP = ChiTietSP.MaCTSP
 end
-/****** Object:  Trigger [dbo].[tg_SoLuongKhiNhap]    Script Date: 22/11/2022 4:37:56 CH ******/
+--2
+/****** Object:  Trigger [dbo].[tg_SoLuongKhiNhap]    Script Date: 23/11/2022 8:23:09 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -54,7 +56,25 @@ begin
 	) a
 	where a.MaCTSP = ChiTietSP.MaCTSP
 end
-/****** Object:  Trigger [dbo].[tg_TongTienHDN]    Script Date: 22/11/2022 4:38:09 CH ******/
+--3
+/****** Object:  Trigger [dbo].[tg_TinhGiaBanKhiNhap]    Script Date: 23/11/2022 8:23:16 CH ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER trigger [dbo].[tg_TinhGiaBanKhiNhap] on [dbo].[ChiTietHDN] for insert, update as
+begin
+	update SanPham
+	set DonGiaNhap = a.dgn, DonGiaBan = a.Dgn * 1.1
+	from
+	(
+		select MaSP,  DonGiaNhap dgn
+		from inserted i join ChiTietSP c on i.MaCTSP = c.MaCTSP
+	) a
+	where SanPham.MaSP = a.MaSP
+end
+--4
+/****** Object:  Trigger [dbo].[tg_TongTienHDN]    Script Date: 23/11/2022 8:23:24 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -81,7 +101,8 @@ begin
 	) a
 	where HoaDonNhap.MaHDN = a.MaHDN
 end
-/****** Object:  Trigger [dbo].[tg_delHDB]    Script Date: 22/11/2022 4:38:58 CH ******/
+--5
+/****** Object:  Trigger [dbo].[tg_delHDB]    Script Date: 23/11/2022 8:24:13 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -94,7 +115,8 @@ begin
 	delete from HoaDonBan
 	where MaHDB in (select MaHDB from deleted)
 end
-/****** Object:  Trigger [dbo].[tg_delHDN]    Script Date: 22/11/2022 4:39:12 CH ******/
+--6
+/****** Object:  Trigger [dbo].[tg_delHDN]    Script Date: 23/11/2022 8:24:25 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -107,7 +129,8 @@ begin
 	delete from HoaDonNhap
 	where MaHDN in (select MaHDN from deleted)
 end
-/****** Object:  Trigger [dbo].[tg_delNV]    Script Date: 22/11/2022 4:39:31 CH ******/
+--7
+/****** Object:  Trigger [dbo].[tg_delNV]    Script Date: 23/11/2022 8:24:44 CH ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -121,9 +144,3 @@ begin
 		select MaNV from deleted
 	)
 end
-
-
-
-
-
-
