@@ -17,32 +17,32 @@ namespace BTLCSDL {
 	public partial class MainForm : Form {
 		#region define DAO & type
 		private Type ChatLieuType;
-		private ReflectionDAO chatLieuDAO;
+		private DynamicDAO chatLieuDAO;
 
 		private Type TheLoaiType;
-		private ReflectionDAO theLoaiDAO;
+		private DynamicDAO theLoaiDAO;
 
 		private Type QuocGiaType;
-		private ReflectionDAO quocGiaDAO;
+		private DynamicDAO quocGiaDAO;
 
 		private Type SizeType;
-		private ReflectionDAO sizeDAO;
+		private DynamicDAO sizeDAO;
 
 		private Type MauSacType;
-		private ReflectionDAO mauSacDAO;
+		private DynamicDAO mauSacDAO;
 
 		private Type ChucVuType;
-		private ReflectionDAO chucVuDAO;
+		private DynamicDAO chucVuDAO;
 
-		private ReflectionDAO sanPhamDAO;
-		private ReflectionDAO chiTietSPDAO;
-		private ReflectionDAO nhanVienDAO;
-		private ReflectionDAO hoaDonBanDAO;
-		private ReflectionDAO hoaDonNhapDAO;
-		private ReflectionDAO khachHangDAO;
-		private ReflectionDAO nhaCungCapDAO;
-		private ReflectionDAO chiTietHoaDonBanDAO;
-		private ReflectionDAO chiTietHoaDonNhapDAO;
+		private DynamicDAO sanPhamDAO;
+		private DynamicDAO chiTietSPDAO;
+		private DynamicDAO nhanVienDAO;
+		private DynamicDAO hoaDonBanDAO;
+		private DynamicDAO hoaDonNhapDAO;
+		private DynamicDAO khachHangDAO;
+		private DynamicDAO nhaCungCapDAO;
+		private DynamicDAO chiTietHoaDonBanDAO;
+		private DynamicDAO chiTietHoaDonNhapDAO;
 
 		private BaoCaoDAO baoCaoDAO;
 		#endregion
@@ -52,33 +52,33 @@ namespace BTLCSDL {
 
 			#region init DAO & TYPE
 			ChatLieuType = typeof(ChatLieu);
-			chatLieuDAO = new ReflectionDAO(ChatLieuType);
+			chatLieuDAO = new DynamicDAO(ChatLieuType);
 
 			TheLoaiType = typeof(TheLoai);
-			theLoaiDAO = new ReflectionDAO(TheLoaiType);
+			theLoaiDAO = new DynamicDAO(TheLoaiType);
 
 			QuocGiaType = typeof(QuocGia);
-			quocGiaDAO = new ReflectionDAO(QuocGiaType);
+			quocGiaDAO = new DynamicDAO(QuocGiaType);
 
 			SizeType = typeof(Model.Size);
-			sizeDAO = new ReflectionDAO(SizeType);
+			sizeDAO = new DynamicDAO(SizeType);
 
 			MauSacType = typeof(Model.MauSac);
-			mauSacDAO = new ReflectionDAO(MauSacType);
+			mauSacDAO = new DynamicDAO(MauSacType);
 
 			ChucVuType = typeof(ChucVu);
-			chucVuDAO = new ReflectionDAO(ChucVuType);
+			chucVuDAO = new DynamicDAO(ChucVuType);
 
 			sanPhamDAO = new SanPhamDAO();
 			chiTietSPDAO = new ChiTietSPDAO();
 			nhanVienDAO = new NhanVienDAO();
 
 			hoaDonBanDAO = new HoaDonBanDAO();
-			khachHangDAO = new ReflectionDAO(typeof(KhachHang));
-			chiTietHoaDonBanDAO = new ReflectionDAO(typeof(ChiTietHDB));
-			nhaCungCapDAO = new ReflectionDAO(typeof(NhaCungCap));
-			hoaDonNhapDAO = new ReflectionDAO(typeof(HoaDonNhap));
-			chiTietHoaDonNhapDAO = new ReflectionDAO(typeof(ChiTietHDN));
+			khachHangDAO = new DynamicDAO(typeof(KhachHang));
+			chiTietHoaDonBanDAO = new DynamicDAO(typeof(ChiTietHDB));
+			nhaCungCapDAO = new DynamicDAO(typeof(NhaCungCap));
+			hoaDonNhapDAO = new DynamicDAO(typeof(HoaDonNhap));
+			chiTietHoaDonNhapDAO = new DynamicDAO(typeof(ChiTietHDN));
 
 			baoCaoDAO = new BaoCaoDAO();
 			#endregion

@@ -20,13 +20,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BTLCSDL.Forms {
 	public partial class FormNhanVien : Form {
-		ReflectionDAO dao;
-		ReflectionDAO chucVuDAO;
+		DynamicDAO dao;
+		DynamicDAO chucVuDAO;
 		private List<Object> listChucVu;
 		Hashtable HTChucVu;
 		private bool isThem;
 
-		public FormNhanVien(ReflectionDAO dao, ReflectionDAO chucVuDAO) {
+		public FormNhanVien(DynamicDAO dao, DynamicDAO chucVuDAO) {
 			InitializeComponent();
 			this.dao = dao;
 			this.chucVuDAO = chucVuDAO;

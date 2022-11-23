@@ -20,11 +20,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BTLCSDL.Forms {
 	public partial class FormKhachHang : Form {
-		ReflectionDAO dao;
+		DynamicDAO dao;
 
 		private bool isThem;
 
-		public FormKhachHang(ReflectionDAO dao) {
+		public FormKhachHang(DynamicDAO dao) {
 			InitializeComponent();
 			this.dao = dao;
 

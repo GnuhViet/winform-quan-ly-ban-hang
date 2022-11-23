@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BTLCSDL.DAO.impl {
-	internal class ChiTietSPDAO : ReflectionDAO {
+	internal class ChiTietSPDAO : DynamicDAO {
 		public ChiTietSPDAO() : base(typeof(ChiTietSP)) {
 		} 
 

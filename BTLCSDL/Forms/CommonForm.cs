@@ -18,7 +18,7 @@ using System.Xml.Linq;
 
 namespace BTLCSDL.Forms {
 	public partial class CommonForm : Form {
-		private ReflectionDAO dao;
+		private DynamicDAO dao;
 		private bool isThem;
 
 		private Type type;
@@ -28,7 +28,7 @@ namespace BTLCSDL.Forms {
 		private PropertyInfo Ten;
 		private String formName;
 
-		public CommonForm(ReflectionDAO dao ,Type type, String formName) {
+		public CommonForm(DynamicDAO dao ,Type type, String formName) {
 			String classShortName = string.Concat(Regex.Matches(type.Name, "[A-Z]").OfType<Match>().Select(match => match.Value));
 			
 			this.type = type;

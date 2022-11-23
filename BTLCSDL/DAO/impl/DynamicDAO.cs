@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BTLCSDL.DAO.impl {
-	public class ReflectionDAO : CommonDAO {
+	public class DynamicDAO : CommonDAO {
 		protected Type type;
 		protected String className;
 		protected String modelID;
@@ -25,7 +25,7 @@ namespace BTLCSDL.DAO.impl {
 		private String updateQuery;
 		private String deleteQuery;
 
-		public ReflectionDAO(Type type) {
+		public DynamicDAO(Type type) {
 			this.type = type;
 			className = type.Name;
 			String classShortName = string.Concat(Regex.Matches(className, "[A-Z]").OfType<Match>().Select(match => match.Value));

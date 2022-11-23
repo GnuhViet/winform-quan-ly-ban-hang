@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BTLCSDL.DAO.impl {
-	internal class SanPhamDAO : ReflectionDAO {
+	internal class SanPhamDAO : DynamicDAO {
 		public SanPhamDAO() : base(typeof(SanPham)) {
 		}
 

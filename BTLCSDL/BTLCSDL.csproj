@@ -312,7 +312,7 @@
     <Compile Include="DAO\impl\ChiTietSPDAO.cs" />
     <Compile Include="DAO\impl\HoaDonBanDAO.cs" />
     <Compile Include="DAO\impl\NhanVienDAO.cs" />
-    <Compile Include="DAO\impl\ReflectionDAO.cs" />
+    <Compile Include="DAO\impl\DynamicDAO.cs" />
     <Compile Include="DAO\impl\SanPhamDAO.cs" />
     <Compile Include="DAO\SQLServerConnection.cs" />
     <Compile Include="Forms\CommonForm.cs">

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BTLCSDL.DAO.impl {
-	internal class HoaDonBanDAO : ReflectionDAO {
+	internal class HoaDonBanDAO : DynamicDAO {
 		public HoaDonBanDAO() : base(typeof(HoaDonBan)) {
 
 		}

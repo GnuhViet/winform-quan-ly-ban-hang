@@ -22,7 +22,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace BTLCSDL.Forms {
 	public partial class FormThongKe : Form {
 		private BaoCaoDAO dao;
-		private ReflectionDAO nhanVienDAO;
+		private DynamicDAO nhanVienDAO;
 		private SaveFileDialog save;
 		private Hashtable HTNhanVien;
 
@@ -32,7 +32,7 @@ namespace BTLCSDL.Forms {
 		private String quyHienTai;
 
 
-		public FormThongKe(BaoCaoDAO dao, ReflectionDAO nhanVienDAO) {
+		public FormThongKe(BaoCaoDAO dao, DynamicDAO nhanVienDAO) {
 			InitializeComponent();
 			this.dao = dao;
 			this.nhanVienDAO = nhanVienDAO;

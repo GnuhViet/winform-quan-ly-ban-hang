@@ -18,15 +18,15 @@ namespace BTLCSDL.Forms
     public partial class FormHoaDonNhap : Form
     {
         private int MaHDN;
-        private ReflectionDAO hdn;
-        private ReflectionDAO cthdn;
-        private ReflectionDAO ncc;
-        private ReflectionDAO nv;
+        private DynamicDAO hdn;
+        private DynamicDAO cthdn;
+        private DynamicDAO ncc;
+        private DynamicDAO nv;
         private CommonDAO sql;
         private string queryGetAll = "select MaHDN, NgayNhap, MaSoThue, TongTien, TenNCC, HoTenNV from HoaDonNhap h join NhanVien n on h.MaNV = n.MaNV join NhaCungCap n2 on n2.MaNCC = h.MaNCC";
         private List<SanPhamHDN> listSPHD;
         private bool isThem;
-        public FormHoaDonNhap(ReflectionDAO hdn2, ReflectionDAO cthdn2, ReflectionDAO ncc2, ReflectionDAO nv2)
+        public FormHoaDonNhap(DynamicDAO hdn2, DynamicDAO cthdn2, DynamicDAO ncc2, DynamicDAO nv2)
         {
             InitializeComponent();
             hdn = hdn2;

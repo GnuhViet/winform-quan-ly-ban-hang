@@ -20,17 +20,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BTLCSDL.Forms {
 	public partial class FormHoaDonBan : Form {
-		ReflectionDAO dao;
-		ReflectionDAO khDAO;
-		ReflectionDAO nvDAO;
-		ReflectionDAO cthdbDAO;
-		ReflectionDAO ctspDAO;
-		ReflectionDAO spDAO;
-		ReflectionDAO sizeDAO;
-		ReflectionDAO msDAO;
-		ReflectionDAO theLoaiDAO;
-		ReflectionDAO chatLieuDAO;
-		ReflectionDAO quocGiaDAO;
+		DynamicDAO dao;
+		DynamicDAO khDAO;
+		DynamicDAO nvDAO;
+		DynamicDAO cthdbDAO;
+		DynamicDAO ctspDAO;
+		DynamicDAO spDAO;
+		DynamicDAO sizeDAO;
+		DynamicDAO msDAO;
+		DynamicDAO theLoaiDAO;
+		DynamicDAO chatLieuDAO;
+		DynamicDAO quocGiaDAO;
 
 		private bool isThem;
 		List<Object> listNhanVien;
@@ -45,17 +45,17 @@ namespace BTLCSDL.Forms {
 		Hashtable HTNhanVien;
 		Dictionary<String, List<ChiTietSP>> MapChiTietSP;
 
-		public FormHoaDonBan(ReflectionDAO dao,
-				ReflectionDAO khDAO,
-				ReflectionDAO nvDAO,
-				ReflectionDAO cthdbDAO,
-				ReflectionDAO ctspDAO,
-				ReflectionDAO spDAO,
-				ReflectionDAO sizeDAO,
-				ReflectionDAO msDAO,
-				ReflectionDAO theLoaiDAO,
-				ReflectionDAO chatLieuDAO,
-				ReflectionDAO quocGiaDAO) {
+		public FormHoaDonBan(DynamicDAO dao,
+				DynamicDAO khDAO,
+				DynamicDAO nvDAO,
+				DynamicDAO cthdbDAO,
+				DynamicDAO ctspDAO,
+				DynamicDAO spDAO,
+				DynamicDAO sizeDAO,
+				DynamicDAO msDAO,
+				DynamicDAO theLoaiDAO,
+				DynamicDAO chatLieuDAO,
+				DynamicDAO quocGiaDAO) {
 
 			InitializeComponent();
 			this.dao = dao;

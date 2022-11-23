@@ -19,13 +19,13 @@ namespace BTLCSDL.Forms {
 	public partial class txtSanPhamHienTai : Form {
 		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(txtSanPhamHienTai));
 
-		ReflectionDAO dao;
-		ReflectionDAO ChatLieuDAO;
-		ReflectionDAO TheLoaiDAO;
-		ReflectionDAO QuocGiaDAO;
-		ReflectionDAO SizeDAO;
-		ReflectionDAO MauSacDAO;
-		ReflectionDAO ChiTietSPDAO;
+		DynamicDAO dao;
+		DynamicDAO ChatLieuDAO;
+		DynamicDAO TheLoaiDAO;
+		DynamicDAO QuocGiaDAO;
+		DynamicDAO SizeDAO;
+		DynamicDAO MauSacDAO;
+		DynamicDAO ChiTietSPDAO;
 
 		Hashtable HTChatLieu;
 		Hashtable HTTheLoai;
@@ -35,10 +35,10 @@ namespace BTLCSDL.Forms {
 
 		private bool isThem;
 
-		public txtSanPhamHienTai(ReflectionDAO dao, ReflectionDAO ChatLieuDAO, 
-				ReflectionDAO TheLoaiDAO, ReflectionDAO QuocGiaDAO, 
-				ReflectionDAO SizeDAO, ReflectionDAO MauSacDAO,
-				ReflectionDAO ChiTietSPDAO) {
+		public txtSanPhamHienTai(DynamicDAO dao, DynamicDAO ChatLieuDAO, 
+				DynamicDAO TheLoaiDAO, DynamicDAO QuocGiaDAO, 
+				DynamicDAO SizeDAO, DynamicDAO MauSacDAO,
+				DynamicDAO ChiTietSPDAO) {
 			this.dao = dao;
 			this.ChatLieuDAO = ChatLieuDAO;
 			this.TheLoaiDAO = TheLoaiDAO;

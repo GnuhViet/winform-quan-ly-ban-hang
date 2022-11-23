@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BTLCSDL.DAO.impl {
-	internal class NhanVienDAO : ReflectionDAO {
+	internal class NhanVienDAO : DynamicDAO {
 		public NhanVienDAO() : base(typeof(NhanVien)) {
 		}
 

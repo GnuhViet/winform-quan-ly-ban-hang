@@ -20,11 +20,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BTLCSDL.Forms {
 	public partial class FormNhaCungCap : Form {
-		ReflectionDAO dao;
+		DynamicDAO dao;
 
 		private bool isThem;
 
-		public FormNhaCungCap(ReflectionDAO dao) {
+		public FormNhaCungCap(DynamicDAO dao) {
 			InitializeComponent();
 			this.dao = dao;
 
