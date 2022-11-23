@@ -1,11 +1,11 @@
 drop view SanPhamTonKho
-
+--1 in danh sach san pham ton kho
 create view SanPhamTonKho
 as
 select SanPham.MaSP as [Mã],
        TenSP        as [Tên Sản Phẩm],
-       DonGiaBan       [Giá Bán],
-       DonGiaNhap      [Giá Nhập],
+       DonGiaBan    as [Giá Bán],
+       DonGiaNhap   as [Giá Nhập],
        GioiTinh     as [Giới Tính],
        TL.TenTL     as [Thể Loại],
        CL.TenCL     as [Chất Liệu],
@@ -31,6 +31,7 @@ where SanPham.MaSP not in
 
 drop function fn_DanhSachHoaDonTheoNhanVien;
 
+-- 3 Báo cáo danh sách hóa đơn và tổng tiền nhập hàng theo quý chọn trước
 create function fn_DanhSachHoaDonTheoNhanVien(@HoTenNV nvarchar(255))
     returns table
         as
@@ -54,3 +55,42 @@ end
 
 select * from fn_DanhSachHoaDonTheoNhanVien('Blue Dante')
 print dbo.fn_TinhTongTienTheoNhanVien('Blue Dante')
+
+-- 2 Báo cáo danh sách hóa đơn và tổng tiền nhập hàng theo quý chọn trước
+drop function fn_BaoCaoHoaDonNhapTheoQuyVaNam
+create function fn_BaoCaoHoaDonNhapTheoQuyVaNam(@monthStart int, @monthEnd int, @nam int)
+    returns table
+        as return
+            (
+                select MaHDN as [Mã],
+                       NgayNhap as [Ngày Nhập],
+                       MaSoThue as [Mã Số Thuế],
+                       TenNCC as [Tên Nhà Cung Cấp],
+                       HoTenNV as [Họ Tên Nhân Viên],
+                       TongTien as [Tổng Tiền]
+                from HoaDonNhap h
+                         join NhaCungCap n1 on h.MaNCC = n1.MaNCC
+                         join NhanVien n2 on h.MaNV = n2.MaNV
+                where month(NgayNhap) between @monthStart and @monthEnd
+                  and year(NgayNhap) = @nam
+            )
+select * from fn_BaoCaoHoaDonNhapTheoQuyVaNam('8', '12','2022')
+
+-- 4 Báo cáo danh sách hóa đơn và tổng tiền nhập hàng theo quý chọn trước
+drop function fn_Top3KhachHang
+create function fn_Top3KhachHang(@monthStart int, @monthEnd int, @nam int)
+    returns table as return
+            (
+                select top 3 with ties k.MaKH as [Mã],
+                                       HoTenKH as [Họ Tên],
+                                       SoDT [Số Điện Thoại],
+                                       sum(TongTien) [Tổng Tiền Đã Tiêu]
+                from KhachHang k
+                         join HoaDonBan h on k.MaKH = h.MaKH
+                where month(NgayBan) between @monthStart and @monthEnd
+                  and year(NgayBan) = @nam
+                group by k.MaKH, HoTenKH, SoDT
+                order by [Tổng Tiền Đã Tiêu] DESC
+            )
+
+select * from fn_Top3KhachHang('8', '12','2022')

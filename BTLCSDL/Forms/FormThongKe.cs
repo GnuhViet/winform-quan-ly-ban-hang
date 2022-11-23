@@ -2,7 +2,9 @@
 using BTLCSDL.Model;
 using Bunifu.UI.WinForms;
 using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Bibliography;
 using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections;
@@ -22,9 +24,14 @@ namespace BTLCSDL.Forms {
 		private BaoCaoDAO dao;
 		private ReflectionDAO nhanVienDAO;
 		private SaveFileDialog save;
-		private Hashtable HTNhanVien;	
-		
-		
+		private Hashtable HTNhanVien;
+
+
+		private String namHienTai = DateTime.Now.Year.ToString();
+		private int month = DateTime.Now.Month;
+		private String quyHienTai;
+
+
 		public FormThongKe(BaoCaoDAO dao, ReflectionDAO nhanVienDAO) {
 			InitializeComponent();
 			this.dao = dao;
@@ -42,29 +49,14 @@ namespace BTLCSDL.Forms {
 			txtNamBaoCaoNhap.Size = new System.Drawing.Size(123, 37);
 			txtNamKhachHang.Size = new System.Drawing.Size(123, 37);
 			
-
-			baoCaoBan.DataSource = dao.HoaDonTheoNhanVien("");
+			quyHienTai = ((month + 2) / 3).ToString();
 		}
 
 		#region utils
-
-		private void txtValidate_KeyPress(object sender, KeyPressEventArgs e) {
-			if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.')) {
-				e.Handled = true;
-			}
-		}
-
-		private void txtValidate_TextChange(object sender, EventArgs e) {
-			if (!Regex.IsMatch(((BunifuTextBox)sender).Text.Trim(), @"^\d+$")) {
-				((BunifuTextBox)sender).Text = "";
-				return;
-			}
-		}
-
 		private void cbbNhanVien_SelectedIndexChanged(object sender, EventArgs e) {
 			String HoTenNV = cbbNhanVien.Text;
-			baoCaoBan.DataSource = dao.HoaDonTheoNhanVien(HoTenNV);
-			double TongTien = dao.TongTienHoaDonTheoNhanVien(HoTenNV);
+			baoCaoBan.DataSource = dao.HoaDonBanTheoNhanVien(HoTenNV);
+			double TongTien = dao.TongTienHoaDonBanTheoNhanVien(HoTenNV);
 			if (HoTenNV == "") {
 				txtTongTien.Text = "  -Chưa Chọn Nhân Viên-";
 				return;
@@ -99,33 +91,66 @@ namespace BTLCSDL.Forms {
 
 		#endregion
 
-		private void btnXuatBaoCao_Click(object sender, EventArgs e) {
-			// xuat toan bo 4 bao cao
-			XLWorkbook wb = new XLWorkbook();
-
-			#region hoa don ban
-			DataTable dtHoaDonBan = dao.HoaDonTheoNhanVien("");
-			double TongTien = 0;
-			DataRow r = dtHoaDonBan.NewRow();
-			foreach (DataRow dr in dtHoaDonBan.Rows) {
-				TongTien += Convert.ToDouble(dr[2]);
-			}
-			r[4] = "Tổng Tiền: " + TongTien;
-
-			dtHoaDonBan.Rows.Add(dtHoaDonBan.NewRow());
-			dtHoaDonBan.Rows.Add(r);
-			#endregion
-
-			addWorksheet(dao.danhSachSanPhamTonKho(), wb, "Sản Phẩm", "Báo Cáo Danh Sách Sản Phẩm Tồn Kho");
-			addWorksheet(dtHoaDonBan, wb, "Hoá Đơn Bán", "Báo Cáo Hoá Đơn");
-
-			saveFile(wb);
-		}
-
 		private void FormThongKe_Load(object sender, EventArgs e) {
+			baoCaoBan.DataSource = dao.HoaDonBanTheoNhanVien("");
 			danhSachSanPhamTonKho.DataSource = dao.danhSachSanPhamTonKho();
+			baoCaoNhap.DataSource = dao.HoaDonNhapTheoQuyVaNam(this.quyHienTai, this.namHienTai);
+			topKhachHang.DataSource = dao.Top3KhachHang(this.quyHienTai, this.namHienTai);
 		}
 
+		private void btnTaoBaoCaoNhap_Click(object sender, EventArgs e) {
+			String nam = txtNamBaoCaoNhap.Text;
+			String quy = cbbQuyBaoCaoNhap.Text;
+
+			if (quy == "" || quy == null) {
+				MessageBox.Show("Chưa chọn quý");
+				return;
+			}
+			if (nam == "") {
+				MessageBox.Show("Chưa nhập năm");
+				return;
+			}
+			try {
+				int y = Convert.ToInt32(nam);
+				if (y < 0) {
+					MessageBox.Show("Năm không tồn tại");
+					return;
+				}
+			} catch {
+				MessageBox.Show("Năm không tồn tại");
+				return;
+			}
+
+			baoCaoNhap.DataSource = dao.HoaDonNhapTheoQuyVaNam(quy, nam);
+		}
+
+		private void btnTaoBaoCaoKhach_Click(object sender, EventArgs e) {
+			String nam = txtNamBaoCaoNhap.Text;
+			String quy = cbbQuyBaoCaoNhap.Text;
+
+			if (quy == "" || quy == null) {
+				MessageBox.Show("Chưa chọn quý");
+				return;
+			}
+			if (nam == "") {
+				MessageBox.Show("Chưa nhập năm");
+				return;
+			}
+			try {
+				int y = Convert.ToInt32(nam);
+				if (y < 0) {
+					MessageBox.Show("Năm không tồn tại");
+					return;
+				}
+			} catch {
+				MessageBox.Show("Năm không tồn tại");
+				return;
+			}
+
+			topKhachHang.DataSource = dao.Top3KhachHang(quy, nam);
+		}
+
+		// excel
 
 		private void btnBaoCaoDSTonKho_Click(object sender, EventArgs e) {
 			XLWorkbook wb = new XLWorkbook();
@@ -135,18 +160,18 @@ namespace BTLCSDL.Forms {
 
 		private void btnBaoCaoBan_Click(object sender, EventArgs e) {
 			String HoTenNV = cbbNhanVien.Text;
-			DataTable dt = dao.HoaDonTheoNhanVien(HoTenNV == null ? "" : HoTenNV);
+			DataTable dt = dao.HoaDonBanTheoNhanVien(HoTenNV == null ? "" : HoTenNV);
 			double TongTien = 0;
 
 			if (HoTenNV == null || HoTenNV == "") {
 				MessageBox.Show("Bạn chưa chọn nhân viên, \n sẽ xuất ra file toàn bộ hoá đơn");
-				foreach(DataRow dr in dt.Rows) {
+				foreach (DataRow dr in dt.Rows) {
 					TongTien += Convert.ToDouble(dr[2]);
 				}
 			} else {
-				TongTien = dao.TongTienHoaDonTheoNhanVien(HoTenNV);
+				TongTien = dao.TongTienHoaDonBanTheoNhanVien(HoTenNV);
 			}
-			
+
 			DataRow r = dt.NewRow();
 
 			r[4] = "Tổng Tiền: " + TongTien;
@@ -160,11 +185,28 @@ namespace BTLCSDL.Forms {
 		}
 
 		private void btnBaoCaoNhap_Click(object sender, EventArgs e) {
-
+			XLWorkbook wb = new XLWorkbook();
+			addWorksheet((DataTable)baoCaoNhap.DataSource, wb,
+				"Hoá Đơn Nhập", $"Báo Cáo Hoá Đơn Nhập Theo Quý:{cbbQuyBaoCaoNhap.Text}, Năm: {txtNamBaoCaoNhap.Text}");
+			saveFile(wb);
 		}
-
+		
 		private void btnTopKhachHang_Click(object sender, EventArgs e) {
-
+			XLWorkbook wb = new XLWorkbook();
+			addWorksheet((DataTable)topKhachHang.DataSource, wb,
+				"Top Khách", $"Top Khách Hàng Mua Nhiều Nhất Theo Quý:{cbbQuyBaoCaoNhap.Text}, Năm: {txtNamBaoCaoNhap.Text}");
+			saveFile(wb);
 		}
+
+		private void btnXuatBaoCao_Click(object sender, EventArgs e) {
+			// xuat toan bo 4 bao cao
+			XLWorkbook wb = new XLWorkbook();
+			addWorksheet(dao.danhSachSanPhamTonKho(), wb, "Sản Phẩm", "Báo Cáo Danh Sách Sản Phẩm Tồn Kho");
+			addWorksheet((DataTable)baoCaoBan.DataSource, wb, "Hoá Đơn Bán", "Báo Cáo Hoá Đơn Bán Trong Quý");
+			addWorksheet((DataTable)baoCaoNhap.DataSource, wb, "Hoá Đơn Nhập", "Báo Cáo Hoá Đơn Nhập Trong Quý");
+			addWorksheet((DataTable)topKhachHang.DataSource, wb, "Top Khách", "Top khách hàng mua nhiều nhất trong quý");
+			saveFile(wb);
+		}
+
 	}
 }
